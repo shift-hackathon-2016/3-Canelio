@@ -1,0 +1,187 @@
+a,a:hover,a:visited,a:active{
+    text-decoration:none;
+}
+
+html{
+    width:100%;
+    height:100%;
+
+}
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: #ddd;
+    font-family: Lato;
+}
+.wrap960{
+    width: 960px;
+    margin:  0px auto;
+}
+.styleView{
+    
+    min-width:100%;
+    min-height:100%;
+    position:relative;
+
+}
+.menuLink {
+    font-family: 'Bangers', cursive;
+    font-weight:400;
+    display: block;
+    width: 100%;
+    padding: 9px 10px;
+    box-sizing: border-box;
+    font-size:2em;
+    background-color: #2b605f;
+    color: white;
+    border-bottom: 2px solid #aaa;
+    text-decoration:none;
+    background-color: #ccc;
+    color: #444;
+}
+.menuLink .descriptionText{
+    display:block;
+    font-family:Lato;
+    font-size:0.5em;
+    color:#222;
+}
+.trainMenuLink{
+    padding:16px 10px;
+    color:#000;
+}
+.menuLinkIcon{
+    height: 24px;
+    margin-right: 5px;
+}
+
+input {
+    padding: 0px 5px 0px 5px;
+    height: 40px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    transition: 0.2s linear all;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+}
+
+    input:focus {
+        border: 2px solid #bb9a01;
+    }
+
+.error{
+    border:2px solid #871326;
+    box-shadow: 2px 2px 5px 0px #ab4548;
+}
+
+button {
+    background-color: #2b605f;
+    padding: 10px 20px;
+    font-family: 'Bangers', cursive;
+    color: white;
+    border-width: 0px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+    button:focus {
+        background-color: #bb9a01;
+        color: white;
+        transition: 0.2s all linear;
+    }
+
+.relativeContainer{
+      width:100%;
+      height:100%;
+      position:relative;  
+}
+.relativeWidthContainer{
+      width:100%;
+      position:relative;  
+}
+.absoluteCenter{
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin:auto;
+    position:absolute;
+}
+.groupContainer{
+    padding-top:20px;
+}
+.transitionAll03{
+    -webkit-transition:all ease-in-out 0.3s;
+    transition:all ease-in-out 0.3s;
+}
+
+.subView{
+    top:0px;
+    bottom:0px;
+    width:100%;
+    position:absolute;
+}
+
+.black{
+    color:#000;
+}
+
+.loadingMessage{
+    margin:0px auto!important;
+}
+.loadingContainer{
+    height:220px;
+    width:100%;
+    font-family: Bangers;
+    color:#000;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.margin0auto{
+    margin:0px auto;
+}
+
+.clearFix{
+    width: 1px;
+    height:1px;
+    clear:both;
+}
+
+.centerText{
+    text-align: center;
+}
+
+
+
+@font-face {
+    font-family: "Bangers";
+    /*src: url("Bangers.ttf") format("opentype");*/
+    src: url('BebasNeue-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BangersTrue";
+    src: url("Bangers.ttf") format("opentype");
+
+}
+
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    src: url("Lato-Regular.ttf") format("opentype");
+
+}
+
+@media screen 
+  and (max-width: 960px) { 
+    .wrap960{
+        width: 100%;
+    } 
+}

@@ -1,0 +1,51 @@
+<div class="decimalInputContainer slideFromBottomOutQuick" ng-show="decimalInput_visible">
+    <div class="topContainer closeContainer">
+        <div class="inputField absoluteCenter" ng-style="decimalInput_inputFiledStyle()">
+            <div class="relativeContainer">
+                <div class="input absoluteCenter"></div>
+            </div>
+        </div>
+        <div class="saveContainer absoluteCenter" ng-style="decimalInput_saveStyle()" ng-click="decimalInput_save()">
+            <div class="relativeContainer">
+                <div class="importantText absoluteCenter">Save</div>
+            </div>
+        </div>
+    </div>
+    <div class="numberContainer" ng-style="decimalInput_getNumStyle()" >
+        <div class="number">1</div>
+    </div>
+    <div class="numberContainer middleNumberContainer" ng-style="decimalInput_getNumStyle('mid')" >
+        <div class="number">2</div>
+    </div>
+    <div class="numberContainer" ng-style="decimalInput_getNumStyle()">
+        <div class="number">3</div>
+    </div>
+    <div class="numberContainer " ng-style="decimalInput_getNumStyle()" >
+        <div class="number">4</div>
+    </div>
+    <div class="numberContainer middleNumberContainer" ng-style="decimalInput_getNumStyle('mid')" >
+        <div class="number">5</div>
+    </div>
+    <div class="numberContainer" ng-style="decimalInput_getNumStyle()" >
+        <div class="number">6</div>
+    </div>
+    <div class="numberContainer " ng-style="decimalInput_getNumStyle()" >
+        <div class="number">7</div>
+    </div>
+    <div class="numberContainer middleNumberContainer" ng-style="decimalInput_getNumStyle('mid')" >
+        <div class="number">8</div>
+    </div>
+    <div class="numberContainer" ng-style="decimalInput_getNumStyle()" ng-style="decimalInput_getNumStyle('mid')">
+        <div class="number">9</div>
+    </div>
+    <div class="numberContainer deleteContainer" ng-style="decimalInput_getNumStyle()">
+        <div class="number"><img src="res/digitalInputDeleteArrow.png" class="deleteArrow" /></div>
+    </div>
+    <div class="numberContainer middleNumberContainer" ng-style="decimalInput_getNumStyle('mid')" >
+        <div class="number">0</div>
+    </div>
+    <div class="numberContainer" ng-style="decimalInput_getNumStyle()" >
+        <div class="number">.</div>
+    </div>
+    <div class="closeContainer" ng-click="decimalInput_visible = false" ng-hide="decimalInput_hideCancel"><div class="close importantText absoluteCenter">Cancel</div></div>
+</div>

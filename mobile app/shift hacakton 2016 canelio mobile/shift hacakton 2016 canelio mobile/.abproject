@@ -1,0 +1,45 @@
+{
+  "ProjectName": "shift2016",
+  "ProjectGuid": "620e62e2-f556-4673-bba9-9ecd41b1f474",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.shift2016",
+  "DisplayName": "shift2016",
+  "Author": "",
+  "Description": "shift2016",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "19",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "4.0.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{54867726-24e3-4ed3-9028-6cd0e0c56e76}",
+  "WP8ProductID": "{3df6099a-1de8-4847-b9e3-08ad5ea45714}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.shifthacakton2016caneliomobile",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ],
+  "iOSDeploymentTarget": "8.4"
+}

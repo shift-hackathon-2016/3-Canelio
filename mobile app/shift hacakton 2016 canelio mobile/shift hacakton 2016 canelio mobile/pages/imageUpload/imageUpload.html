@@ -1,0 +1,49 @@
+<div ng-show="!loading && !cropping">
+    <main-nav></main-nav>
+
+    <div>
+        <a class="menuLink" ng-click="takeUserPhoto()">
+            <img src="res/camera444.png" class="menuLinkIcon" />
+            From Camera
+        </a>
+        <a class="menuLink" ng-click="takeUserPhoto('gallery')">
+            <img src="res/gallery444.png" class="menuLinkIcon" />
+            Your Phone
+        </a>
+        <a class="menuLink" ng-click="navigateGallery()">
+            <img src="res/gallery444.png" class="menuLinkIcon" />
+            Gallery
+        </a>
+    </div>
+
+    <div class="groupContainer" ng-show="edit">
+
+        <a class="menuLink" ng-click="editClick()">
+            <img src="res/crop444.png" class="menuLinkIcon" />
+            Edit picture
+        </a>
+
+    </div>
+    <!--<img id="cropped" />-->
+</div>
+
+<div ng-show="loading" class="absoluteCenter" style="height:200px;" >
+    <img src="res/walking-dog.gif" class="loadingImg margin0Auto" />
+    <div class="centeredBigMessage">{{loadingMessage}}</div>
+</div>
+
+<div class="relativeContainer background222" ng-style="croppingModal()">
+    <div id="croppingContainer" ng-style="croppingArea()" class="backgroundBlack">
+        <div>
+            <img id="naturalImage" />
+        </div>
+    </div>
+    <div class="cropFooter">
+        <div class="cancel" ng-click="cropCancel()">
+            Cancel
+        </div>
+        <div class="save" ng-click="cropSave()">
+            Save
+        </div>
+    </div>
+</div>

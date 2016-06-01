@@ -1,0 +1,9 @@
+.standardForm{
+    margin:20px 0px;
+}
+
+.standardForm .submitButton{
+    font-size: 1.1em;
+    margin: 0px auto;
+    display: block;
+}

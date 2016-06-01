@@ -1,0 +1,55 @@
+<div id="datesPicker" class="weight-dates-picker slideFadeInFromBottomOut" ng-show="showDatesPicker"></div>
+
+<main-nav datepicker="true" history="true"></main-nav>
+
+
+
+<div ng-hide="loading">
+    <div ng-click="decimalInput_reset()">
+        <div class="logWeightButton relativeContainer" ng-hide="currentWeight">
+            <div class="logWeightContainer absoluteCenter">
+                <div class="weightMessage">
+                    Log Weight
+                </div>
+            </div>
+        </div>
+        <div class="logWeightButton relativeContainer" ng-show="currentWeight">
+            <div class="currentWeightContainer absoluteCenter">
+                <div class="weightMessage">
+                    Current Weight
+                </div>
+                <div class="weightMessage currentWeight">
+                    {{currentWeight}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logWeightChangeContainer" ng-show="changeAvaliable || oneDataEntry">
+        <div class="logWeightChange weightMessage logWeightContainer absoluteCenter" ng-show="changeAvaliable">
+            latest Change : <img ng-show="changeUp" src="res/arrowTop222.png" class="logWeightArrow logWeightArrowBottom" />
+            <img ng-show="changeDown" src="res/arrowBottom222.png" class="logWeightArrow logWeightArrowBottom" /><span class="change">{{change}}</span>
+        </div>
+        <div class="logWeightChange weightMessage logWeightContainer absoluteCenter" ng-show="oneDataEntry && currentWeight">
+            Log again to see change
+        </div>
+    </div>
+    <div ng-hide="currentWeight">
+        <div class="weightLogPointer">
+            <img src="res/arrowUpBig222.png" />
+        </div>
+        <div class="weightMessage">
+            Log weight to see chart and latest change
+        </div>
+    </div>
+    <div id="wieghtChart" class="d3Chart" ng-style="chartStyle()" ng-show="currentWeight"></div>
+</div>
+
+<div ng-show="loading" >
+    <img src="res/walking-dog.gif" class="loadingImg" />
+    <div class="loadingText">{{loadingMessage}}</div>
+</div>
+
+<decimal-input></decimal-input>
+
+
+

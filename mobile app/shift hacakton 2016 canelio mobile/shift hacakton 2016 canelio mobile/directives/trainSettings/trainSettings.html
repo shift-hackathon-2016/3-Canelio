@@ -1,0 +1,24 @@
+<div class="relativeContainer">
+
+    <div class="title">Select Your Default Training Method </div>
+    <div class="lastDays">
+        
+        <a class="trickLink "
+           ng-class="{selected: trainSettings_isSelected('1')}"
+           ng-click="trainingTypeChanged(1)">
+            Single Repetition
+        </a>
+        <a class="trickLink"
+           ng-class="{selected: trainSettings_isSelected('2')}"
+           ng-click="trainingTypeChanged(2)">
+            Multiple Repetitions
+        </a>
+        <a class="trickLink"
+           ng-class="{selected: trainSettings_isSelected('3')}"
+           ng-click="trainingTypeChanged(3)">
+            Multiple Bags
+        </a>
+    </div>
+
+
+</div>

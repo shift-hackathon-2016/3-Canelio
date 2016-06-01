@@ -1,0 +1,36 @@
+App.controller("ctrl_AchievmentShare", function ($scope, svc_File, $q, $routeParams,model_Share) {
+
+    $scope.title = "Share";
+
+    $scope.loading = true;
+    var def = $q.defer();
+    def.promise.then(function (data) {
+        console.log(data);
+        console.log(data.url);
+        $scope.url = data.url;
+        $scope.loading = false;
+    });
+
+    model_Share.shareAchivment(def,$routeParams.id);
+
+    $scope.fbShare = function(){
+        window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, 'http://www.exoplace.com' /* url */, function () { console.log('share ok') }, function (errormsg) { alert(errormsg) });
+    }
+        //var list = document.getElementById('slipList');
+
+
+    //list.addEventListener('slip:beforeswipe', function (e) {
+    //    if (e.target.nodeName == 'INPUT' || /demo-no-swipe/.test(e.target.className)) {
+    //        e.preventDefault();
+    //    }
+    //}, false);
+
+
+    //list.addEventListener('slip:afterswipe', function (e) {
+    //    e.target.parentNode.appendChild(e.target);
+    //}, false);
+
+
+
+
+});

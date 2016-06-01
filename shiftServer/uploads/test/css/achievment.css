@@ -1,0 +1,133 @@
+.singleAchivementContainer{
+    font-family: bangers;
+    font-size:1.8em;
+    color:#444;
+}
+.singleAchivementContainer .achivementHeader{
+    padding-top: 40px;
+/*    padding-bottom: 20px;*/
+    border-bottom: 4px solid #eee;
+}
+.singleAchivementContainer .details{
+    padding-left: 20px;
+    float:left;
+    padding-top: 10px;
+}
+.singleAchivementContainer .achivementHeader .schoolPic{
+    float:right;
+    height:100px;
+    max-width: 100px;
+}
+
+.singleAchivementContainer .profilePhoto{
+    width: 75px;
+    height:75px;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    float: left;
+}
+
+.singleAchivementContainer .informativePage{
+    width: 100%;
+    clear: both;
+/*    padding: 20px 10px;
+    box-sizing: border-box;
+    background-color:#eee;*/
+}
+
+.singleAchivementContainer .trickPic{
+    float: left;
+    max-width: 300px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.singleAchivementContainer .trickPic img{
+    max-width: 100%;
+    float: right;
+}
+
+.singleAchivementContainer .achivementDetails{
+    background-color: #fff;
+    float: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right:20px;
+    box-sizing: border-box;
+}
+
+.singleAchivementContainer .achivementDetails .informativeLine{
+    padding-bottom: 15px;
+}
+.singleAchivementContainer .sucessRateLegend{
+     font-family: Lato;
+     font-size: 0.6em;
+     padding-top: 20px;
+}
+
+@media screen 
+  and (max-width: 960px) { 
+    .singleAchivementContainer .achivementDetails{
+       width: 100%;
+       padding: 20px 0px;
+    }
+    .singleAchivementContainer .achivementHeader{
+        width:600px;
+        margin:0 auto;
+        padding-bottom: 20px;
+    }
+    .singleAchivementContainer .trickPic{
+        float: none;
+        margin:0 auto;
+    }
+    .singleAchivementContainer .trickPic img{
+        float: none;
+        margin:0 auto;
+        display:block;
+    }
+    .singleAchivementContainer .informativeLine{
+        text-align: center;
+    }
+    
+}
+
+@media screen 
+  and (max-width: 620px) { 
+      .singleAchivementContainer .achivementHeader .schoolPic{
+            float:none;
+            display:block;
+            margin: 0 auto;
+            margin-bottom:10px;
+      }
+      .singleAchivementContainer .trickPic{
+       padding: 20px 0px;
+      }
+      .singleAchivementContainer .trickPic img{
+          float: none;
+      }
+      .singleAchivementContainer .informativePage{
+          background-color: #fff;
+      }
+    .singleAchivementContainer .achivementHeader{
+        width:100%;
+    }
+    .singleAchivementContainer .profilePhoto{
+        float:none;
+        margin:0 auto;
+        display:block;
+    }
+    .singleAchivementContainer .details{
+        width: 100%;
+        padding-left: 0px;
+        text-align:center;
+    }
+    .singleAchivementContainer .informativeLine .black{
+        display:block;
+    }
+}
+@media screen 
+  and (max-width: 320px) { 
+    .singleAchivementContainer .trickPic{
+        width:auto;
+    }
+}

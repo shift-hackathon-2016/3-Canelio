@@ -1,0 +1,23 @@
+.slideFromBottomOutQuick.ng-hide-remove, .slideFromBottomOutQuick.ng-hide-add{
+    -webkit-transition:all ease-in-out 0.3s;
+    transition:all ease-in-out 0.3s;
+}
+
+.slideFromBottomOutQuick.ng-hide-remove {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+
+}
+.slideFromBottomOutQuick.ng-hide-remove.ng-hide-remove-active{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    
+}
+.slideFromBottomOutQuick.ng-hide-add{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+.slideFromBottomOutQuick.ng-hide-add.ng-hide-add-active {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+}

@@ -1,0 +1,75 @@
+    
+.warning .cancel{
+margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.6em;
+  font-family: Bangers;
+    color: #bb0000;
+  padding: 10px 0px;
+}
+
+.warning .cancelv2{
+    width:100%;
+    position:absolute;
+    bottom:85px;
+}
+
+.warning .cancel .explanation{
+  font-family: Lato;
+  font-size: 0.8em;
+  color: #333;
+  display: block;
+}
+
+
+
+.gifImageSyncContainer{
+  height: 263px;
+  margin: 0px!important;
+
+  overflow: hidden;
+
+}
+
+.gifImageSyncContainer img{
+    display:block;
+    margin:auto;
+    padding-top: 70px;
+;
+}
+
+.gifImageSyncContainer .explanation{
+  text-align: center;
+  font-family: Bangers;
+  font-size: 1.8em;
+  padding: 15px 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+
+}
+
+.gifImageSyncContainerBorderBottom{
+
+    height:20px;
+}
+
+.warningHoldToSync{
+    padding-top:0px;
+
+}
+
+
+
+.closeGifImageSync{
+    bottom:20px!important;
+}
+
+.warningHoldToSync .cancel{
+   margin-bottom: 0px!important;
+    background-color:#ccc;
+}
+
+.warningHoldToSync .cancel .explanation{
+    font-size:0.6em;
+}

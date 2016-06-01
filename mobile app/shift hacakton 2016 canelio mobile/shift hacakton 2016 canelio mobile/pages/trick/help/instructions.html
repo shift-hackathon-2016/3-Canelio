@@ -1,0 +1,17 @@
+<!--<video controls id="trickVideo" style="width:100%;height:300px;" >
+    <source src="{{videoSrc}}" type="video/mp4">
+</video>
+-->
+<div id="kapp" class="standardKapp">
+    <div data-role="view" id="instructions">
+        <div data-role="header">
+            <main-nav></main-nav>
+        </div>
+        <div id="instructionsContainer">
+            <div ng-repeat="step in steps track by $index" class="stepContainer">
+                <p class="stepTitle">{{'Step' +" "+ ($index+1)}}: {{step.name}}</p>
+                <p class="stepContent">{{step.text}}</p>
+            </div>
+        </div>
+    </div>
+</div>

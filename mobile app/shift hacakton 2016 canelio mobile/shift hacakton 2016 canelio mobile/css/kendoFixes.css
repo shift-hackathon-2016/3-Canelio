@@ -1,0 +1,101 @@
+.km-ios{
+    font:normal 1em Arial!important;
+}
+
+.km-vertical-scrollbar{
+    right:0px!important;
+}
+
+.km-touch-scrollbar{
+    background-color:#3955aa!important;
+}
+
+.km-header{
+    background-clip: border-box;
+    box-sizing:border-box;
+}
+/*odavde*/
+.km-widget{
+    clip:auto!important;
+    outline-width:0px!important;
+}
+
+.km-header{
+    outline-width:0px!important;
+}
+
+#kapp{
+    background-origin: border-box!important;
+    outline-width:0px!important;
+}
+#navBar{
+    border:1px solid #062244!important ;
+    outline:1px solid #062244!important ;
+}
+
+.standardKapp .km-content{
+    background-color:#ddd!important;
+}
+
+.standardKapp .km-header{
+    background-color: #062244!important;
+}
+
+.km-flat, .km-flat .km-content{
+    color:#000!important;
+}
+
+.km-pages{
+ padding-top:0.6em!important;
+ margin-bottom:0.6em!important;
+}
+
+
+
+.standardizeFonts .km-content,.standardizeFonts .km-header,.standardizeFonts .km-footer,.standardizeFonts .km-list>li{
+    font-size:16px!important;
+}
+
+
+.standardKapp *{
+    background-clip: border-box!important;
+}
+
+.standardKapp .km-content p{
+    margin-right:0.5rem;
+    margin-left:0.5rem;
+}
+
+.standardKapp .tabText{
+    font-size:21px!important;
+}
+
+.standardKapp .km-list li{
+    border-width:0px;
+    box-shadow:none;
+    -webkit-box-shadow: none;
+}
+
+
+
+.standardKapp #tabs{
+    margin-bottom:0px;
+}
+
+.km-current-page{
+    background-color:#062244!important
+}
+
+.standardKapp .km-modalview-wrapper{
+    background-color:rgba(0,0,0,0.9);
+}
+
+.kModal .noAchivemntsMessage{
+    margin-bottom:20px;
+    margin-top:0px;
+    font-size:1.5em;
+}
+
+.standardKapp .km-modalview-wrapper{
+    padding:0px!important;
+}

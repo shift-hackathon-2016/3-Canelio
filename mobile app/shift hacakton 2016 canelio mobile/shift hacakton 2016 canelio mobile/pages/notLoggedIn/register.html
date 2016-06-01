@@ -1,0 +1,19 @@
+<div class="loginContainer">
+    <form ng-submit="nextStep()">
+        <div class="inputContainer" ng-show="step <= 0">
+            <input type="text" placeholder="email" ng-model="email"  id="mirko"/>
+            <input type="password" placeholder="{{passwordTxt}}" ng-model="password" />
+            <input type="text" placeholder="{{dogNameTxt}}" class="inputFirst" ng-model="dogName" />
+
+        </div>
+        <div ng-show="step == 1">
+            <p class="subTitle">{{almostDoneTxt}}</p>
+            <img class="logo" src="res/logoBig444.png" />
+        </div>
+        <div class="buttonsContainer" ng-hide="step == 1">
+            <a class="navigation" ng-click="prevStep()"> {{backTxt}}</a>
+            <a class="navigation" ng-click="nextStep()">Register</a>
+        </div>
+        <button type="submit" value="submit" style="display:none"></button>
+    </form>
+</div>

@@ -1,0 +1,80 @@
+<div class="deleteTrickContainer absoluteCenter" ng-show="step == 1">
+    <div class="noAchivemntsMessage deleteTrickQuestion">
+        Do you want to connect clicker with this phone?
+    </div>
+    <div class="explanation">
+        (clicker can work only with one phone)
+    </div>
+    <div class="relativeContainer deleteTrickAnswerContainer">
+        <div id="simpleTrainTrainContainer" class="trainContainer">
+            <div class="trainSuccess trainFail" ng-click="cancelClickerConnect()">NO</div>
+            <div class="trainSuccess " ng-click="step = 2">YES</div>
+        </div>
+    </div>
+</div>
+<div class="loginContainer deleteTrickContainer absoluteCenter" ng-show="step == 2">
+    <div class="noAchivemntsMessage deleteTrickQuestion">
+        ENTER THE CODE YOU GOT
+    </div>
+    <input type="text" placeholder="Clicker Code" ng-model="clickerCode" />
+    <div class="relativeContainer deleteTrickAnswerContainer">
+        <div id="simpleTrainTrainContainer" class="trainContainer">
+            <div class="trainSuccess trainFail" ng-click="step = 1">CANCEL</div>
+            <div class="trainSuccess " ng-click="securityConnect()">CONNECT</div>
+        </div>
+    </div>
+</div>
+
+<div class="absoluteCenter height380" ng-show="step == 3">
+    <div class="infoBoxTitle centeredBigMessage">
+        Connecting to Clicker
+    </div>
+    <div class="infoBox centeredBigMessage">Searching for clicker...</div>
+
+    <img src="res/walking-dog.gif" class="loadingImg">
+
+</div>
+
+<div class="absoluteCenter warning warningHoldToSync" ng-show="enableBluetoothWarning" id="DownloadClickerBluetoothWarning">
+    <div class="relativeContainer">
+
+        <div class="noAchivemntsMessage deleteTrickQuestion absoluteCenter" style="height:100px;margin:auto!important">
+            Please go to phone settings and enable bluetooth
+        </div>
+        <div class="cancel cancelv2" ng-click="goToStep2AndClear()" >
+            Cancel Clicker connect <span class="explanation">(You can always connect from app settings)</span>
+        </div>
+
+        <div class="mainMenuButtonV2" ng-click="bleApp.checkBle()">
+            <div class="button">
+                I DID
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="absoluteCenter warning warningHoldToSync" ng-show="enableBluetoothTransferWarning">
+    <div class="relativeContainer">
+
+        <div class="gifImageSyncContainer">
+            <div class="relativeContainer">
+                <div class="explanation">Hold button to enable sync</div>
+                <img src="res/sync/animacijaSync1.gif" />
+            </div>
+        </div>
+        <div class="gifImageSyncContainerBorderBottom"></div>
+        
+        <div class="cancel cancelv2" ng-click="goToStep2AndClear()">
+            Cancel Clicker connect <span class="explanation">(You can always connect from app settings)</span>
+        </div>
+
+        <div class="mainMenuButtonV2" ng-click="bleApp.reconnect()">
+            <div class="button">
+                I DID
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

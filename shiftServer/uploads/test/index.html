@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--target-densitydpi=device-dpi height=device-height width=device-width, -->
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" id="viewport"  />
+    <!--canelio kendo fixes-->
+
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/forms.css"/>
+    <link rel="stylesheet" type="text/css" href="css/resposiveAchievmentSingle.css" />
+    <link rel="stylesheet" type="text/css" href="css/achievmentSingle.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <link href="res/favicon.png" rel="shortcut icon" type="image/x-icon">
+</head>
+
+<!--<body ng-app="App" ng-controller="AppCtrl" onload="onLoad()">-->
+
+
+<body ng-app="App" ng-controller="AppCtrl" >
+    
+    <link href="lib/alertify/alertify.core.css" rel="stylesheet" type="text/css" />
+    <link href="lib/alertify/alertify.default.css" rel="stylesheet" type="text/css" />
+    <script src="lib/alertify/alertify.js"></script>
+
+    <script src="lib/jquery2.1.1..js" type="text/javascript"></script>
+    <script src="lib/globalize.min.js" type="text/javascript"></script>
+    
+    <!--1.2.22-->
+
+    <script src="lib/angular.min.js" type="text/javascript"></script>
+    <script src="lib/angular-sanitize.js" type="text/javascript"></script>
+    <script src="lib/angular-route.min.js" type="text/javascript"></script>
+    <script src="lib/angular-touch.min.js" type="text/javascript"></script>
+    <script src="lib/angular-animate.min.js" type="text/javascript"></script>
+
+
+    
+    <script src="lib/moment.js"></script>
+    <script src="lib/d3/d3.min.js"></script>
+     <script src="lib/iscroll-probe.js"></script>
+    <script src="lib/slip.js"></script>
+  
+
+    <script src="variables.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <script src="routing.js" type="text/javascript"></script>
+
+
+
+    <script src="helpers/kendo_DateHelper.js"></script>
+    <script src="helpers/kendo_DateCalculationsHelper.js"></script>
+    <script src="helpers/kendo_ChartHelper.js"></script>
+    <script src="helpers/kendo_RequestHelper.js"></script>
+    
+
+
+    <script src="models/model_Achivement.js"></script>
+    <script src="models/kmodel_TrickStatistics.js"></script>
+    <script src="models/kmodel_Points.js"></script>
+    <script src="models/model_PassRetrival.js"></script>
+
+    
+
+    <script src="directives/d3AreaChart.js"></script>
+    <script src="directives/standardFooter/standardFooter.js"></script>
+
+    <script src="pages/ctrl_SingleAchivement.js"></script>
+    <script src="pages/ctrl_PassRetrival.js"></script>
+    <script src="pages/ctrl_PassRetrivalEmail.js"></script>
+   
+
+
+
+
+    <div class="styleView {{pageClass}}" ng-view></div>
+
+</body>
+
+</html>

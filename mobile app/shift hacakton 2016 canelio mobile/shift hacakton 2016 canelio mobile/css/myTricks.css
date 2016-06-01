@@ -1,0 +1,77 @@
+.createTrickRelativeContainer{
+    height:60px;
+    position:relative;
+}
+.createTrickContainer{
+    position:relative;
+    background-color:#051133;
+    outline: 1px solid #051133!important;
+    border:1px solid #051133!important;
+    box-sizing:border-box;
+    /*border-top:2px solid #3e5d6d;*/
+    height:60px;
+    padding:0px;
+    width:100%;
+}
+.createTrickInfoContainer{
+    background-color:#fff;
+    outline: 1px solid #fff!important;
+    border:1px solid #fff!important;
+}
+
+.createTrickInfoContainer .createTrickButton{
+    color:#222;
+}
+
+.createTrickContainer .createTrickButton{
+    width:100%;
+    background-color:transparent;
+    font-size:1.5em;
+}
+
+
+.createTrickContainer img{
+    height: 25px;
+  margin-right: 10px;
+  margin-bottom: -2px;
+}
+
+.createTrickSecondLine{
+    padding-top:50px;
+}
+
+.createTrickSaveButton{
+    line-height:57px;
+    height:57px;
+}
+
+.trickList li{
+    padding:0px!important
+}
+
+.arrowDownBig{
+    transform:rotate(180deg) ;
+    -webkit-transform: rotate(180deg) ;
+    margin-top:20px;
+}
+
+#myTricksDeleteModal .content {
+  height: 270px;
+  width: 100%;
+}
+
+#myTricksDeleteModal .footer{
+    background-color:#eee;
+    outline: 0px solid #eee!important;
+    border:0px solid #eee!important;
+    height:auto;
+    white-space:normal;
+}
+
+#myTricksDeleteModal .firstFooter{
+    border-bottom: 2px solid #bbb!important;
+}
+
+#myTricksDeleteModal .menuLink{
+    text-align:center;
+}

@@ -1,0 +1,49 @@
+.footer{
+    clear:both;
+    background-color:#1a1a1a;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.footer .logo{
+    float: left;
+    width: 100px;
+    margin-left:10px;
+}
+.footer .logo a,.footer .logo a:visited,.footer .logo a:hover{
+    color: #fff;
+    font-family: Bangers;
+    font-size: 2em;
+    text-align: center;   
+    display: block;
+}
+
+.footer .logo img{
+    width:100%;
+}
+
+.footer .download{
+    float: right;
+    padding-top: 45px;
+}
+
+.footer .download img{
+    float: right;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+@media screen 
+  and (max-width: 420px) { 
+    .footer .logo{
+        float:none;
+        margin:0 auto;
+    } 
+    
+    .footer .download{
+        float:none;
+        margin:0 auto;
+        width: 280px;
+    }
+}

@@ -1,0 +1,11 @@
+{"name":"Stay",
+"training":"1",
+"video":"matej.MP4",
+"handSignal":"handSignals/1.png",
+"steps":[
+	{"name":"Preparation","text":"Put your dog in sit or lay position, click and treat"},
+	{"name":"Stay","text":"When your dog is in position say the cue('Stay') wait 1 second, click and treat."},
+	{"name":"Repetition","text":"Repeat previous 2 steps while gradually increasing the duration of stay needed before the click and treat.Try to get to 10-15 seconds before continuing to the next step."},
+	{"name":"Distance","text":"Say the cue and take 1 step back. Wait 1 second , if your dog stays click and treat. If you can't get it from 10 tries go back to step 3 and practice more. before moving to distance step."},
+	{"name":"Differentiate","text":"Say command stay and gradually increase time and distance. Try moving in different directions from your dog."},
+	{"name":"Distractions","text":"Once you have mastered step 5 you can start introducing distractions like a squeaky toy, some food on ground or other dogs passing by"}]}

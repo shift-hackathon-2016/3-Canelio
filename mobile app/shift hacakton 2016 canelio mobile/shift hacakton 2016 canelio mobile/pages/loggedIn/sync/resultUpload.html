@@ -1,0 +1,121 @@
+<div ng-show="step == 1" class="growFromTopOut">
+    <div class="levelsWon">
+        <div class="width320">
+            <div class="relativeContainer">
+                <img class="trohpy" src="res/troph3d.png" />
+                <div class="lvls">
+                    {{lvlsWon}}
+                </div>
+                <div class="description">
+                    Levels won
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="currentLevelStatus">
+        <div class="width320">
+            <div class="relativeContainer">
+                <div class="currentStatusContainer" ng-hide="titleWon">
+                    <div class="currentStatus">
+                        Current Status
+                    </div>
+                </div>
+                <div class="titleWonContainer" ng-show="titleWon">
+                    <div class="titleWon">
+                        TitleWon <img src="res/crown.png" class="crown" />
+                    </div>
+                </div>
+                <div class="medalLevel">
+                    <div class="relativeContainer">
+                        <div class="currentLvl">
+                            {{level}}
+                        </div>
+                        <div class="lvlText">
+                            Lvl
+                        </div>
+                        <img src="res/medalLevels.png" class="levelPic" />
+                    </div>
+                </div>
+                <img src="res/logo002644WithoutPencil.png" ng-src="{{dogImage}}" class="dogImage">
+            </div>
+        </div>
+        <div class="whiteBackgroundContainer">
+            <div class="colorBackground">
+
+            </div>
+        </div>
+        <div class="currentTitle " ng-class="{currentTitleWon : titleWon}">
+            {{rankingTitle}}
+        </div>
+    </div>
+</div>
+<div ng-show="step == 2" id="achivmentsContainer" class="growFromTopOut">
+    <div id="wrapper">
+        <div id="scroller" class="scroller">
+            <div class="levelsWon resultUploadAchivmentsWon">
+                <div class="width320">
+                    <div class="relativeContainer">
+                        <img class="trohpy" src="res/GoldMedal.png" />
+                        <div class="lvls">
+                            {{achivmentsTotal}}
+                        </div>
+                        <div class="description">
+                            achievements
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resultUploadAchivmentList" id="resultUploadAchivmentList">
+
+            </div>
+            <!--<div class="singleAchivment" ng-repeat="a in achivementsWon" ng-click="achivmentClicked(a)">
+        <div class="width320 relativeContainer">
+            <img class="profileImg" ng-src="{{a.img}}" />
+            <div class="trickTitle">{{a.trick}}</div>
+        </div>
+    </div>-->
+
+        </div>
+    </div>
+</div>
+<div ng-show="step == 3" class="growFromTopOut">
+    <div class="resultSyncSuccessRatesTitle">
+        Success rates
+    </div>
+    <div class="goalDetailsTricksContainer resultSyncSuccessRates" >
+        <div class="dailyPorgressButton" ng-repeat="trick in tricks" ng-click="goToTrickStatistics(trick)" >
+            <div class="progressBar" ng-style="calculateTrickWidth(trick);"></div>
+            <div class="percentage trickName" ng-class="{color222:trick.noResults}">
+                {{trick.trick}}
+            </div>
+            <div class="percentage donePercentage">
+                <span ng-show="!trick.noResults">{{calculateSuccessRate(trick)}}%</span>
+                <span ng-show="trick.noResults" class="color222">not</span>
+            </div>
+            <div class="reps">
+                <span ng-show="!trick.noResults"> {{trick.total}} reps</span>
+                <span ng-show="trick.noResults" class="color222">trained</span>
+            </div>
+        </div>
+    </div>
+    <div class="resultSyncRepsDoneContainer">
+        total reps done: <span class="reps">{{totalReps}} reps</span>
+    </div>
+</div>
+<div>
+    <div class="resultsUploadCloseButton" ng-show="(step == 3 && totalSteps != 1) || (step == 2 && totalSteps ==2 && !successRatesExists)">
+        <div class="simpleMenuFooter">
+            <div class="learnedButton" ng-click="goBackStep()">Back</div>
+            <div class="learnedButton createButton" ng-click="close()">Close</div>
+        </div>
+    </div>
+    <div class="resultsUploadCloseButton" ng-show="step == 2 && totalSteps == 3">
+        <div class="simpleMenuFooter">
+            <div class="learnedButton" ng-click="goBackStep()">Back</div>
+            <div class="learnedButton createButton" ng-click="goNextPage()">next</div>
+        </div>
+    </div>
+    <div class="resultsUploadCloseButton" ng-click="close()" ng-show="totalSteps == 1">Close Summary</div>
+    <div class="resultsUploadCloseButton" ng-click="goNextPage()" ng-show="(step == 1 && totalSteps > 1) || (step == 2 && !lvlsWonExists && successRatesExists)">Next</div>
+</div>

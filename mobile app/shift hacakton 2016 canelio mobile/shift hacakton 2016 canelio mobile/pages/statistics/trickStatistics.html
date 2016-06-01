@@ -1,0 +1,67 @@
+
+<div id="datesPicker" class="dates-picker" ng-show="showDatesPicker"></div>
+
+<main-nav datepicker="true"></main-nav>
+
+<div id="tabs">
+    <div class="tabSpacer" ng-style="tabSpacersWidth()"></div>
+
+    <div id="sucessRateTab"
+         class="tabContainer"
+         ng-click="select('success')"
+         ng-class="{tabContainerSelected: isSelected('success')}">
+        <img ng-src="{{getTabIconSrc('success')}}" class="tabIcon" />
+        <span class="tabText">Sucess Rate</span>
+    </div>
+
+    <div class="tabSpacer" ng-style="tabSpacersWidth()"></div>
+
+    <div id="repetitionsTab"
+         class="tabContainer "
+         ng-click="select('repetition')"
+         ng-class="{tabContainerSelected: isSelected('repetition')}">
+        <img ng-src="{{getTabIconSrc('repetition')}}" class="tabIcon" />
+        <span class="tabText tabTextSelected">Repetition</span>
+    </div>
+
+    <div class="tabSpacer" ng-style="tabSpacersWidth()"></div>
+</div>
+<div ng-show="loading">
+    <img src="res/walking-dog.gif" class="loadingImg" />
+    <div class="loadingText">Loading Data...</div>
+</div>
+
+<div ng-show="noTrainingsDone" class="noTrainingsDone">
+    You haven't done any training in selected period <!--<br/><br /><br />-->
+    <!--from: <span class="date">{{from}}</span> <br />
+    to: <span class="date">{{to}}</span>-->
+</div>
+
+<div ng-show="!loading && !noTrainingsDone">
+    <div class="chartsRelativeContainer" ng-style="chartsRelativeContainer">
+        <div ng-show="isSelected('repetition')" class="chartContainer absoluteCenter" ng-style="singleChartHeight()">
+            <div class="sucessRateLegend">
+                <div class="legendIcon sucessRateLegendIcon"></div>
+                <div class="legendInfo">Success</div>
+                <div class="legendSpacer"></div>
+                <div class="legendIcon failedLegendIcon "></div>
+                <div class="legendInfo">Fail</div>
+            </div>
+            <div id="repetitionsChart"
+                 class="trickStatisticsChart d3Chart"></div>
+            <p class="trickStatisticsInfoText"> total: <span class="trickStatisticsInfoTextNumber">{{totalSuccess}}</span> succesful, <span class="trickStatisticsInfoTextNumber">{{totalFailed}}</span> failed</p>
+
+        </div>
+
+        <div ng-show="isSelected('success')" class="chartContainer absoluteCenter" ng-style="singleChartHeight()">
+            <div class="sucessRateLegend">
+                <div class="legendIcon sucessRateLegendIcon"></div>
+                <div class="legendInfo">Success rate %</div>
+            </div>
+            <div id="successChart"
+                 class="trickStatisticsChart d3Chart"></div>
+            <p class="trickStatisticsInfoText"> Highest success rate is  <span class="trickStatisticsInfoTextNumber">{{highestSucessRate}}%</span></p>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<main-nav></main-nav>
+<div class="simpleMenuHighlight"></div>
+<div id="mainMenuList" class="scrollableList sortableList">
+    <div id="wrapper">
+        <div id="scroller">
+            <ul id="slipList">
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="simpleMenuFooter createNewTrickButton" ng-click="createTrick()">
+    Create new
+</div>
+<div class="absoluteCenter tutorial tricksTutorial" ng-show="tricksTutorialShow">
+    <div class="relativeContainer">
+        <div class="absoluteCenter">
+            <div class="tricksLedLegendContainer GoalsLegendContainer">
+                <div class="goalLegendInfo">First five tricks can be trained from clicker.Each Trick Has different light</div>
+                <span class="goalLegendInfo"></span>
+                <div class="ledContainer">
+                    <span class="led led1"></span>
+                    <span class="led led2"></span>
+                    <span class="led led3"></span>
+                    <span class="led led4"></span>
+                    <span class="led led5"></span>
+                </div>
+                
+            </div>
+            <div class="GoalsLegendContainer tricksLedLegendContainer">
+                <span class="goalLegendInfo">Hold and drag & drop  To reorder</span>
+            </div>
+            <div class="GoalsLegendContainer tricksLedLegendContainer">
+                <span class="goalLegendInfo">Swipe to delete trick</span>
+            </div>
+
+            <div class="closeButtons">
+                <div class="dontShowThisAgain">
+                    <form onclick="">
+                        <label for="test" ng-click="clickedLabel">
+                            <input type="checkbox" name="test" id="test" ng-model="tricksTutorial" />
+                            <span class="checkboxReplacment"></span>
+                            <span class="text">Don't show this again</span>
+                        </label>
+                    </form>
+                </div>
+                <div class="trickTrainButton" ng-click="closeTutorial()">Got IT</div>
+            </div>
+        </div>
+    </div>
+</div>

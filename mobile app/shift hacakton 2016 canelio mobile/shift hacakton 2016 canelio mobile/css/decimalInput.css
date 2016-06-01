@@ -1,0 +1,95 @@
+.decimalInputContainer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color:black;
+}
+
+.decimalInputContainer .numberContainer{
+    background-color: #222222;
+    float:left;
+    border-top:1px solid #2f2f2f;
+    height:50px;
+    width:106px;
+    position:relative;
+}
+
+.decimalInputContainer .number{
+    color: #fff;
+    font-size:1.5em;
+    position:absolute;
+    height:30px;
+    text-align:center;
+    top:0px;
+    bottom:0px;
+    margin:auto;
+    width:100%;
+}
+
+
+.decimalInputContainer .middleNumberContainer{
+    border-left:1px solid #2f2f2f;
+    border-right:1px solid #2f2f2f;
+}
+
+.decimalInputContainer .deleteContainer{
+    background-color:#141414;
+}
+
+.decimalInputContainer .numberContainerActive{
+    background-color:#888;
+}
+
+.decimalInputContainer .deleteArrow{
+    height: 14px;
+}
+
+.decimalInputContainer .closeContainer{
+     border-top:1px solid #2f2f2f;
+     background-color:#141414;
+     position:relative;
+     height:50px;
+     clear:both;
+}
+
+.decimalInputContainer .importantText{
+    font-size:1.7em;
+    color:#fff;
+    font-family:Bangers;
+    height:30px;
+    text-align:center;
+}
+
+.decimalInputContainer .close{
+    color:#6a6a6a;
+}
+
+.decimalInputContainer .topContainer{
+    height:66px;
+    border-top:0px solid #fff;
+}
+
+.decimalInputContainer .inputField{
+    left:6px;
+    right: 112px;;
+    background-color:#ffffff;
+    border:2px solid #a0c0d1;
+    box-sizing:border-box;
+    height:50px;
+}
+
+.decimalInputContainer .input{
+    font-size:2em;
+    color:#000;
+    font-family:Bangers;
+    height:35px;
+    margin-left:6px;
+}
+
+.decimalInputContainer .saveContainer{
+    height:100%;
+    left:212px;
+    right:0px;
+
+}

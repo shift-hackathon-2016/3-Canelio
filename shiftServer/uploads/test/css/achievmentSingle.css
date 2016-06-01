@@ -1,0 +1,115 @@
+body, html{
+    background-color:#fff;
+    padding:0px;
+    margin:0px;
+}
+
+.clearfix{
+    clear: both;
+}
+
+
+
+.singleAchivment .width1080{
+    width:1080px;
+    margin:0px auto;
+}
+
+
+.singleAchivment{
+    padding: 20px 0px;
+}
+
+.singleAchivment .header{
+    display:inline;
+}
+
+.singleAchivment .header img{
+    float:left;
+}
+.singleAchivment .header .info{
+    float:left;
+    margin-left:30px;
+}
+
+.singleAchivment{
+    font-family: Bangers;
+    font-size:2em;
+    color:#444;
+}
+
+.singleAchivment .content{
+    margin-top: 40px;
+}
+.singleAchivment .content .picBigContainer{
+    float:left;
+    width:400px;
+}
+.singleAchivment .content .picBigContainer .picBig{
+    float:left;
+}
+
+.singleAchivment .content .info{
+    float:left;
+    width:600px;
+    text-align: center;
+}
+.singleAchivment .content .info .achivmentBadges img{
+    margin: 0px 5px;
+}
+
+.singleAchivment .content .info .achivmentTitle{
+    margin-top:30px;
+}
+
+.singleAchivment .content .info .statistics{
+    margin-top: 35px;
+    line-height: 55px;
+}
+
+.singleAchivment .content .info .trainedWith{
+    margin-top: 0px;
+}
+
+.singleAchivment .content .info .achivmentBadges{
+    margin-top:30px;
+} 
+
+.singleAchivment .content .info .schoolLogo{
+    margin-top:20px;
+}
+
+.singleAchivment .ledaerboardPosition{
+    margin-top:40px;
+}
+.singleAchivment .ledaerboardPosition span{
+    margin-left:20px;
+    line-height:110px;
+}
+
+.singleAchivment .ledaerboardPosition span, .singleAchivment .ledaerboardPosition img{
+    float:left;
+}
+
+.important{
+    color:#000;
+}
+
+
+
+
+@font-face {
+    font-family: "Bangers";
+    /*src: url("Bangers.ttf") format("opentype");*/
+    src: url('BebasNeue-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    src: url("Lato-Regular.ttf") format("opentype");
+}

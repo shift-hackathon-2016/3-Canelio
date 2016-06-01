@@ -1,0 +1,1056 @@
+//Copyright 2016, Tomislav Brlek, All rights reserved.
+
+#include "mbed.h"
+#include "ble/BLE.h"
+#include "GattService.h"
+#include "ble/GattServer.h"
+#include "ble/GattCharacteristic.h"
+
+#define LED_ON_TIME             1
+#define MAX_REPLY_LEN           (UARTService::BLE_UART_SERVICE_MAX_DATA_LEN)
+#define MAX_TRICKS              5
+#define MAX_CONNECTION_TIMEOUT  20
+#define TIME_LONG_FAIL          4
+#define TIME_LONG_NEXT          4
+
+#define CANELIO_SERVICE_UUID        0xC033
+#define CANELIO_CHARACTERISTIC_UUID 0xC034
+
+
+DigitalOut led1(P0_29);
+DigitalOut led2(P0_28);
+DigitalOut led3(P0_25);
+DigitalOut led4(P0_24);
+DigitalOut led5(P0_23);
+
+InterruptIn buttonSuccess(P0_1);
+InterruptIn buttonFail(P0_2);
+InterruptIn buttonNext(P0_3);
+InterruptIn buttonPrev(P0_4);
+InterruptIn buttonRead(P0_5);
+
+enum {
+    TRICK_1 = 1,
+    TRICK_2 = 2,
+    TRICK_3 = 3,
+    TRICK_4 = 4,
+    TRICK_5 = 5
+};
+
+int currentTrick = TRICK_1;
+int addressSave = 2;
+int lastAddressSent = 2;
+
+int lastHoursSaved = 0;
+int timeSeconds = 0;
+int timeMinutes = 0;
+int timeHours = 0;
+int bufferMinutes = 0;
+int bufferSeconds = 0;
+int dcCommandSent =  0;
+int totalAdressSent = 0;
+
+bool toAdvertise = false;
+int  ledAdvertLap = 0;
+
+bool insideSecond = false;
+bool recentTurnOn = false;
+bool canButtonBePressed = true;
+bool nextLongPress = false;
+int noButtBlinkCount = 0;
+
+int currentTrickAddressIncrement[MAX_TRICKS] = {0};
+bool currentTrickSaved[MAX_TRICKS] = {false};
+ 
+uint16_t uuid = CANELIO_SERVICE_UUID;
+ 
+int totalHourlySuccess[MAX_TRICKS] = {0};
+int totalHourlyFail[MAX_TRICKS] = {0};
+int totalHourly = 0;            //suma za trenutnu vrijednost tjekom spremanja
+int testStarted = 0;
+
+uint8_t buffer[20];
+uint16_t lastSentAddress = 2;
+uint8_t bufferS1[13];
+uint8_t bufferS2[16];
+
+static char           DEVICE_NAME[20]        = "Canelio";
+static const uint16_t uuid16_list[]        = {CANELIO_SERVICE_UUID};
+void startTest();
+
+Ticker timerLed;
+Ticker timerTime;
+Ticker connectionTime;
+Ticker failAdvert;
+Ticker advertTime;
+Ticker ledTimerAdvertise;
+Ticker nextHalt;
+Ticker noButt;
+Ticker oneSecPress;
+
+void ledAdvertise1();
+void blinkOffNoButton();
+
+//Serial pc(USBTX,USBRX);
+
+I2C i2c(P0_30, P0_7);
+
+BLE& ble = BLE::Instance(BLE::DEFAULT_INSTANCE);
+
+ReadWriteArrayGattCharacteristic<uint8_t, 20> canelioCharacteristic(CANELIO_CHARACTERISTIC_UUID, buffer, GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY | GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_WRITE_WITHOUT_RESPONSE);
+
+void turnOffLed(){
+    led1 = 0;
+    led2 = 0;
+    led3 = 0;
+    led4 = 0;
+    led5 = 0;   
+}
+
+void turnOnCurrentLed(){
+    switch(currentTrick){
+        case 1: 
+            led1 = 1;
+            break;    
+        case 2: 
+            led2 = 1;
+            break;
+        case 3: 
+            led3 = 1;
+            break;
+        case 4: 
+            led4 = 1;
+            break;
+        case 5: 
+            led5 = 1;
+            break;
+    }
+}
+
+void incTime(){
+    timeSeconds++;
+    if (timeSeconds >= 60){
+        timeSeconds = 0;
+        timeMinutes++;
+    }
+    if (timeMinutes >= 60){
+        timeMinutes = 0;
+        timeHours++;
+        //pc.printf("incerease hours \n\r");
+    }
+    if (timeHours > 2047) {
+        timeHours = 0;
+    }
+}
+
+void upTenHrs(){
+    timeHours += 10;
+    //pc.printf("10 hours to future\n\r");
+}
+
+void ledAdvertiseOFF(){
+    if (ledAdvertLap > 1){
+        led5 = 0;
+        ledTimerAdvertise.detach();
+        ledAdvertLap = 0;
+    } else {
+        led5 = 0;
+        ledAdvertLap++;
+        ledTimerAdvertise.detach();
+        ledAdvertise1();
+    }
+}
+
+void ledAdvertise5(){
+    led4=0;
+    led5 = 1;
+    ledTimerAdvertise.detach();
+    ledTimerAdvertise.attach_us(&ledAdvertiseOFF, 250000);
+}
+
+void ledAdvertise4(){
+    led3=0;
+    led4 = 1;
+    ledTimerAdvertise.detach();
+    ledTimerAdvertise.attach_us(&ledAdvertise5, 250000);
+}
+
+void ledAdvertise3(){
+    led2=0;
+    led3 = 1;
+    ledTimerAdvertise.detach();
+    ledTimerAdvertise.attach_us(&ledAdvertise4, 250000);
+}
+
+void ledAdvertise2(){
+    led1=0;
+    led2 = 1;
+    ledTimerAdvertise.detach();
+    ledTimerAdvertise.attach_us(&ledAdvertise3, 250000);
+}
+
+void ledAdvertise1(){
+    led1 = 1;
+    ledTimerAdvertise.attach_us(&ledAdvertise2, 250000);
+}
+
+void turnOnLed(){
+    //pc.printf("turning on led");
+    timerLed.attach(&turnOffLed, LED_ON_TIME);
+    
+    switch (currentTrick){
+        case TRICK_1:
+            led1 = 1;
+            led2 = 0;
+            led5 = 0;
+            break; 
+        case TRICK_2:
+            led2 = 1;
+            led3 = 0;
+            led1 = 0;
+            break;
+        case TRICK_3:
+            led3 = 1;
+            led4 = 0;
+            led2 = 0;
+            break;
+        case TRICK_4:
+            led4 = 1;
+            led5 = 0;
+            led3 = 0;
+            break;
+        case TRICK_5:
+            led5 = 1;
+            led1 = 0;
+            led4 = 0;
+            break;
+    }
+}
+
+void enableI2C(){
+    //pc.printf("i2c enabled\n\r");
+    NRF_TWI1->ENABLE = TWI_ENABLE_ENABLE_Enabled << TWI_ENABLE_ENABLE_Pos;
+    NRF_TWI0->ENABLE = TWI_ENABLE_ENABLE_Enabled << TWI_ENABLE_ENABLE_Pos;
+}
+
+void disableI2C(){
+    //pc.printf("i2c disabled\n\r");
+    NRF_TWI1->ENABLE = TWI_ENABLE_ENABLE_Disabled << TWI_ENABLE_ENABLE_Pos;
+    NRF_TWI0->ENABLE = TWI_ENABLE_ENABLE_Disabled << TWI_ENABLE_ENABLE_Pos;
+}
+
+void readEEPROM(){
+    int i = 0;
+    char tempBuffer;
+
+
+    enableI2C();
+
+    i2c.write(0xA0);
+    i2c.write(0x00);
+    i2c.write(0x02);
+    
+    for (i = 0; i < addressSave - 2; i++){
+        i2c.start();
+        i2c.write(0xA1);
+        tempBuffer = i2c.read(0);
+        i2c.stop();
+        if (i % 5 == 0){
+            // pc.printf("\n\r")
+            };
+        //pc.printf("%d, ", tempBuffer);
+    }
+    
+    disableI2C();
+    
+    addressSave = 2;
+    
+    for (i = 0; i < MAX_TRICKS; i++){
+        currentTrickAddressIncrement[i] = 0;
+        currentTrickSaved[i] = false;
+    }
+}
+
+void readEEPROMWihoutResetPointer(){
+    int i = 0;
+    int startAdress = 7;
+    int endAdress = 12;
+    int currentNumber;
+    
+    
+    addressSave = 32;
+
+    enableI2C();
+
+//start single read
+    
+    
+    i2c.start();
+    i2c.write(0xA0);
+    i2c.write(startAdress >> 8);
+    i2c.write(startAdress & 0xFF);
+    i2c.stop();
+    //pc.printf("reading bufffer-----------\n\r");
+    for(i= startAdress; i < endAdress ;i++){
+        i2c.start();
+        i2c.write(0xA1);
+        currentNumber = i2c.read(0);
+         i2c.stop();
+         //pc.printf("current number %d \n\r",currentNumber);
+    }
+//end single read
+/*
+    i2c.write(0xA0);
+    i2c.write(0x00);
+    i2c.write(0x02);
+    pc.printf("start--------\n\r");
+    
+    for (i = 0; i < addressSave - 2; i++){
+        i2c.start();
+        i2c.write(0xA1);
+        tempBuffer = i2c.read(0);
+        
+        i2c.stop();
+        singleTrick[i%5] = tempBuffer; 
+        if ((((i+1) % 5 )) == 0 && i != 0){
+            pc.printf("timesTrained:%d, ", (singleTrick[0 + 1] % 16) * 256 + singleTrick[0 + 2]);
+            pc.printf("\n\r");
+            pc.printf("timesSuccess:%d, ", singleTrick[0] * 256 + singleTrick[0+ 1] / 16);
+            pc.printf("\n\r");
+            pc.printf("trick_id:%d, ", singleTrick[0 + 3] / 8);
+            pc.printf("\n\r");
+            pc.printf("time:%d, ", ((singleTrick[0 + 3] % 8) * 256 + singleTrick[0 + 4]));
+            pc.printf("\n\r");
+            pc.printf("\n\r");
+        }
+        
+        
+    }
+    */
+/*
+            pc.printf("timesTrained:%d, ", (singleTrick[i + 1] % 16) * 256 + singleTrick[i + 2]);
+            pc.printf("\n\r");
+            pc.printf("timesSuccess:%d, ", singleTrick[i] * 256 + singleTrick[i + 1] / 16);
+            pc.printf("\n\r");
+            pc.printf("trick_id:%d, ", singleTrick[i + 3] / 8);
+            pc.printf("\n\r");
+            pc.printf("time:%d, ", ((singleTrick[i + 3] % 8) * 256 + singleTrick[i + 4]));
+            pc.printf("\n\r");
+            pc.printf("\n\r"); */
+    disableI2C();
+    
+
+    
+}
+
+void onPrevCallback(void){
+    //smanjuj brojac trenutnog trika ako je 1, tada je sljedeci trik 5    
+    if (currentTrick == TRICK_1) {
+        currentTrick = TRICK_5;
+    } else if (currentTrick > TRICK_1) {
+        currentTrick--;
+    }
+    turnOnLed();
+}
+
+void blinkOnNoButton(){
+    if (noButtBlinkCount < 5){
+        noButt.detach();
+        turnOnCurrentLed();
+        noButtBlinkCount++;
+        noButt.attach_us(&blinkOffNoButton, 200000);
+    } else {
+        noButtBlinkCount = 0;
+        noButt.detach();
+    }
+}
+
+void blinkOffNoButton(){
+    noButt.detach();
+    turnOffLed();
+    noButt.attach_us(&blinkOnNoButton, 200000);
+}
+
+void onNextRelease(){
+    //pc.printf("next clicked \n\r");
+    wait(0.01);
+    nextHalt.detach(); // detecha timer za gasenje/paljenje
+    //recentTurnOn kada se budi da ne radi next trick
+    if (!recentTurnOn){
+        
+        if (canButtonBePressed){
+            //pc.printf("next trick passed \n\r");
+            if (currentTrick < TRICK_5) {
+                currentTrick++;
+            } else if (currentTrick >= TRICK_5) {
+                currentTrick = TRICK_1;
+            }
+            turnOnLed();
+        }
+    }
+    recentTurnOn = false;
+}
+
+void toggleNoPress(){
+    //pc.printf("toggled turn on turn off \n\r");
+    //pc.printf("canButtonBePressed %d\n\r ",canButtonBePressed);
+    blinkOnNoButton();
+    canButtonBePressed = !canButtonBePressed;
+    if (canButtonBePressed){
+        recentTurnOn = true;
+    }
+    nextHalt.detach();
+}
+
+void onNextCallback(void){
+    wait(0.003);
+    nextHalt.attach(&toggleNoPress, TIME_LONG_NEXT);
+}
+
+void write1ByteInEEEPROM(int adress,int data){
+    char dataToSend[3];
+
+    i2c.start();
+    dataToSend[0] = adress >> 8;     // MSB address
+    dataToSend[1] = adress & 0xFF;     // LSB address
+    dataToSend[2] = data; // data
+    if(i2c.write(0xA0, dataToSend, 3)) {
+        //pc.printf("Write failed\n");
+    }
+    while(i2c.write(0xA0, NULL, 0)){
+        //pc.printf("Check Failed\n");    
+    }; // wait to complete
+    i2c.stop();
+
+    
+}
+
+
+
+void saveInEEPROM(int total,int success,int trick,int hour,int startAdress,int totalAdress){
+        
+        //set pointer
+        
+        //pc.printf("\n\rsaving in EEPROM-------- \n\r");
+        
+        
+        //pc.printf("total %d\n\r",total);
+        //pc.printf("success %d\n\r",success);
+        //pc.printf("trick %d\n\r",trick);
+        //pc.printf("hour %d\n\r",hour);
+        //pc.printf("startAdress %d\n\r",startAdress);
+        //pc.printf("totalAdress %d\n\r",totalAdress);
+        //pc.printf("\n\r\n\r");
+        enableI2C();
+
+        
+        //start
+
+        
+        // write sucess in 2 bytes
+        write1ByteInEEEPROM(startAdress ,success & 0xFF);                    
+        startAdress++;
+        
+        write1ByteInEEEPROM(startAdress ,(success >> 8) & 0xFF);                    
+        startAdress++;
+        
+        // write total in 2 bytes
+        write1ByteInEEEPROM(startAdress ,total & 0xFF);                    
+        startAdress++;
+        
+        write1ByteInEEEPROM(startAdress ,(total >> 8) & 0xFF);                    
+        startAdress++;      
+     
+         // write hours in 2 bytes
+        write1ByteInEEEPROM(startAdress ,hour & 0xFF);                    
+        startAdress++;
+        
+        write1ByteInEEEPROM(startAdress ,(hour >> 8) & 0xFF);                    
+        startAdress++;    
+   
+        // write trick_id in 1 bytes
+        write1ByteInEEEPROM(startAdress ,trick & 0xFF);                    
+        startAdress++;
+            
+        
+      
+        
+        write1ByteInEEEPROM(0,(totalAdress >> 8));
+        startAdress++;
+        
+        write1ByteInEEEPROM(0,(totalAdress & 0xFF));
+        startAdress++;
+        
+        
+        disableI2C();
+        
+}
+
+
+
+
+void saveData(int trickCase){
+    //pc.printf("data start save \n\r");
+    if (addressSave > 31000){
+        addressSave = 2;
+    }
+    
+    
+    int i = 0;
+    
+
+    
+    
+    if (lastHoursSaved != timeHours) {
+        for (i = 0; i < MAX_TRICKS; i++){
+                currentTrickSaved[i] = false;
+            }
+    }
+    //
+    if ((lastHoursSaved != timeHours) || (!currentTrickSaved[currentTrick - 1])) {
+    
+        totalHourlySuccess[currentTrick - 1] = 0;
+        totalHourlyFail[currentTrick - 1] = 0;
+        
+        currentTrickAddressIncrement[currentTrick - 1] = addressSave;
+        currentTrickSaved[currentTrick - 1] = true;      //save to know that a trick is saved allready in this hour
+        
+        //0 prvi bajt
+                        
+        if (trickCase == 1) {            
+        
+            totalHourlySuccess[currentTrick - 1]++;
+            totalHourlyFail[currentTrick - 1] = 0;
+            
+            
+        } else if (trickCase == 0){
+
+            totalHourlySuccess[currentTrick - 1] = 0;
+            totalHourlyFail[currentTrick - 1]++;
+
+            
+        }
+        
+        
+        
+        saveInEEPROM(1,trickCase,currentTrick,timeHours,addressSave,addressSave + 7);
+        addressSave += 7;
+        
+    
+    } else {   //lastHourSaved == timeHours
+        if (!trickCase){
+            totalHourlyFail[currentTrick - 1]++;
+            totalHourly = totalHourlySuccess[currentTrick - 1] + totalHourlyFail[currentTrick - 1];
+            
+            
+            
+            saveInEEPROM(totalHourly,totalHourlySuccess[currentTrick - 1],currentTrick,timeHours,currentTrickAddressIncrement[currentTrick - 1],addressSave);
+            
+        } else {
+            totalHourlySuccess[currentTrick - 1]++;
+            totalHourly = totalHourlySuccess[currentTrick - 1] + totalHourlyFail[currentTrick - 1];
+            
+            saveInEEPROM(totalHourly,totalHourlySuccess[currentTrick - 1],currentTrick,timeHours,currentTrickAddressIncrement[currentTrick - 1],addressSave);
+            
+        }
+    }    
+    lastHoursSaved = timeHours;
+    //pc.printf("data end save \n\r");
+}
+
+
+
+
+
+int updateBuffer(){
+    //last field is for length
+    int i = 0;
+    int j = 0;
+    
+    enableI2C();
+    
+    
+    i2c.start();
+    i2c.write(0xA0);
+    i2c.write(lastAddressSent >> 8);
+    i2c.write(lastAddressSent & 0xFF);
+    i2c.stop();
+    
+    //pc.printf("updating bufffer-----------\n\r");
+    //pc.printf("lastAddressSent: %d \n\r",lastAddressSent);
+    //pc.printf("addressSave: %d \n\r",addressSave); 
+    
+    for (i = 0; (i < 14) && ((i+1+lastAddressSent) <= addressSave) ; i++){
+        //pc.printf("%d,\n\r", i);
+        i2c.start();
+        i2c.write(0xA1);
+        buffer[i] = i2c.read(0);
+         i2c.stop();
+        wait(0.01);
+    }
+
+   
+    
+    //pc.printf("\n\r");
+    
+    
+    disableI2C();
+    
+    lastAddressSent += 14;
+    //when there are 20 bytes it goes another circle
+    if(i>14){
+        i = 14;
+    }
+    return i;
+}
+
+void sendTotal(){
+    int size;
+    uint8_t buffertotal[20];
+    
+    ble_error_t didSendValue = BLE_ERROR_NONE;
+    size = (addressSave-2)/7;
+    
+    buffertotal[0] = size >> 8;
+    buffertotal[1] = size & 0xFF;
+    //pc.printf("seniding total number of adresses %d\n\r",size);
+    //pc.printf("%d\n\r",buffertotal[0]);
+    //pc.printf("%d\n\r",buffertotal[0]);
+ 
+    didSendValue = ble.gattServer().write(canelioCharacteristic.getValueHandle(), buffertotal, 2);
+    if(didSendValue == BLE_ERROR_NONE){
+        totalAdressSent = 1;
+    }         
+    
+}
+
+
+
+
+void sendData(){
+    int size;
+    ble_error_t didSendValue = BLE_ERROR_NONE;
+ 
+    size = updateBuffer();
+    //pc.printf("size of buffer");
+    //pc.printf("%d\n\r",size);
+    didSendValue = ble.gattServer().write(canelioCharacteristic.getValueHandle(), buffer, size);
+    if(didSendValue != BLE_ERROR_NONE){
+        lastAddressSent -= 20;
+    }         
+    
+}
+
+
+void sendDiscconnectCommandToMobile(){
+    uint8_t buffer[5];
+    int j;
+    //pc.printf("sending dc\n\r");
+    ble_error_t didSendValue = BLE_ERROR_NONE;
+    
+    for (j = 0; j < 5; j++){
+        buffer[j] = 0;
+    }
+    
+    didSendValue = ble.gattServer().write(canelioCharacteristic.getValueHandle(), buffer, sizeof(buffer));
+    if(didSendValue == BLE_ERROR_NONE){
+        dcCommandSent = 1;
+        //pc.printf("dc success\n\r");
+    };
+}
+
+void onSent(unsigned count){
+    if(totalAdressSent){
+        if (lastAddressSent < addressSave) {
+            sendData();
+        }else{
+            if(dcCommandSent != 1){
+                sendDiscconnectCommandToMobile();
+            } 
+        }        
+    }else{
+        sendTotal();
+    }
+ 
+}
+
+void sendTime(){
+    uint8_t timeBuffer[20];
+    ble_error_t didSendValue = BLE_ERROR_NONE;
+    
+    while (true){
+        
+        timeBuffer[0] = timeHours >> 8;
+        timeBuffer[1] = timeHours & 0xFF;
+        timeBuffer[2] = timeMinutes;
+        timeBuffer[3] = timeSeconds;
+        
+        didSendValue = ble.gattServer().write(canelioCharacteristic.getValueHandle(), timeBuffer, sizeof(timeBuffer));
+       
+        if (didSendValue != BLE_ERROR_NONE){
+            break;
+        }
+    }
+}
+
+void waitBounce(){
+    wait(0.02);
+}
+
+void stopAdvert(){
+    //pc.printf("stop advertising \n\r");
+    ble.gap().stopAdvertising();
+    advertTime.detach();
+}
+
+void toggleOneSecondPress(){
+    insideSecond = false;
+    oneSecPress.detach();
+}
+
+void failReleaseCallback(){
+    //pc.printf("fail Clicked \n\r");
+    wait(0.01);
+    failAdvert.detach();
+    if (!toAdvertise){
+        if (canButtonBePressed){
+            if (!insideSecond){
+                //pc.printf("fail Passed \n\r");
+                turnOnLed();
+                insideSecond = true;
+                oneSecPress.attach(&toggleOneSecondPress, 1);
+                saveData((int)0);
+               
+                
+            }
+        }
+    }
+    toAdvertise = false;
+}
+
+//togela advertisment
+void toggleFailOrAdvert(){
+    //pc.printf("start advertising \n\r");
+    toAdvertise = true;
+    failAdvert.detach();
+    ledAdvertise1(); 
+    ble.gap().startAdvertising();
+    advertTime.attach(&stopAdvert, 50);
+}
+
+void onSuccessCallback(void){
+    //zapisi vrijeme successa u eeprom
+    //upali ledicu trenutnog trika
+    //pc.printf("Success clicked \n\r");
+    if (canButtonBePressed){
+        if (!insideSecond){
+            //pc.printf("Success Passed \n\r");
+            turnOnLed();
+            oneSecPress.attach(&toggleOneSecondPress, 1);
+            insideSecond = true;
+            saveData((int)1);
+            
+            
+        }
+    }
+}
+
+void onFailCallback(void){
+    wait(0.003);
+    failAdvert.attach(&toggleFailOrAdvert, TIME_LONG_FAIL);
+}
+
+void initAddress(){
+    int hb, lb, i;
+    
+    enableI2C();
+    
+    i2c.start();
+    i2c.write(0xA0);
+    i2c.write(0x00);
+    i2c.write(0x00);
+    i2c.stop();
+    
+    i2c.start();
+    i2c.write(0xA1);
+    hb = i2c.read(0);
+    i2c.stop();
+
+    wait(0.001);
+
+    i2c.start();
+    i2c.write(0xA1);
+    lb = i2c.read(0);
+    i2c.stop();
+    
+    addressSave = (hb << 8) | lb;
+    addressSave = 2;
+    
+    i2c.write(0xA0);
+    i2c.write(0x7F);
+    i2c.write(0xE2);
+    
+    for (i = 0; i < 13; i++){
+        i2c.start();
+        i2c.write(0xA1);
+
+        bufferS1[i] = i2c.read(0);
+        //pc.printf("%c",bufferS1[i]);
+        //pc.printf("\n\r");
+        DEVICE_NAME[i + 7] = bufferS1[i];
+        i2c.stop();
+    }
+
+    for (i = 0; i < 16; i++){
+        i2c.start();
+        i2c.write(0xA1);
+        bufferS2[i] = i2c.read(0);
+        //pc.printf("%c",bufferS2[i]);
+        //pc.printf("\n\r");
+        i2c.stop();
+    }
+    
+    disableI2C();
+    
+}
+
+void fillFakeData(){
+    
+    int i, j;
+    led1 = 1;
+    for (i = 0; i < 20; i++){
+        
+        for (j = 0; j < 5; j++){
+        
+            saveData(1);
+            saveData(1);
+            saveData(0);
+            saveData(0);
+            
+            if (currentTrick < TRICK_5) {
+                currentTrick++;
+            } else if (currentTrick == TRICK_5) {
+                currentTrick = TRICK_1;
+            }
+
+        }
+
+        timeHours++;
+    }
+    led1 = 0;
+}
+
+void onDataWritten(const GattWriteCallbackParams *context){
+    int a = 0;
+    bool trueSend = true;
+    
+    for (a = 0; a < 20; a++){
+        buffer[a] = context->data[a];
+    }
+    
+    connectionTime.detach();
+    
+    for (a = 0; a < 16; a++){
+        if (bufferS2[a] != buffer[a]){
+            ble.disconnect(Gap::LOCAL_HOST_TERMINATED_CONNECTION);
+            trueSend = false;
+        }
+    }
+    if(trueSend){
+        bufferMinutes = buffer[16];
+        bufferSeconds = buffer[17];
+        //if (buffer[18] == 1){
+         //   sendTime();
+        //} else if (buffer[18] == 0){
+            sendTotal(); 
+        //}
+    }
+    
+}
+
+void connectionTimeout(){
+    connectionTime.detach();
+    ble.disconnect(Gap::LOCAL_HOST_TERMINATED_CONNECTION);
+}
+
+void connectionCallback(const Gap::ConnectionCallbackParams_t *params) {
+    connectionTime.attach(&connectionTimeout, MAX_CONNECTION_TIMEOUT);
+}
+
+void disconnectionCallback(const Gap::DisconnectionCallbackParams_t *params)
+{
+    int i = 0;
+    totalAdressSent = 0;
+    //pc.printf("disconnect-------------------------\n\r");
+    //pc.printf("lastAddressSent %d \n\r", lastAddressSent);
+    //pc.printf("addressSave %d \n\r", addressSave);
+    if (dcCommandSent){
+        //pc.printf("disconnected ok resetting adress \n\r");
+        dcCommandSent = 0;
+        addressSave = 2;
+
+        for (i = 0; i < MAX_TRICKS; i++){
+            currentTrickAddressIncrement[i] = 0;
+            currentTrickSaved[i] = false;
+        }
+        lastHoursSaved = 0;
+        
+        
+        timeMinutes = bufferMinutes;
+        timeSeconds = bufferSeconds;
+        timeHours = 0;
+        
+        enableI2C();
+        
+        i2c.start();
+        i2c.write(0xA0);
+        i2c.write(0);
+        i2c.write(0);
+        i2c.write(0);
+        i2c.stop();      
+        
+        wait(0.005);
+        
+        i2c.start();
+        i2c.write(0xA0);
+        i2c.write(0);
+        i2c.write(1);
+        i2c.write(2);
+        i2c.stop(); 
+        
+        disableI2C();
+        
+        ble.gap().stopAdvertising();
+    }
+    lastAddressSent = 2;
+}
+
+void bleInitComplete(BLE::InitializationCompleteCallbackContext *params)
+{
+    BLE &ble          = params->ble;
+    ble_error_t error = params->error;
+
+    if (error != BLE_ERROR_NONE) {
+        return;
+    }
+
+    ble.gap().onDisconnection(disconnectionCallback);
+    ble.gap().onConnection(connectionCallback);
+    ble.gattServer().onDataSent(onSent);
+    ble.gattServer().onDataWritten(onDataWritten);
+
+    /* Setup auxiliary service. */   
+
+    /* Setup advertising. */
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::BREDR_NOT_SUPPORTED | GapAdvertisingData::LE_GENERAL_DISCOVERABLE);
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS, (uint8_t *)uuid16_list, sizeof(uuid16_list));
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LOCAL_NAME, (uint8_t *)DEVICE_NAME, sizeof(DEVICE_NAME));
+    ble.gap().setAdvertisingType(GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED);
+    ble.gap().setAdvertisingInterval(10); /* 1000ms */
+    //ble.gap().startAdvertising();
+}
+
+void testConversion(){
+    uint8_t buffer[2];
+    int i;
+    int total;
+    int success;
+    int hour;
+    int trick;
+    //pc.printf("%d \n\r",0x7FE0);
+    for(i = 0; i < 65535 ;i++){
+       buffer[0]= i & 0xFF;
+       buffer[1]= (i >> 8) & 0xFF;
+       total = buffer[0] + buffer[1] *256 ;
+       if(i != total){
+            //pc.printf("%d  %d \n\r",total);
+        }
+        if(i%1000 == 0){
+            //pc.printf("i passed:%d \n\r",i);
+        }
+    }
+    //pc.printf("done");
+}
+
+void startTest(){
+    int i = 0;
+    int j = 0;
+    int b = 0;
+
+    
+    for(i= 0; i < 2;i++){
+         currentTrick = 1;
+         //pc.printf("%d\n\r",i);
+         for(j= 0 ; j < 3;j++){
+            saveData(1);
+            wait(0.01);
+            totalHourlySuccess[currentTrick - 1] = 1600;
+            totalHourlyFail[currentTrick - 1] = 600;
+            saveData(1);
+            wait(0.01);
+            saveData(1);
+            wait(0.01);
+            saveData(0);
+            wait(0.01);
+            currentTrick++;
+            
+        }
+
+        timeHours++;
+        currentTrick = 1;
+    }
+    //pc.printf("done \n\r");
+           
+    //readEEPROMWihoutResetPointer();
+}
+
+
+
+int main(void)
+{    
+    turnOffLed();
+    
+    
+    buttonSuccess.mode(PullUp);
+    buttonFail.mode(PullUp);
+    buttonNext.mode(PullUp);
+    buttonPrev.mode(PullUp);
+    buttonRead.mode(PullUp);
+
+    buttonSuccess.fall(&onSuccessCallback);
+    buttonFail.fall(&onFailCallback);
+    buttonNext.fall(&onNextCallback);
+    buttonPrev.fall(&startTest); // gumb 4 funkcija
+    buttonRead.fall(&readEEPROM);
+
+    buttonSuccess.rise(&waitBounce);
+    buttonFail.rise(&failReleaseCallback);
+    buttonNext.rise(&onNextRelease);
+    buttonPrev.rise(&waitBounce);
+    buttonRead.rise(&waitBounce);
+    
+    
+    i2c.frequency(100000);
+    wait(2);
+    initAddress();
+    
+
+    disableI2C();
+
+    ble.init(bleInitComplete);
+
+    GattCharacteristic *charTable[] = {&canelioCharacteristic};
+    GattService canelioService(CANELIO_SERVICE_UUID, charTable, sizeof(charTable) / sizeof(GattCharacteristic *));
+    ble.addService(canelioService);
+
+    timerTime.attach(&incTime, 1);
+    
+    
+
+
+    while (true) {
+   
+        ble.waitForEvent();
+    }
+
+}

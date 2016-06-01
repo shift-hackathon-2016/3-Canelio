@@ -1,0 +1,30 @@
+/*custome dates pick*/
+.imitateViewTransition.ng-hide-remove, .imitateViewTransition.ng-hide-add{
+    -webkit-transition:all ease-in-out 0.6s;
+    transition:all ease-in-out 0.6s;
+    position:absolute;
+    top:0;
+}
+
+.imitateViewTransition.ng-hide-remove {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+.imitateViewTransition.ng-hide-remove.ng-hide-remove-active{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+.imitateViewTransition.ng-hide-add{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+
+}
+.imitateViewTransition.ng-hide-add.ng-hide-add-active {
+        transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+}
+
+.imitateViewTransition.ng-hide-remove .step3MultipleBags, .imitateViewTransition.ng-hide-add .step3MultipleBags {
+    position:absolute!important;
+    top:0!important;
+}

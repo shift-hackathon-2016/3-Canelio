@@ -1,0 +1,13 @@
+{
+    "name": "Come",
+    "tricks": [
+        {
+            "id": "1",
+            "name": "Close Distance"
+        },
+        {
+            "id": "2",
+            "name": "Command"
+        }
+    ]
+}

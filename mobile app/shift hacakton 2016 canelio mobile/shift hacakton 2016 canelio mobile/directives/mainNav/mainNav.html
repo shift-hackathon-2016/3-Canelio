@@ -1,0 +1,32 @@
+<div>
+    <div id="navBar">
+        <a ng-click="navigateBack()">
+            <div class="navBackArrowContainer">
+                <img src="res/backArrowWhite.jpg" class="navBackArrow" />
+            </div>
+            <h1>{{title}}</h1>
+        </a>
+        <div class="searchContainer" ng-show="mainNavShowSearch">
+            <img src="res/search.jpg" class="searchIcon" />
+        </div>
+        <!--<div class="menuContainer" >
+            <img src="res/menu.jpg" />
+        </div>-->
+        <div class="calendarContainer" ng-show="mainNav_delete_show" ng-click="mainNav_delete_click()">
+            <img src="res/deleteWhite.png" class="calendarIcon" />
+        </div>
+        <div class="calendarContainer" ng-show="mainNav_datePicker_show" ng-click="mainNav_datePicker_click()">
+            <img src="res/calendarWhite.png" class="calendarIcon" />
+        </div>
+        <div class="settingsContainer calendarContainer" ng-show="mainNav_statistic_show" ng-click="mainNav_statistic_click()">
+            <img src="res/navBarStatisticsWhite.png" class="statisticsIcon" />
+        </div>
+        <div class="settingsContainer calendarContainer" ng-show="mainNav_settings_show" ng-click="mainNav_settings_click()">
+            <img src="res/settingsWhite.png" class="calendarIcon" />
+        </div>
+        <div class="settingsContainer calendarContainer" ng-show="mainNav_history_show" ng-click="mainNav_history_click()">
+            <img src="res/historyWhite.png" class="cameraIcon" />
+        </div>
+    </div>
+    <div id="navBarSpaceFiller"></div>
+</div>

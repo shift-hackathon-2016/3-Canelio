@@ -1,0 +1,27 @@
+.slideFadeInFromBottomOut.ng-hide-remove, .slideFadeInFromBottomOut.ng-hide-add{
+    -webkit-transition:all ease-in-out 0.6s;
+    transition:all ease-in-out 0.6s;
+}
+
+.slideFadeInFromBottomOut.ng-hide-remove {
+    opacity:0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+
+}
+.slideFadeInFromBottomOut.ng-hide-remove.ng-hide-remove-active{
+    opacity:1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    
+}
+.slideFadeInFromBottomOut.ng-hide-add{
+    opacity:1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+.slideFadeInFromBottomOut.ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+}

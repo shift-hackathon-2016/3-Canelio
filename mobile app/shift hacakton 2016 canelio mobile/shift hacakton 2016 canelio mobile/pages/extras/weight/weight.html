@@ -1,0 +1,52 @@
+<main-nav></main-nav>
+
+<style>
+    .d3Chart {
+        font: 10px sans-serif;
+    }
+
+        .d3Chart .x text {
+            font-size: 1.3em;
+        }
+
+        .d3Chart .axis path,
+        .d3Chart .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+        .d3Chart .y line {
+            stroke: #bbb;
+            stroke-width: 1;
+        }
+
+        .d3Chart .area {
+            fill: #134787;
+            fill-opacity: 0.8;
+
+        }
+
+        .d3Chart .areaLine {
+            stroke: #062244;
+            stroke-width: 2;
+        }
+
+    #wieghtChart .y text, #wieghtChart .yNumbers text {
+        font-family: Bangers;
+        font-size: 1.5em;
+    }
+</style>
+<br />
+<br />
+<div ng-click="promjenaDate()">
+    moje
+</div>
+<br />
+<br />
+
+<div id="wieghtChart" class="d3Chart">
+</div>
+
+
+

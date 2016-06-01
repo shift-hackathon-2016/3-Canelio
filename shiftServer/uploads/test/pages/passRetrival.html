@@ -1,0 +1,32 @@
+<div ng-show="step == 2" class="singleAchivementContainer wrap960">
+        <div class="centerText">
+            Password reset you can now login to app
+        </div>
+</div>
+
+<div ng-show="step != 2" class="singleAchivementContainer wrap960">
+    
+    <form ng-submit="changePassword()">
+        <div class="standardForm">
+            <div class="centerText">
+            Please input new password
+            <input type="password" placeholder="New Password" ng-model="p1"/>
+            </div >
+            <div class="centerText">
+            Retype new password
+            <input type="password" placeholder="Retype new password" ng-model="p2"/>
+            </div>
+            <div class="abosluteCenter">
+                <button type="submit" class="submitButton" ng-model="email"> Submit</button>
+            </div>
+        </div>
+    </form>
+        
+
+    
+
+</div>
+
+<standard-footer ng-hide="loading"></standard-footer>
+
+

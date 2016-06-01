@@ -1,0 +1,17 @@
+<main-nav></main-nav>
+
+<div ng-show="loading" class="absoluteCenter" style="height:200px;">
+    <img src="res/walking-dog.gif" class="loadingImg margin0Auto" />
+    <div class="centeredBigMessage">Loading...</div>
+</div>
+<div ng-hide="loading">
+    <div class="facebookShareContainer facebookShareBlank">
+        <div class="trickTrainButton" ng-click="fbShare();"><img src="res/facebook.png" />Facebook</div>
+        <br/>
+        <div class="trickTrainButton twitterShareButton" ng-click="twtShare();"><img src="res/twitter.png" />Twitter</div>
+        <br />
+        <div class="trickTrainButton whatsappShareButton" ng-click="whatsappShare();"><img src="res/whatsapp.png" />WhatsApp</div>
+        <br />
+        <div class="trickTrainButton instagramShareButton" ng-click="shareOther();">Other</div>
+    </div>
+</div>

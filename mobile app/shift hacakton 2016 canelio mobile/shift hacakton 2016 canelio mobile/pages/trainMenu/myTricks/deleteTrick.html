@@ -1,0 +1,16 @@
+<div class="deleteTrickContainer absoluteCenter">
+    <div class="noAchivemntsMessage deleteTrickQuestion">
+        Are you sure you want to delete this trick?
+    </div>
+    <div class="historyList deleteTrickTrickName">
+        <div class="menuLink">
+            {{trickName}}
+        </div>
+    </div>
+    <div class="relativeContainer deleteTrickAnswerContainer">
+        <div id="simpleTrainTrainContainer" class="trainContainer">
+            <div class="trainSuccess" ng-click="deleteCancel()">Cancel</div>
+            <div class="trainSuccess trainFail" ng-click="deleteTrick()">Delete</div>
+        </div>
+    </div>
+</div>

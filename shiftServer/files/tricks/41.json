@@ -1,0 +1,13 @@
+{"name":"Come",
+"training":"1",
+"video":"matej.MP4",
+"handSignal":"handSignals/1.png",
+"steps":[
+	{"name":"Positioning","text":"Reinforce your dog for coming to you! Start by kneeling a few feet away and making happy noises"},
+	{"name":"Clicking","text":"Click when the pup takes her first step toward you and give her a yummy treat when she gets to you"},
+	{"name":"Repetition","text":"Run a few feet away and repeat the process. Make it a fun game!"},
+	{"name":"Collar grab","text":"When you call your dog take hold of her collar before you deliver treat. There is no use of recall if you can't catch her."},
+	{"name":"Cue","text":"When she's coming to you reliably, start using your cue. For example 'here Luna'"},
+	{"name":"Generalization","text":"Try calling her in different enviroments and different settings, so she is prepared for everything"},	
+	{"name":"Don't do","text":"Calling a young puppy from across the yard when she is exploring a new, interesting scent is setting yourself and your pup up to fail."},
+	{"name":"What to do","text":"Walk to within a few feet, kneel down, and call her from there and make sure to reinforce her for abandoning the distraction with something even better."}]}

@@ -1,0 +1,10 @@
+{"name":"Shake Hands",
+"training":"1",
+"video":"matej.MP4",
+"handSignal":"handSignals/1.png",
+"steps":[
+	{"name":"Preparation","text":"Position yourself in front of the dog and have him sit"},
+	{"name":"Lure","text":"Hold treat in front of his nose but don't let him have it. Keep him interested for food but dont't allow him to take it with his head. Dogs will try to take food with is head but if they can't only thing thats left is to try to take it using paws. Wait for slightest foot movement. Once he moves his foot just a little bit click and reward him."},
+	{"name":"Your hand","text":"Once he starts consistently moving his foot, keep your open hand in front of him and be ready to catch his paw."},
+	{"name":"Improvement","text":"Gradually keep asking him to have paw higher and higher. Reward only when you are happy. Always be ready to go step back and improve based on that if current expectations arent working."},
+	{"name":"Cue","text":"When you have mastered the behaviour start introducing Cue. For example 'Fido shake hands'"}]}

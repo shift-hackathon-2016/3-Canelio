@@ -1,0 +1,88 @@
+#navBarSpaceFiller{
+    height:48px;
+    width:100%;
+}
+#navBar{
+    box-sizing: border-box;
+    background-clip: border-box;
+    height: 48px;
+    padding-top: 5px;
+    padding-right: 5px;
+    background-color: #062244;
+    width: 100%;
+    position:fixed;
+}
+h1{
+    float:left;
+    display:inline-block;
+    font-family: 'Bangers', cursive;
+    color:  white;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 7px;
+    font-weight: 400;
+    font-size: 24px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    padding-right: 10px;
+}
+.navBackArrowContainer{
+     float:left;
+    height: 100%;
+    width: 30px;
+}
+.navBackArrow{
+     float:left;
+    height: 20px;
+    width: 24px;
+    margin-top: 9px;
+    margin-left: 8px;
+}
+
+.navLogo{
+     float:left;
+    vertical-align: middle;
+    padding-left: 5px;
+    width: 39px;
+    height: 35px;
+}
+
+.searchContainer{
+     float:right;
+    flex-shrink:0;
+    width: 35px;
+    height: 100%;
+    padding-top: 7px;
+    box-sizing: border-box;
+}
+
+.menuContainer{
+    float:right;
+    box-sizing:  border-box;
+    padding-top: 7px;
+    margin-left: 10px;
+    width: 35px;
+    height: 100%;
+}
+
+.calendarContainer{
+    float:right;
+    text-align:center;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:7px;
+}
+
+.calendarIcon{
+    width: 31px;
+    margin-top: -3px;
+}
+.cameraIcon{
+    width: 38px;
+    margin-top: -6px;
+}
+
+.statisticsIcon{
+    width: 36px;
+    margin-top: 0px;
+}

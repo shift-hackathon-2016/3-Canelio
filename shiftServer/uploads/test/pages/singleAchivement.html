@@ -1,0 +1,55 @@
+<meta property="og:url"                content="http://www.exoplace.com/uploads/test/#/achivement/{{achievmenetID}}" />
+<meta property="og:type"                content="article" />
+<meta property="og:title"              content="Me and {{dogName}} have learned a trick" />
+<meta property="og:description"        content="We have learened trick {{trickName}} on canelio" />
+<meta property="og:image"              content="{{trickPic}}" />
+
+<div ng-show="loading" class="loadingContainer absoluteCenter">
+        <img src="res/walking-dog.gif" class="loadingImg" />
+        <div class="noAchivemntsMessage loadingMessage">
+            Loading achievement
+        </div>
+</div>
+<section class="singleAchivment" ng-hide="loading">
+    <div class="width1080 ">
+        <div class="header">
+            <img ng-src="{{dogPic}}"/>
+            <div class="info">
+                <div class="name">level {{level}}, <span class="important">{{dogName}}</span></div>
+                <div class="learned">has learned trick <span class="important">{{trickName}}</span></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="width1080 content">
+            <div class="picBigContainer">
+                <img id="trickPic"  class="picBig"/>
+            </div>
+
+            <div class="info">
+                <div class="trainedWith important">
+                    Trained with
+                </div>
+                <img src="res/vindor.png" class="schoolLogo"/>
+                <div class="achivmentBadges">
+                    <img src="res/badge1Blue.png" ng-src="{{trophy1}}"/>
+                    <img src="res/badge2Blue.png" ng-src="{{trophy2}}"/>
+                    <img src="res/badge3Blue.png" ng-src="{{trophy3}}"/>
+                    <img src="res/badge4Blue.png" ng-src="{{trophy4}}"/>
+                </div>
+                <div class="important achivmentTitle">
+                    {{dogName}} is {{trickTitle}}
+                </div>
+                <div class="statistics">
+                    <div> Time took to master behavior: {{daysTrained}} days </div>
+                    <div> By doing this behavior {{dogName}} won: {{pointsWon}} points </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</section>
+
+<standard-footer ng-hide="loading"></standard-footer>
+
+

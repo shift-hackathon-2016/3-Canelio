@@ -1,0 +1,132 @@
+<div class="dogButtonContainer" ng-click="goToSettings()">
+    <div id="wrapper">
+        <div id="scroller">
+            <ul>
+                <li ng-style="getLiWidth()" id="Lena">
+                    <div class="dogButton relativeContainer">
+                        <div class="dogPic">
+                            <div class="relativeContainer">
+                                <img class="pic" src="res/temp/singleAchievmentPhoto.png">
+                                </img>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <div class="name"> Lena</div>
+                            <div class="pointsContainer">
+                                <div class="relativeContainer">
+
+                                    <div class="pointsText">
+                                        325 points to lvl <span class="level">999</span>
+                                    </div>
+                                    <div class="progressBarContainer">
+                                        <div class="greyProgressBar absoluteVerticalCenter">
+                                        </div>
+                                        <div class="greyProgressBar darkBlueProgressBar absoluteVerticalCenter" ng-style="widthSuccessBar()" style="width: 50%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li ng-style="getLiWidth()">
+                    <div class="dogButton relativeContainer">
+                        <div class="dogPic">
+                            <div class="relativeContainer">
+                                <img class="pic" src="res/temp/singleAchievmentPhoto.png">
+                                </img>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <div class="name"> Fido</div>
+                            <div class="pointsContainer">
+                                <div class="relativeContainer">
+
+                                    <div class="pointsText">
+                                        325 points to lvl <span class="level">999</span>
+                                    </div>
+                                    <div class="progressBarContainer">
+                                        <div class="greyProgressBar absoluteVerticalCenter">
+                                        </div>
+                                        <div class="greyProgressBar darkBlueProgressBar absoluteVerticalCenter" ng-style="widthSuccessBar()" style="width: 50%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li ng-style="getLiWidth()">
+                    <div class="dogButton relativeContainer">
+                        <div class="dogPic">
+                            <div class="relativeContainer">
+                                <img class="pic" src="res/temp/singleAchievmentPhoto.png">
+                                </img>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <div class="name"> Mirko</div>
+                            <div class="pointsContainer">
+                                <div class="relativeContainer">
+
+                                    <div class="pointsText">
+                                        325 points to lvl <span class="level">999</span>
+                                    </div>
+                                    <div class="progressBarContainer">
+                                        <div class="greyProgressBar absoluteVerticalCenter">
+                                        </div>
+                                        <div class="greyProgressBar darkBlueProgressBar absoluteVerticalCenter" ng-style="widthSuccessBar()" style="width: 50%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="dailyPorgressButton">
+    <div class="progressBar"></div>
+    <div class="percentage">
+        43%
+    </div>
+    <div class="percentage explanation">
+        daily
+    </div>
+    <img src="res/mainMenuProgressArrow.png" class="arrow" />
+    <div class="reps">
+        156 reps
+    </div>
+</div>
+<div  class="dailyPorgressButton  weeklyProgressBar">
+    <div class="progressBar"></div>
+    <div class="percentage">
+        97%
+    </div>
+    <div class="percentage explanation">
+        weekly
+    </div>
+    <img src="res/mainMenuProgressArrow.png" class="arrow" />
+    <div class="reps">
+        18943 reps
+    </div>
+</div>
+
+<div style="height:20px;"></div>
+<div class="mainMenuButton">
+    <div class="iconContainer">
+        <img class="icon absoluteCenter" src="res/needsIcon.png" />
+    </div>
+    <div class="title">Needs</div>
+    <div class="explanation">Keep track of vaccines and flea protection</div>
+</div>
+<div class="mainMenuButton mainMenuTrainButton" ng-click="goToTrainMenu()">
+    <div class="iconContainer">
+        <img class="icon absoluteCenter" src="res/trainIcon.png" />
+    </div>
+    <div class="title">Train</div>
+    <div class="explanation">Learn new tricks or improve bad behaviour</div>
+</div>

@@ -1,0 +1,18 @@
+<main-nav></main-nav>
+<div class="settingsTitle">account</div>
+<a ng-click="logout();" class="menuLink">logout</a>
+<a ng-click="refreshData()" class="menuLink">Refresh Data</a>
+<div class="settingsTitle">clicker</div>
+<div ng-show="clickerConnected">
+    <a ng-click="manualSync()" class="menuLink">Manual Sync</a>
+    <a ng-click="clickerSyncOnStartClick()" class="menuLink">
+        Sync on Start
+        <span class="standardSwitch positionStandardSwitch">
+            <span id="switchSyncStart"></span>
+        </span>
+    </a>
+    <a ng-click="disconnectClicker()" class="menuLink">Disconnect Clicker</a>
+</div>
+<div ng-hide="clickerConnected">
+    <a href="#/clicker/Connect" class="menuLink">Connect clicker</a>
+</div>

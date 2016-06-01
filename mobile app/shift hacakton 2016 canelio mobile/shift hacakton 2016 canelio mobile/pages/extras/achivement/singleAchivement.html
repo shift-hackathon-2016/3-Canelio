@@ -1,0 +1,88 @@
+
+<div data-role="view" id="achivementSingle" data-model="kctrl_achivementSingle" data-stretch="true"
+     data-init="kctrl_achivementSingle.init" data-show="kctrl_achivementSingle.show" data-before-show="kctrl_achivementSingle.beforeShow">
+
+    <div data-role="header">
+        <div id="navBar">
+            <a data-bind="click:navigateBack">
+                <div class="navBackArrowContainer">
+                    <img src="res/backArrowWhite.jpg" class="navBackArrow" />
+                </div>
+                <h1 data-bind="text:title"></h1>
+            </a>
+            <div class="settingsContainer calendarContainer" data-bind="click:uploadPic">
+                <img src="res/cameraWhite.png" class="cameraIcon" />
+            </div>
+        </div>
+        <div id="navBarSpaceFiller"></div>
+    </div>
+    <div data-bind="visible:loading" class="loadingContainer absoluteCenter">
+        <img src="res/walking-dog.gif" class="loadingImg" />
+        <div class="noAchivemntsMessage loadingMessage">
+            Loading achievement
+        </div>
+    </div>
+    <div id="scrollview" data-role="scrollview" data-content-height="100%" data-velocity-threshold="0.05" data-bind="invisible:loading">
+        <div data-role="page">
+            <div data-bind="visible:picTaken" class="relativeContainer achivemntBigPhotoContainer">
+                <img data-bind="attr: { src: imageSrc}" class="absoluteCenter achivemntBigPhoto" />
+            </div>
+            <div data-bind="invisible:picTaken, click:uploadPic " class="noPhotoContainer absoluteCenter">
+                <img src="res/trophyYellowBig.png" class="achivmentTrophy" />
+                <div class="achivmentBigButton">
+                    <div class="informativeMessage444">
+                        Upload photo of
+                    </div>
+                    <div class="dogName" data-bind="text:dogName">
+
+                    </div>
+                    <div class="informativeMessage444">
+                        Doing trick
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="page">
+            <div class="informativePage absoluteCenter">
+                <div class="informativeLine">
+                    <div class="informativeMessage444">
+                        Time took to learn trick
+                    </div>
+                    <div class="informativeMessage444 informativeMessageAddon" data-bind="text: daysBetween">
+
+                    </div>
+                </div>
+                <div class="informativeLine">
+                    <div class="informativeMessage444">
+                        By doing this trick you won
+                    </div>
+                    <div class="informativeMessage444 informativeMessageAddon">
+                        <span data-bind="text:points"></span> points
+                    </div>
+                </div>
+                <div class="informativeLine">
+                    <div class="informativeMessage444">
+                        In learning process you have done
+                    </div>
+                    <div class="informativeMessage444 informativeMessageAddon">
+                        <span data-bind="text:repetitions"></span> repetitions
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="page">
+            <div class="sucessRateLegend">
+                <div class="legendIcon sucessRateLegendIcon"></div>
+                <div class="legendInfo">Success rate %</div>
+            </div>
+            <div id="successChart" class="trickStatisticsChart d3Chart">
+
+            </div>
+            <div class="facebookShareContainer facebookShareBlank" data-bind="click:navigateShare">
+                <div class="trickTrainButton">Share</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

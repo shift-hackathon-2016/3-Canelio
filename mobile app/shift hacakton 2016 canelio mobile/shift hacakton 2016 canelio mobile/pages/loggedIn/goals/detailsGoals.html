@@ -1,0 +1,45 @@
+<main-nav></main-nav>
+<div id="detailsGoalsScroller">
+    <div id="wrapper">
+        <div id="scroller" class="scroller">
+            <div ng-show="defNeedsReject">
+                <img src="res/walking-dog.gif" class="loadingImg" />
+                <div class="loadingText">Loading Days...</div>
+            </div>
+
+            <div class="goalsDetailsBackground " ng-class="{goalsDetailsBackgroundSuccess: goalSuccess, goalsDetailsBackgroundTrained:goalTrained}">
+                <div class="goalsDetailsAchieved">
+                    <img src="res/sadPuppy3dSmall.png" class="goalDetailsSadPuppyImage" ng-show="!goalSuccess && !goalTrained" />
+                    <img src="res/GoldMedal.png" class="goalDetailsSadPuppyImage" ng-show="goalTrained && !goalSuccess" />
+                    <img src="res/troph3d.png" class="goalDetailsSadPuppyImage" ng-show="goalSuccess" />
+                    <div class="goalsDetailsRepetitionsDone">
+                        {{trainedReps}} reps
+                    </div>
+                    <div class="goalsDetailsRepetitionsDone GoalsDetailsGoalDone">
+                        {{trainedGoal}}% goal
+                    </div>
+                </div>
+                <div class="goalDetailsTricksLearned">
+                    Success Rates
+                </div>
+            </div>
+            
+            <div class="goalDetailsTricksContainer">
+                <div class="goalDetailsNoTricksDone" ng-show="noTricksDone">You haven't trained any tricks</div>
+
+                <div class="dailyPorgressButton dailyPorgressButtonContainer" ng-repeat="trick in tricks" ng-click="goToTrickStatistics(trick)">
+                    <div class="progressBar" ng-style="calculateTrickWidth(trick);"></div>
+                    <div class="percentage trickName">
+                        {{trick.trickName}}
+                    </div>
+                    <div class="percentage donePercentage">
+                        {{trick.successPercent}}%
+                    </div>
+                    <div class="reps">
+                        {{trick.timesTrained}} reps
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

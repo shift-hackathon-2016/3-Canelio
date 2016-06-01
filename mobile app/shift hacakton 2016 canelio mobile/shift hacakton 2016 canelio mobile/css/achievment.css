@@ -1,0 +1,480 @@
+.achivmentMessageContainer{
+    padding:20px 5px;
+    box-sizing:border-box;
+}
+
+.achievmentMessage{
+    text-align:center;
+    font-family:Bangers;
+    font-size:1.7em;
+    color:#444;
+}
+
+.color222{
+    color:#222;
+}
+
+.achivmentEarned{
+    margin-top:20px;
+}
+
+.facebookShareContainer{
+    background-color:#bbbbbb;
+    border-bottom: 2px solid #6a808b;
+    padding:30px 0px;
+}
+
+.facebookShareBlank{
+    background-color:transparent;
+    border-bottom:none;
+}
+
+.achievmentWonFooter{
+    position:absolute;
+    bottom:0px;
+    padding-bottom:15px;
+    width:100%;
+    padding-top:15px;
+    height:55px;
+}
+.achievmentWonFooter .trickTrainButton{
+    font-size:2em;
+}
+.facebookShareContainer .trickTrainButton{
+    display:block;
+    margin:0px auto;
+    font-size:2em;
+    background-color:#3b5998;
+    position:relative;
+}
+
+.facebookShareContainer  .twitterShareButton{
+    background-color:#6cadde;
+}
+
+.facebookShareContainer  .instagramShareButton{
+    background-color:#957d60;
+}
+
+.facebookShareContainer .whatsappShareButton{
+    background-color:#369804;
+}
+
+.facebookShareContainer .trickTrainButton img{
+    height:30px;
+    margin-right:10px;
+
+}
+
+.facebookShareContainer  .twitterShareButton img{
+    margin-bottom: -2px;
+}
+
+.facebookShareContainer  .instagramShareButton img,.facebookShareContainer .whatsappShareButton img{
+    margin-bottom: -4px;
+}
+
+
+
+
+.achivmentList li{
+    background-color:#ddd!important;
+    padding:0px 5px!important;
+    max-width:450px;
+    margin:auto!important;
+    left:0px!important;
+    right:0px!important;
+}
+
+
+
+.achivmentList li .margin{
+    width:100%;
+    height:7px;
+}
+
+.achivmentList li .spaceFiller{
+    height:125px;
+    background-color:#eeeeee;
+    position:relative;
+    padding:5px;
+    box-sizing:content-box;
+}
+
+.achivmentList li .spaceFiller .date{
+    /*top:5px;
+    left:5px;*/
+    font-family:Arial;
+    font-size:0.8em;
+    color:#444;
+    position:absolute;
+    font-weight:normal;
+}
+.achivmentList li .spaceFiller .trickType{
+    bottom:8px;
+    left:5px;
+    font-family:Arial;
+    font-size:0.8em;
+    color:#444;
+    position:absolute;
+    font-weight:normal;
+}
+
+.achivmentList li .logo{
+    height:20px;
+    margin-bottom:-3px;
+    margin-right:5px;
+}
+
+.achivmentList li .picSpace{
+    height:95px;
+    width:95px;
+    position:absolute;
+    right:10px;
+    top:0px;
+    bottom:0px;
+    margin:auto;
+}
+
+.achivmentList li .picSpace .pic{
+    width:100%;
+    height:100%;
+    border-radius:5px;
+    border:3px solid #3e5d6d;
+    box-sizing:border-box;
+}
+
+.achivmentList li .trickSpace{
+    background-color:#fff;
+    height:73px;
+    width:100%;
+    padding:0px 5px;
+    margin-left:-5px;
+    margin-top:22px;
+    position:relative;
+}
+
+.achivmentList li .trickName{
+    font-family:Arial;
+    font-size:1.4em;
+    color:#222;
+    font-weight:normal;
+}
+
+.achivmentList li .parentTrick{
+    padding-top: 8px;
+    font-weight:bold;
+}
+.achivmentList li .soloTrickName{
+    padding-top: 25px;
+} 
+
+.noAchivemntsMessage{
+    font-family:Bangers;
+    color:#222;
+    font-size:2em;
+    margin-top:100px;
+    text-align:center;
+    padding:0px 10px;
+}
+.achivemntBigPhotoContainer{
+    box-sizing:border-box;
+}
+
+.achivemntBigPhoto{
+    max-height:100%;
+    max-width:100%;
+}
+
+.informativeMessage444{
+    font-family:Bangers;
+    font-weight:normal;
+    color:#444;
+    font-size: 1.6em;
+    text-align:center;
+}
+
+.informativeMessageAddon{
+    color:#000;
+    font-size:1.8em;
+    margin-top: 10px;
+}
+
+#achivementSingle .informativeLine{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#achivementSingle .informativePage{
+    height:320px;
+}
+
+
+.dogName{
+    display:block;
+    font:Arial;
+    font-size:1.5em;
+    color:#222;
+    text-align:center;
+}
+#achivementSingle .dogName{
+    padding:20px 0px;
+}
+
+.achivmentTrophy{
+    display:block;
+    margin:auto;
+}
+
+#achivementSingle .achivmentTrophy{
+    /*margin-bottom:40px;*/
+}
+
+#achivementSingle .facebookShareContainer{
+    padding:0px;
+}
+
+
+.achivmentBigButton{
+    width: 80%;
+    margin: 0px auto;
+    border-radius: 20px;
+    background-color: #eee;
+    /*border: 2px solid #6a808b;*/
+    border-top: 2px solid #6a808b;
+    padding: 30px 0px;
+}
+
+#achivementSingle .noPhotoContainer{
+    height:270px;
+}
+
+#WrapperSingleAchivment ul{
+    padding:0px;
+    margin:0px;
+}
+
+.singleAchivmentTrophiesContainer{
+    background-image:url("../res/textures/wood-texture.jpg");
+    background-repeat:repeat;
+    height: 130px;
+    width:100%;
+    position:relative;
+}
+
+.singleAchivmentTrophiesContainer .width320{
+    height:100%;
+}
+
+.singleAchivmentTrophiesContainer .trophy1{
+  height: 106px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.singleAchivmentTrophiesContainer .trophy2{
+  height: 106px;
+  position: absolute;
+  top: -2px;
+  right: 0px;
+}
+.singleAchivmentTrophiesContainer .trophy3{
+
+  position: absolute;
+  bottom: -17px;
+  width: 145px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.singleAchivmentTrophiesContainer .borderWhite{
+  position: absolute;
+  height: 7px;
+  background-color: #fff;
+  width: 100%;
+  top: 0px;
+}
+
+.singleAchivmentSpacer{
+    height: 20px;
+    background-color:#fff;
+}
+
+.singleAchivmentGrass{
+    background-image:url("../res/textures/grass.jpg");
+    background-repeat:repeat;
+    height: 155px;
+    width:100%;
+    position:relative;
+}
+.singleAchivmentGrass .width320{
+    height:100%;
+}
+
+.singleAchivmentGrass .pictureSide{
+  /* height: 100%; */
+  width: 120px;
+  background-color: #fff;
+  /* margin-left: 20px; */
+  position: relative;
+  padding-top: 55px;
+ margin: 0px auto;
+   float: left;
+
+}
+
+
+
+.singleAchivmentGrass .trophy4{
+  height: 75px;
+  display: block;
+  margin: 0px auto;
+  position: absolute;
+  top: -20px;
+}
+
+
+.singleAchivmentGrass .pictureContainer{
+   width: 100px;
+  height: 100px;
+  margin: 0px auto;
+  display: block;
+}
+}
+
+.pointsSide{
+      height: 68px;
+      float: right;
+      width: 160px;
+      margin-right: 10px;
+      background-color: #fff;
+}
+
+.pointsSide .pointsWon{
+  color: #444;
+  font-family: Bangers;
+  text-align: center;
+  font-size: 1.4em;
+  margin-top: 5px;
+}
+
+.pointsSide .points{
+    color:#000;
+    font-size:1.6em;
+}
+
+.singleAchivmentTitle{
+  font-family: Bangers;
+  color: #000;
+  font-size: 2.1em;
+  background-color: #fff;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+
+
+
+.pageShower{
+    position:absolute;
+    bottom:0px;
+    height:40px;
+    width:100%;
+    background-color:#ddd;
+    text-align:center;
+}
+
+.pageShower .page{
+  background-color: #777;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin: 7px 5px;
+  display: inline-block;
+}
+
+.pageShower .activePage{
+     background-color:#062244;
+}
+
+.singleAchievmentShareButton {
+  width: 100%;
+  background-color: #062244;
+  height: 55px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.singleAchievmentShareButton .button {
+      height: 45px;
+  border-radius: 10px;
+  background-color: #000821;
+  width: 90%;
+  margin: 5px auto;
+  color: white;
+  font-family: Bangers;
+  font-size: 2em;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 4px 0px;
+}
+
+.shield {
+    width:100px;
+    height:135px;
+    float:left;
+    position:relative;
+}
+
+.shield .shieldImage{
+    width:100%;
+    position:absolute;
+    z-index:0;
+}
+
+.shield .shieldTitle{
+  font-family: Bangers;
+  font-size: 1.2em;
+  color: #dddddd;
+  position: absolute;
+  text-align: center;
+  top: 15px;
+  width: 100%;
+}
+
+.shield .shieldImprotant{
+font-family: Bangers;
+  font-size: 2.4em;
+  color: #ddd;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 44px;
+}
+
+.shieldFail .shieldTitle{
+    color:#c74731;
+}
+
+.shieldFail .shieldImprotant{
+    color:#c24631
+}
+
+.shieldSuccess .shieldTitle{
+    color:#437dc5;
+}
+
+.shieldSuccess .shieldImprotant{
+    color:#2780ef
+}
+
+.WrapperSingleAchivment{
+  height: 355px;
+  position: absolute;
+  top: 48px;
+  bottom: 55px;
+  width: 100%;
+  margin: auto;
+}

@@ -1,0 +1,145 @@
+.chartsRelativeContainer{
+    width:100%;
+    position:relative;
+}
+.chartContainer{
+    width:100%;
+    padding:0px 0px;
+    box-sizing:border-box;
+    position:relative;
+}
+.trickStatisticsChart{
+    /*height:250px;*/
+}
+
+.trickStatisticsInfoText{
+
+    text-align:center;
+    font-size:18px;
+    background-color:#ccc;
+    margin:0px 5px;
+    margin-top:15px;
+    padding:15px 5px;
+    font-family:Bangers;
+    color:#2B3F60;
+    box-sizing:border-box;
+
+}
+.trickStatisticsInfoTextNumber{
+    color:#2B3F60;
+    margin:0px;
+    padding:0px;
+}
+
+.loadingImg{
+    margin:auto;
+    display:block;
+    margin-top:40px;
+}
+
+.loadingText{
+    width:100%;
+    text-align:center;
+    font-family:Bangers;
+    color: #555;
+}
+
+.noTrainingsDone{
+    width:100%;
+    text-align:center;
+    font-family:Bangers;
+    color: #555;
+    font-size:25px;
+    padding:10px;
+    margin-top:60px;
+    box-sizing:border-box;
+
+}
+
+.noTrainingsDone .date{
+    color:#0055cc;
+}
+
+.chartSharesLegend{
+    margin-left:20px;
+    color:#4c5356;
+}
+.legendIcon{
+    float:left;
+    margin-top:7px;
+    margin-right:10px;
+}
+.legendInfo{
+    float:left;
+}
+.chartSharesLegend{
+    clear:both;
+    height:20px;
+}
+
+.sucessRateLegend{
+    text-align:center;
+    padding-bottom:10px;
+}
+.sucessRateLegend .legendIcon{
+    float:none;
+    height:8px;
+    width:9px;
+    display: inline-block;
+}
+.sucessRateLegend .legendInfo{
+    color:rgb(76, 83, 86);
+    float:none;
+    display:inline;
+}
+
+.sucessRateLegend .sucessRateLegendIcon{
+    background-color:#134787;
+}
+
+.sucessRateLegend .failedLegendIcon{
+    background-color:#871326;
+}
+
+.sucessRateLegend .legendSpacer{
+    display:inline-block;
+    width:30px;
+    height:5px;
+}
+
+.d3Chart {
+    font: 10px sans-serif;
+}
+
+    .d3Chart .x text {
+        font-size: 1.3em;
+        font-family:Arial;
+        fill:rgb(76, 83, 86);
+    }
+
+    .d3Chart .axis path,
+    .d3Chart .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .d3Chart .y line {
+        stroke: #bbb;
+        stroke-width: 1;
+    }
+
+    .d3Chart .area {
+        fill: #134787;
+        fill-opacity: 0.8;
+    }
+
+    .d3Chart .areaLine {
+        stroke: #062244;
+        stroke-width: 2;
+    }
+
+    .d3Chart .y text, .d3Chart .yNumbers text {
+        font-family: Bangers;
+        font-size: 1.5em;
+    }

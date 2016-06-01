@@ -1,0 +1,63 @@
+<div class="relativeContainer">
+    <div class="title"> Select Statistics time period </div>
+    <div class="lastDays">
+        
+        <a class="trickLink "
+           ng-class="{selected: datesPicker_isSelected('7')}"
+           ng-click="lastDaysClicked(7)">
+            Last 7 days
+        </a>
+        <a class="trickLink"
+           ng-class="{selected: datesPicker_isSelected('14')}"
+           ng-click="lastDaysClicked(14)">
+            Last 14 days
+        </a>
+        <a class="trickLink"
+           ng-class="{selected: datesPicker_isSelected('30')}"
+           ng-click="lastDaysClicked(30)">
+            Last 30 days
+        </a>
+        <a class="trickLink"
+           ng-class="{selected: datesPicker_isSelected('9999')}"
+           ng-click="lastDaysClicked(9999)">
+            All time
+        </a>
+    </div>
+
+    <!--<div class="pickersContainer"
+         ng-class="{selectedContainer: datesPicker_isSelected('custome')}">
+
+        <div class="customeDatesPicker"
+             ng-show="!customDatesEnabled">
+            <div ng-click="customDatesEnabled = true"
+                 class="set menuLink disabled ">
+                Pick Dates
+            </div>
+        </div>
+
+        <div ng-show="customDatesEnabled" class="customeDatesPicker">
+            <div class="set menuLink" ng-click="datesPicker_costumeDatesClicked()">Set Dates</div>
+
+            <div id="fromPickerContainer" class="inputContainer">
+                <input id="fromPicker"
+                       ng-click="datesPicker_fromPickerFocused()"
+                       kendo-date-picker
+                       ng-model="datesPicker_from"
+                       k-ng-model="datesPicker_fromObject" />
+                <span class="label">From:</span>
+            </div>
+            <div class="inputContainer secondPicker">
+                <input id="toPicker"
+                       ng-click="datesPicker_toPickerFocused()"
+                       id="toPicker"
+                       kendo-date-picker
+                       ng-model="datesPicker_to"
+                       k-ng-model="datesPicker_toObject" />
+                <span class="label">To:</span>
+            </div>
+        </div>
+
+    </div>-->
+
+    
+</div>

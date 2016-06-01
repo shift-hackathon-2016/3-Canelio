@@ -1,0 +1,171 @@
+.trainSwitchInputButton{
+    box-sizing: border-box;
+    height: 48px;
+    text-align:center;
+    background-color: #2b605f;
+    width: 100%;
+    line-height:48px;
+    color:white;
+    font-family: 'Bangers', cursive;
+    color: white;
+    font-size: 1.5em;
+}
+    .trainSwitchInputButton .left{
+        float:left;
+        height:100%;
+        padding-left:10px;
+    }
+    .trainSwitchInputButton .right{
+        float:right;
+        height:100%;
+        padding-right:10px;
+    }
+
+
+.trainMessage{
+    background-color:#49aba8;
+    color:#333;
+}
+
+.trainExplain{
+    padding: 40px 5px 10px 5px;
+    margin:0px;
+    padding-top:30px;
+    box-sizing:border-box;
+    width:100%;
+    font-family:Bangers;
+    font-size: 1.5em;
+    color: #444;
+    text-align:center;
+}
+
+
+.trainContainer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+
+
+.trainExplainSimple{
+    font-size:1.3em;
+    font-family:Bangers;
+    text-align:center;
+    color:#444;
+    padding:5px;
+}
+
+.trickTrainExplain{
+    margin-top:50px;
+}
+
+.trainSuccess{
+    height:83px;
+    font-size:2.3em;
+    line-height:83px;
+    color:white;
+    font-family:Bangers;
+    float:left;
+    width:46%;
+    background-color:#134787;
+    text-align:center;
+    margin:0px 2% 0px 2%;
+    border-radius:10px;
+}
+
+.trainFail{
+    background-color:#871326;
+}
+
+.trainButton{
+    background-color: #3e5d6d;
+    margin:auto;
+    display:block;
+    float:none;
+    width:80%;
+}
+.trainContainer .icon{
+    margin-top: 0px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+
+}
+
+#simpleTrainCenteredContainer{
+    position:absolute;
+    width:100%;
+}
+
+.trainInput{
+    width: 80%;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    font-size: 1.5em;
+}
+
+.howToTrain{
+    font-size: 2em;
+    color: #444;
+}
+
+
+.trickComponent .singleLineText{
+    line-height:100px;
+    font-size:2em;
+    color:#222;
+    font-family:Bangers;
+    text-align:center;
+}
+
+.trainMultipleBagsFooter{
+    background-color:#bbb;
+    border-top: 2px solid #a4a4a4;
+    white-space:normal;
+}
+
+.bagSize{
+    font-size:2em;
+    position:absolute;
+    height:60px;
+    margin:auto;
+    padding:10px;
+}
+
+.howManyRepetitions{
+    height:130px;
+    width:100%;
+    position:absolute;
+    top:40px;
+}
+
+.trainMultipleBagsModal{
+    position:absolute;
+    background-color:#ddd;
+    top:0px;
+    bottom:0px;
+}
+
+    .trainMultipleBagsModal .interaction{
+        height: 250px;
+        top:0px;
+        bottom:80px;
+        position:absolute;
+        left:0px;
+        right:0px;
+        margin:auto;
+    }
+    .trainMultipleBagsModal .trainExplain{
+        font-size:2em;
+        padding-bottom: 20px;
+    }
+
+.step3MultipleBags{
+    position:fixed;
+    top:0px;
+}

@@ -1,0 +1,43 @@
+<main-nav></main-nav>
+<div class="WrapperSingleAchivment absoluteCenter">
+    <div class="singleAchivmentTrophiesContainer">
+        <div class="width320 relativeContainer">
+            <img class="trophy1" src="res/trophies/trophy1Blue.png" ng-src="{{trophy1}}"></img>
+            <img class="trophy2" src="res/trophies/trophy2Blue.png" ng-src="{{trophy2}}"></img>
+            <img class="trophy3" src="res/trophies/trophy3Blue.png" ng-src="{{trophy3}}"></img>
+        </div>
+        <div class="borderWhite"></div>
+    </div>
+    <div class="singleAchivmentSpacer"></div>
+    <div class="singleAchivmentGrass">
+        <div class="width320">
+            <div class="shield">
+                <img src="res/shields/shieldBlue.png" class="shieldImage" />
+                <div class="shieldTitle">Success</div>
+                <div class="shieldImprotant">{{success}}%</div>
+            </div>
+            <div class="pictureSide">
+                <img class="trophy4 absoluteCenter" src="res/trophies/trophy4Blue.png" ng-src="{{trophy4}}" />
+                <img class="pictureContainer" src="res/logo002644WithoutPencil.png" ng-src="{{imageSrc}}" />
+
+            </div>
+            <div class="shield">
+                <img src="res/shields/shieldRed.png" class="shieldImage" />
+                <div class="shieldTitle">Fail</div>
+                <div class="shieldImprotant">{{fail}}%</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearFix"></div>
+    <div class="singleAchivmentTitle">
+        {{achivmentTitle}}
+    </div>
+
+</div>
+
+    <div class="mainMenuButtonV2 mainMenuButtonv2Small" ng-click="shareAchivment()">
+        <div class="button">
+            Share
+        </div>
+    </div>

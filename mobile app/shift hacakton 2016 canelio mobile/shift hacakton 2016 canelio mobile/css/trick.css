@@ -1,0 +1,494 @@
+.settingsTitle {
+  font-family: Bangers;
+  font-size: 2em;
+  color: #083366;
+  padding: 10px 5px;
+  background-color: #eee;
+  box-sizing: border-box;
+  border-bottom: 2px solid #888;
+}
+
+#subNav {
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #3e5d6d;
+    background-color:#2b605f;
+    position:relative;
+    border-top: 2px solid #aaa;
+    border-bottom: 2px solid #aaa;
+    box-sizing:border-box;
+    height:54px;
+}
+
+
+.subNavSpacer {
+   display:block;
+   height:50px;
+   float:left;
+}
+
+.subNavContainer {
+    height: 100%;
+    display:block;
+    float:left;
+}
+
+
+.subNavText {
+    display: block;
+    width: 100%;
+    color: white;
+    font-family: 'Bangers', cursive;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.subNavIcon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+.trickLink {
+    font-family: 'Bangers', cursive;
+    width: 100%;
+    padding: 7px 5px;
+    box-sizing: border-box;
+    font-size: 1.8em;
+    background-color: #3e5d6d;
+    background-color:#2b605f;
+    color: white;
+    border-top: 2px solid #888;
+    display: block;
+    background-color: #ccc;
+    color: #444;
+}
+
+.trickLinkIcon {
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.center{
+    text-align:center;
+    margin-left:-30px;
+}
+
+.trickLinkSpacer {
+    height: 15px;
+    width: 100%;
+}
+.trickVideo{
+    width:100%;
+    display:block;
+}
+.trickLinkSpacer {
+    display: none;
+}
+.playVideoButton{
+    display:none;
+}
+
+.handSignalContainer {
+    width:100%;
+    position: absolute;
+    z-index:200;
+    background-color:#ddd;
+    top:102px;
+}
+
+.handSignal{
+    
+    position:relative;
+    width:100%;
+    height:100%;
+
+}
+.centerImg{
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:auto;
+    border: 2px #aaa solid;
+    box-sizing: border-box;
+    position:absolute;
+    max-width:100%;
+    max-height:100%;
+}
+
+.stepsContainer{
+    box-sizing: border-box;
+    min-width:100%;
+}
+.stepContainer{
+   padding: 10px 0px;
+}
+
+.stepTitle{
+    box-sizing: border-box;
+    margin: 0px 5px;
+    padding: 5px;
+    display: block;
+    font-family: 'Bangers', cursive;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: #444;
+    background-color: #bbb;
+}
+.stepContent{
+    margin: 0px 5px;
+    box-sizing: border-box;
+    padding: 0px;
+    font-size:1.1em;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right:8px;
+    padding-bottom: 10px;
+    color: #222;
+    font-family: Lato;
+    background-color: #fff;
+}
+
+.playVideoButtonContainer{
+    position:relative;
+}
+
+.playVideoButtonAbsolute{
+    height: 133px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+.playVideoButtonAbsolute img{
+    margin: auto;
+    display: block;
+}
+
+.playVideoButtonAbsolute div{
+    /*text-align: center;
+    font-size: 2em;
+    font-family: Lato;
+    padding-top: 0.2em;
+    color: #2b5360;*/
+    padding: 0px 5px;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: Bangers;
+    font-size: 1.5em;
+    color: #222;
+    text-align: center;
+}
+
+.trickFooter{
+    height: 130px;
+    bottom:0px;
+    width:100%;
+    position:absolute;
+}
+.trickFooter .trainContainer{
+    height:88px;
+    background-color:#cccccc;
+    width:100%;
+    position:relative;
+    border-top:2px solid #3e5d6d;
+}
+.trickTrainButton{
+    width: 70%;
+    height: 55px;
+    border-radius:10px;
+    background-color:#3e5d6d;
+    font-family: Bangers;
+    font-size: 2.4em;
+    line-height: 55px;
+    color: white;
+    text-align: center;
+}
+.trickFooter .trainContainer .trickTrainButton img{
+    height: 32px;
+    margin-right: 10px;
+    margin-bottom: -2px;
+}
+
+.trickFooter .buttonsContainer{
+      /* height: 70px; */
+      width: 100%;
+      position: absolute;
+      bottom: 70px;
+      background-color: #fff;
+      padding: 10px 0px;
+}
+    .trickFooter .buttonsContainer a {
+        border-radius: 10px;
+          background-color: #062644;
+          width: 90%;
+          line-height: 50px;
+          height: 50px;
+          font-family: Bangers;
+          font-size: 2.8em;
+          color: white;
+          text-align: center;
+          display: block;
+          margin: 0px auto;
+    }
+    .trickFooter .buttonsContainer .helpButton{
+        left:0;
+        
+    }
+    .trickFooter .buttonsContainer .statisticsButton{
+        right:0;
+    }
+
+.trickVideoButton{
+    position:absolute;
+    height:;
+    width:100%;
+    height:70px;
+    text-align:center;
+    line-height:70px;
+    color:#444444;
+    font-size:2.3em;
+    font-family:Bangers;
+}
+    .trickVideoButton img{
+        margin-right: 18px;
+        vertical-align:middle;
+    }
+.trickLoaderContainer{
+    width:100%;
+}
+    .trickLoaderContainer img{
+        height: 100px;
+        display: block;
+        margin: auto;
+    }
+
+.trickComponent{
+    display: block;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+}
+
+    .trickComponent .successRateContainer{
+        width:80%;
+        margin:auto;
+    }
+    .trickComponent .achievmentContainer{
+        height:96px;
+        border-top:2px solid #6a808b;
+        border-bottom:2px solid #6a808b;
+        background-color:#cccccc;
+        position:relative;
+        width:100%;
+    }
+
+    .trickComponent .achievmentContainer .trophy{
+        position:absolute;
+        top:0px;
+        bottom:0px;
+        margin:auto;
+        height: 45px;
+        left:10px;
+    }
+
+    .trickComponent .achievmentContainer .pic .takePicturePic{
+        width:100%;
+        height:100%;
+    }
+
+    .trickComponent .achievmentContainer .pic{
+        height: 75px;
+        width: 75px;
+        border-radius: 5px;
+        background-color:#e3e2e2;
+        border: 3px solid #3e5d6d;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 10px;
+        margin: auto;
+    }
+
+    .trickComponent .achievmentContainer .pic .realImage {
+        width:75px;
+        height:75px;
+    }
+
+    .trickComponent .achievmentContainer .dateEarned{
+        color: #444;
+        font-size: 1.8em;
+        top: 17px;
+        left: 70px;
+        position: absolute;
+        font-family: Bangers;
+    }
+
+    .trickComponent .achievmentContainer .trickLearned{
+        top: 48px;
+    }
+
+    .trickComponent .achievmentContainer .uploadPhoto{
+        color: #444;
+        font-size: 1.5em;
+        top: 5px;
+        left: 70px;
+        position: absolute;
+        font-family: Bangers;
+    }
+
+    .trickComponent .achievmentContainer .dogName{
+        font-family:Arial;
+        color:#000;
+        font-size: 1.3em;
+        top: 35px;
+    }
+
+    .trickComponent .achievmentContainer .doingTrick{
+        top: 66px;
+    }
+
+    .trickComponent .achievmentContainer .logo{
+        height:44px;
+        width:50px;
+    }
+
+.deleteTrickContainer{
+    height:350px;
+}
+
+.deleteTrickQuestion{
+    margin-top:0px!important;
+    padding-top: 0px!important;
+}
+
+.deleteTrickTrickName{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.deleteTrickAnswerContainer{
+    height:100px;
+    margin-top: 75px;
+}
+
+.singleTrickContainer .width320 .pictureSide{
+    width:120px;
+    float:left;
+    background-color:#fff;
+}
+
+.singleTrickContainer .width320 .pictureSide img{
+    display:block;
+    margin:0px auto;
+    width: 120px;
+}
+
+.singleTrickContainer{
+    position:relative;
+    height:185px;
+}
+
+.singleTrickContainer .width320 {
+    position:relative;
+    z-index:1;
+}
+
+.singleTrickContainer .backgroundColorContainer{
+  bottom: 0px;
+  height: 110px;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.singleTrickContainer .backgroundColorContainer .width320{
+    position:relative;
+    height:100%;
+}
+
+.singleTrickContainer .backgroundColorContainer .width320 .backgroundColor{
+    position:absolute;
+    height:100%;
+    left:50px;
+    right:50px;
+    background-color:#fff;
+}
+
+.singleTrickContainer .backgroundColorContainer .width320 .backgroundColor .successBarContainer{
+    bottom:0px;
+    height:20px;
+    width:100%;
+    position:absolute;
+}
+
+.singleTrickContainer .successBar{
+    height:100%;
+    display:inline-block;
+    background-color:#062244;
+    width:70%;
+}
+.singleTrickContainer .failBar{
+    background-color:#440f06;
+    width:30%;
+}
+
+
+
+.singleTrickMainPartContainer .achivmentsContainer{
+
+    position:absolute;
+    top:233px;
+    bottom:140px;
+    margin:auto;
+    height: 60px;
+    padding: 18px 0px;
+    width:100%;
+    text-align:center;
+
+}
+
+.achivmentBadgeContainer{
+  background-color: #fff;
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  margin: 0px 5px;
+  border-radius: 50%;
+  border: 3px solid #7b96a7;
+  position: relative;
+}
+
+.achivmentBadgeContainer img{
+    height:60px;
+    position:absolute;
+    left:0px;
+}
+
+.achivmentBadgeContainer .trophy1{
+    position: absolute;
+    top: 2px;
+}
+
+.achivmentBadgeContainer .trophy2{
+
+  position: absolute;
+  top:0px;
+}
+
+.achivmentBadgeContainer .trophy3{
+  position: absolute;
+  height: 65px;
+  left: -3px;
+}
+
+.achivmentBadgeContainer .trophy4{
+    position: absolute;
+    top: -5px;
+}
+

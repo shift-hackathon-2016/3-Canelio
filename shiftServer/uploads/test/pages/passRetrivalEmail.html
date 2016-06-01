@@ -1,0 +1,22 @@
+<div ng-show="step == 2" class="singleAchivementContainer wrap960">
+        <div class="centerText">
+            Email with instructions for password reset will come in next few minutes.
+        </div>
+</div>
+<div ng-show="step != 2" class="singleAchivementContainer wrap960">
+    <div class="standardForm">
+        <form ng-submit="sendEmail()">
+            <div class="centerText">
+            Enter your email for password retrieval 
+            <input type="email" placeholder="Email" ng-model="email"/>
+            </div >
+            <div class="abosluteCenter">
+                <button type="submit" class="submitButton" ng-model="email"> Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<standard-footer ng-hide="loading"></standard-footer>
+
+

@@ -1,0 +1,69 @@
+<div data-role="view" id="weightHistory"
+     data-model="kctrl_WeightHistory"
+     data-init="kctrl_WeightHistory.init"
+     data-before-show="kctrl_WeightHistory.beforeShow"
+     data-show="kctrl_WeightHistory.show">
+    <div data-role="header">
+        <div id="navBar">
+            <a data-bind="click:navigateBack">
+                <div class="navBackArrowContainer">
+                    <img src="res/backArrowWhite.jpg" class="navBackArrow" />
+                </div>
+                <h1 data-bind="text:title"></h1>
+            </a>
+        </div>
+        <div id="navBarSpaceFiller"></div>
+        <div class="kendoHeaderMessage" data-bind="invisible: noAchivements">
+            Tap entry to delete
+        </div>
+    </div>
+    <div id="historyList" class="historyList">
+    </div>
+    <div data-bind="visible:loading, style:{paddingTop: loaderPadding}" class="loadingContainer">
+        <img src="res/walking-dog.gif" class="loadingImg" />
+        <div class="noAchivemntsMessage loadingMessage">
+            Loading History
+        </div>
+    </div>
+    <div class="noAchivemntsMessage" data-bind="visible: noAchivements">
+        You haven't log any weight yet
+    </div>
+</div>
+
+<div data-role="modalview" id="weightHistoryModal"
+      class="kModal"
+      style="width: 100%; height: 100%"
+      data-model="kctrl_WeightHistory"
+     data-stretch="true"
+     >
+    <div class="content absoluteCenter" data-bind="invisible:modalLoading">
+        <div class="relativeContainer">
+            <div class="noAchivemntsMessage">
+                Are you sure you want to delete this entry?
+            </div>
+            <div class="historyList">
+                <div class="liReplacement">
+                    <div class="date" data-bind="text: date"></div>
+                    <div class="weight">Weight: <span data-bind="text: weight"></span></div>
+                </div>
+            </div>
+            <div id="simpleTrainTrainContainer" class="trainContainer">
+                <div class="trainSuccess" data-bind="click:closeModalView">Cancel</div>
+                <div class="trainSuccess trainFail" data-bind="click:deleteEntry">Delete</div>
+            </div>
+        </div>
+    </div>
+    <div data-bind="visible:loading" class="loadingContainer">
+        <img src="res/walking-dog.gif" class="loadingImg" />
+        <div class="noAchivemntsMessage loadingMessage">
+            Loading History
+        </div>
+    </div>
+</div>
+
+<script type="text/x-kendo-angular-template" id="weightHistoryTemplate">
+    <div weightid="#:id#" class="liReplacement">
+        <div class="date">#:date#</div>
+        <div class="weight">Weight: #:weight#</div>
+    </div>
+</script>

@@ -1,0 +1,31 @@
+<!--<div kendo-mobile-view>-->
+<!--<div kendo-mobile-scroller>-->
+<div id="kapp" class="kapGallery">
+    <div data-role="view" id="gallery">
+        <div data-role="header">
+            <main-nav></main-nav>
+        </div>
+        <div id="dogGallery" class="gallery">
+        </div>
+        <div class="noImagesMessage" ng-show="noImages">
+            You haven't uploaded any images
+        </div>
+    </div>
+</div>
+
+
+<script type="text/x-kendo-angular-template" id="template">
+<div class="picContainer">
+    <div class="picSpace"><img src="#:images[0].small#" largeid="#:images[0].largeId#" class="pic absoluteCenter" /></div>
+        #if(images[1]){#<div class="picSpace"><img src="#:images[1].small#" largeid="#:images[1].largeId#" class="pic absoluteCenter" /></div>#}#
+    #if(images[2]){#<div class="picSpace"><img src="#:images[2].small#" largeid="#:images[2].largeId#" class="pic absoluteCenter" /></div>#}#
+</div>
+</script>
+<!--<script type="text/x-kendo-angular-template" id="template">
+    <div class="picContainer">
+        a
+    </div>
+</script>-->
+<script>
+    
+</script>

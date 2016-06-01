@@ -1,0 +1,103 @@
+.logWeightButton{
+    height:85px;
+    background-color:#a0c0d1;
+    border-bottom:2px solid #3e5d6d;
+}
+
+.weightMessage{
+    color:#444;
+    text-align:center;
+    font-size:1.6em;
+    font-family:Bangers;
+}
+
+
+
+.logWeightContainer{
+    height:30px;
+}
+.currentWeightContainer{
+    height:60px;
+}
+    .currentWeightContainer .currentWeight{
+        color:#000;
+        margin-top: 4px;
+    }
+
+#wieghtChart{
+    position:absolute;
+    bottom:0;
+}
+
+.logWeightChangeContainer{
+    position:relative;
+    height:80px;
+}
+
+.logWeightArrow{
+    height:20px;
+    margin-left:10px;
+    margin-right:4px;
+}
+
+.logWeightArrowBottom{
+    margin-bottom: 3px;
+}
+
+.logWeightChangeContainer .change{
+    color:#222;
+}
+
+.weightLogPointer{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.historyList li{
+    height:80px;
+    max-width:260px;
+    text-align:center;
+    margin:auto!important;
+    left:0!important;
+    right:0!important;
+    position:absolute!important;
+    background-color:transparent!important;
+}
+
+.historyList .liReplacement{
+    background-color:#eee;
+    padding: 10px 0px;
+    text-align:center;
+}
+
+.historyList  .date{
+    font-weight:bold;
+    color: #222;
+    font-size: 15px;
+    margin-bottom:5px;
+}
+.historyList  .weight{
+    font-size:19px;
+    font-weight:bold;
+}
+
+
+
+#weightHistory .loadingContainer{
+    background-color:#ddd;
+}
+
+.kendoHeaderMessage{
+    font-family:Bangers;
+    font-size:1.2em;
+    text-align:center;
+    padding:5px 0px;
+    background-color:#2b605f;
+}
+
+#weightHistoryModal .content{
+    height:270px;;
+    width:100%;
+
+}
+

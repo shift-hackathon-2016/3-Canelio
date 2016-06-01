@@ -1,0 +1,23 @@
+<main-nav></main-nav>
+
+<form ng-submit="createTrick()">
+    <p class="trainExplain trainExplainFirst">
+        Whats the name of trick?
+    </p>
+    <input id="trainMultipleTimesTrained" type="text" class="trainInput" ng-model="trickName" />
+    <!--<p class="trainExplain createTrickSecondLine" >
+        Add to quick train
+        <span class="standardSwitch positionStandardSwitch">
+            <span id="createTrickSwitch"></span>
+        </span>
+    </p>-->
+</form>
+<div class="trainContainer">
+    <a class="trainButton trainSuccess createTrickSaveButton" ng-click="createTrick()">
+        <img src="res/trainWhite.png" class="icon" />Save
+    </a>
+</div>
+
+<!--<div class="trainContainer">
+    <a class="trickTrainButton absoluteCenter" href="#train/{{trainingType}}/{{trickId}}"> <img src="res/trainWhite.png" />Train</a>
+</div>-->

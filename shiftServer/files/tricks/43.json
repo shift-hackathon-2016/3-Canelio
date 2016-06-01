@@ -1,0 +1,8 @@
+{"name":"Lay",
+"training":"1",
+"video":"matej.MP4",
+"handSignal":"handSignals/1.png",
+"steps":[{"name":"Sit","text":"Position yourself in front of the dog and have your dog to sit, click but don't treat him for that"},
+	{"name":"Luring","text":"Hold the treat near your dog's nose. Once he's focused on it, slowly lower the treat straight to the ground and then towards you. You should trace the L-shape.The instant your dog’s chest and belly touch the ground, click and treat. "},
+	{"name":"Repetition","text":"Repeat the process a few times thaen start doing it with introduced verbal cue. For example 'lay Luna'"},
+	{"name":"Troubleshooting","text":"If your dog only goes partially down you can use your hand to gently push him lower. You can also click and treat when he's lower and lower until he properrly lays down."}]}

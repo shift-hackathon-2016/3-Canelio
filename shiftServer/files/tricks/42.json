@@ -1,0 +1,9 @@
+{"name":"Sit",
+"training":"1",
+"video":"matej.MP4",
+"handSignal":"handSignals/1.png",
+"steps":[{"name":"Positioning","text":"Position yourself in front of the dog"},
+	{"name":"Lure him","text":"Take treat and hold it in front of your dogs nose. Draw your dogs nose up and towards back. As his head goes back, he will naturally sit"},
+	{"name":"Click","text":"At the moment his rear touches ground click and treat him"},
+	{"name":"Cue","text":"Once your dog starts sitting reliably start introducing cue. For example 'Sit Luna'"},
+	{"name":"Generalization","text":"Try giving her cue in different locations so she can reliably sit in every situation"}]}

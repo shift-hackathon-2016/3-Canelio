@@ -1,0 +1,58 @@
+.chartContainer.ng-hide-remove, .chartContainer.ng-hide-add{
+    opacity:1;
+    position:absolute;
+    top:0;
+    -webkit-transition:all ease-in-out 0.6s;
+    transition:all ease-in-out 0.6s;
+    display:block!important;
+}
+
+.chartContainer.ng-hide-remove {
+    opacity:0;
+    /*transform: translateY(100%);
+    -webkit-transform: translateY(100%);*/
+
+}
+.chartContainer.ng-hide-remove.ng-hide-remove-active{
+    opacity:1;
+    /*transform: translateY(0);
+    -webkit-transform: translateY(0);*/
+    
+}
+.chartContainer.ng-hide-add{
+    opacity:1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+.chartContainer.ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+}
+
+
+/*.chartContainer{
+    opacity:1;
+    -webkit-transition:all ease-in-out 12s;
+    transition:all ease-in-out 12s;
+    top:0;
+}
+
+    .chartContainer.ng-hide {
+        opacity: 0;
+        -webkit-transition:all ease-in-out 12s;
+        transition:all ease-in-out 12s;
+    } 
+.chartContainer.ng-hide.ng-hide-remove {
+    opacity:0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+
+}
+.chartContainer.ng-hide.ng-hide-remove.ng-hide-remove-active{
+    opacity:1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    display:block!important;
+    
+}*/

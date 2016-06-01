@@ -1,0 +1,317 @@
+a,a:hover,a:visited,a:active{
+    text-decoration:none;
+}
+html::-webkit-scrollbar { width: 0 !important }
+body::-webkit-scrollbar { width: 0 !important }
+html{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: #ddd;
+    font-family: Lato;
+    overflow:hidden;
+}
+.styleView{
+    width:100%;
+    height:100%;
+    position:relative;
+    background-color:#ddd;
+}
+.menuLink {
+    font-family: 'Bangers', cursive;
+    font-weight:400;
+    display: block;
+    width: 100%;
+    padding: 9px 10px;
+    box-sizing: border-box;
+    font-size:2em;
+    background-color: #2b605f;
+    color: white;
+    border-bottom: 2px solid #aaa;
+    text-decoration:none;
+    background-color: #ccc;
+    color: #444;
+}
+.menuLink .descriptionText{
+    display:block;
+    font-family:Lato;
+    font-size:0.5em;
+    color:#222;
+}
+.trainMenuLink{
+    padding:16px 10px;
+    color:#000;
+}
+.menuLinkIcon{
+    height: 24px;
+    margin-right: 5px;
+}
+
+*{
+    /*-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;*/
+
+}
+
+input {
+    padding: 0px 5px 0px 5px;
+    height: 40px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    transition: 0.2s linear all;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+     -webkit-user-select: auto;
+     user-select: auto;
+}
+
+    input:focus {
+        border: 2px solid #bb9a01;
+    }
+
+.error{
+    border:2px solid #871326;
+    box-shadow: 2px 2px 5px 0px #ab4548;
+}
+
+button {
+    background-color: #2b605f;
+    padding: 10px 20px;
+    font-family: 'Bangers', cursive;
+    color: white;
+    border-width: 0px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+    button:focus {
+        background-color: #bb9a01;
+        color: white;
+        transition: 0.2s all linear;
+    }
+
+.relativeContainer{
+      width:100%;
+      height:100%;
+      position:relative;  
+}
+.relativeWidthContainer{
+      width:100%;
+      position:relative;  
+}
+.absoluteCenter{
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin:auto;
+}
+.groupContainer{
+    padding-top:20px;
+}
+.transitionAll03{
+    -webkit-transition:all ease-in-out 0.3s;
+    transition:all ease-in-out 0.3s;
+}
+
+.subView{
+    top:0px;
+    bottom:0px;
+    width:100%;
+    position:absolute;
+}
+
+.backgroundBlack{
+    background-color:#000;
+}
+
+.background222{
+    background-color:#222;
+}
+
+.loadingMessage{
+    margin:0px auto!important;
+}
+.loadingContainer{
+    height:220px;
+}
+
+.margin0auto{
+    margin:0px auto;
+}
+
+.positionStandardSwitch{
+    padding-top:20px;
+    margin-top: 8px;
+    float: right;
+    width:120px;
+    display:inline-block;
+    position:relative;
+}
+.positionStandardSwitch .km-widget{
+    position:absolute;
+    height:40px;
+    left:15px;
+    top:0px;
+    bottom:0px;
+    margin:auto;
+}
+
+.positionStandardSwitch .km-switch-label-on,.positionStandardSwitch .km-switch-label-off{
+    top:1px;
+    bottom:0px;
+    margin:auto;
+    font-size:1.2em;
+    text-shadow:none;
+    color:#000;
+
+}
+
+.standardSwitch .km-switch-container{
+    border: 2px solid #ccc!important;
+    border-radius:8px!important;
+    background-color: #eee!important;
+    font-family:Bangers;
+    position:absolute;
+    margin:auto;
+    bottom:0px;
+}
+.standardSwitch .km-switch-on .km-switch-handle{
+   background-color: #062244!important;
+   -webkit-transition:background-color 0.5s translateX 0.4s border-radius 0.4s;
+   border-top-right-radius:8px;
+   border-bottom-right-radius:8px;
+   margin:0px !important;
+}
+.standardSwitch .km-switch-off .km-switch-handle{
+   background-color: #660000!important;
+   -webkit-transition:background-color 0.5s translateX 0.4s border-radius 0.4s;
+   border-top-left-radius:8px;
+      margin:0px !important;
+   border-bottom-left-radius:8px;
+}
+
+.tutorial{
+    background-color:rgba(0,0,0,0.7)  ;
+    position:fixed;
+    z-index:999;
+}
+.dontShowThisAgain{
+    text-align: center;
+    color: #fff;
+    font-family: Lato;
+    font-size: 1.1em;
+    height:30px;
+    margin: auto;
+    width: 230px;
+    padding: 0px 10px;
+    padding-top: 50px;
+}
+
+.dontShowThisAgain input {
+    display: none;
+}
+
+#appLoaderProgreesBar{
+    width:0%;
+}
+
+
+
+.dontShowThisAgain .checkboxReplacment {
+        float:left;
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      background: url("../res/checkbox.png");
+      background-size: 30px 30px;
+}
+
+.dontShowThisAgain input:checked + .checkboxReplacment {
+    background-image: url("../res/checkboxChecked.png");
+}
+.dontShowThisAgain .text{
+    float: left;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.tutorial .trickTrainButton{
+    margin:auto;
+    margin-top: 35px;
+}
+
+.tutorial .closeButtons ,.warning .closeButtons {
+    position:absolute;
+    bottom:20px;
+    width:100%;
+}
+
+.warning{
+    background-color:#ddd;
+    z-index: 999;
+    padding-top: 10px;
+}
+
+.warning .trickTrainButton{
+    margin:auto;
+}
+
+.width320{
+    width:320px;
+    height:auto;
+    margin:auto;
+}
+
+@font-face {
+    font-family: "Bangers";
+    /*src: url("Bangers.ttf") format("opentype");*/
+    src: url('BebasNeue-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BangersTrue";
+    src: url("Bangers.ttf") format("opentype");
+
+}
+
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    src: url("Lato-Regular.ttf") format("opentype");
+
+}
+#appLoader{
+    width:100%;
+    height:100%;
+    background-color:#ccc;
+    z-index:9999;
+}
+
+
+#appLoader img{
+    width:100%;
+    height:auto;
+}
+
+#appLoader .infoBox{
+    width:100%;
+    padding:10px 0px;
+    background-color:#eee;
+    margin-top:-5px;
+}

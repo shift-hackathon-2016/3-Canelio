@@ -1,0 +1,71 @@
+<div data-role="view" id="achivementListView"
+     data-model="kctrl_achivementList"
+     data-init="kctrl_achivementList.init"
+     data-before-show="kctrl_achivementList.beforeShow"
+     data-show="kctrl_achivementList.show"
+     >
+    <div data-role="header">
+        <div id="navBar">
+            <a data-bind="click:navigateBack">
+                <div class="navBackArrowContainer">
+                    <img src="res/backArrowWhite.jpg" class="navBackArrow" />
+                </div>
+                <h1 data-bind="text:title"></h1>
+            </a>
+        </div>
+        <div id="navBarSpaceFiller"></div>
+    </div>
+    <div id="achivmentList" class="achivmentList resultUploadAchivmentList">
+    </div>
+    <div data-bind="visible:loading, style:{paddingTop: loaderPadding}" class="loadingContainer">
+        <img src="res/walking-dog.gif" class="loadingImg" />
+        <div class="noAchivemntsMessage loadingMessage">
+            Loading achievement
+        </div>
+    </div>
+    <div class="noAchivemntsMessage" data-bind="visible: noAchivements">
+        You haven't won any achievements
+    </div>
+</div>
+
+<script type="text/x-kendo-angular-template" id="achivementListTemplate">
+    <div achivemntid="#:id#" trickid="#:trickId#" class="singleAchivment">
+
+            <div class="width320 relativeContainer">
+                #if(imageSrc){#
+                <img src="#:imageSrc#" class="profileImg" />
+                #}else{#
+                <img src="res/logo062244White.png" class="profileImg" />
+                #}#
+                <div class="trickTitle">#:trickName#</div>
+            </div>
+
+        <!--<div class="margin"></div>
+        <div class="spaceFiller">
+            <div class="date">#:date#</div>
+            <div class="trickSpace">
+                #if(onlyTrickName){#
+                <div class="trickName parentTrick soloTrickName">#:trickName#</div>
+                #}else{#
+                <div class="trickName parentTrick">#:groupName#</div>
+                <div class="trickName">#:trickName#</div>
+                #}#
+                <div class="picSpace">
+                    #if(imageSrc){#
+                    <img src="#:imageSrc#" class="pic" />
+                    #}else{#
+                    <img src="res/logoWhite3e5d6d.png" class="pic" />
+                    #}#
+                </div>
+            </div>
+            <div class="trickType">
+                #if(canelioTrick){#
+                    <img src="res/logoSmall444.png" class="logo" />Canelio trick
+                #}else{#
+                Custome trick
+                #}#
+            </div>
+        </div>-->
+        <!--<div class="margin"></div>-->
+    </div>
+</script>

@@ -1,0 +1,89 @@
+
+<div id="kapp" class="standardKapp km-ios standardizeFonts">
+    <div data-role="view" id="myTricks">
+        <div data-role="header">
+            <main-nav delete="true"></main-nav>
+        </div>
+        <div id="trickList" class="trickList">
+        </div>
+        <div class="noAchivemntsMessage" ng-show="noTricks">
+            Create trick to track it
+            <div>
+                <img src="res/arrowUpBig222.png" class="arrowDownBig"  />
+            </div>
+        </div>
+        <div data-role="footer">
+            <div class="createTrickRelativeContainer">
+                <div class="createTrickContainer trainContainer createTrickInfoContainer imitateViewTransition" ng-show="deleteMode">
+                    <div class=" trickTrainButton createTrickButton absoluteCenter imitateViewTransition">
+                        <img src="res/instructions222.png" /> Tap trick to delete it
+                    </div>
+                </div>
+                <div class="createTrickContainer trainContainer imitateViewTransition" ng-click="createTrick()" ng-show="!deleteMode">
+                    <div class=" trickTrainButton createTrickButton absoluteCenter ">
+                        <img src="res/trainWhite.png" /> Create trick
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div data-role="modalview" id="myTricksDeleteModal"
+         class="kModal"
+         style="width: 100%; height: 100%"
+         data-model="kctrl_WeightHistory"
+         data-stretch="true">
+        <div class="content absoluteCenter" ng-hide="deleteModalLoading">
+            <div class="relativeContainer">
+                <div class="noAchivemntsMessage">
+                    Are you sure you want to delete this trick?
+                </div>
+                <div class="historyList">
+                    <div class="menuLink">
+                        {{trickName}}
+                    </div>
+                </div>
+
+                <div id="simpleTrainTrainContainer" class="trainContainer">
+                    <div class="trainSuccess" ng-click="deleteCancel()">Cancel</div>
+                    <div class="trainSuccess trainFail" ng-click="deleteConfirm()">Delete</div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" ng-hide="deleteModalLoading">
+            <div class="createTrickContainer trainContainer createTrickInfoContainer imitateViewTransition footer firstFooter">
+                <div class=" trickTrainButton createTrickButton ">
+                    <img src="res/instructions222.png" /> removes from my tricks
+                </div>
+            </div>
+            <div class="createTrickContainer trainContainer createTrickInfoContainer imitateViewTransition footer">
+                <div class=" trickTrainButton createTrickButton ">
+                    <img src="res/instructions222.png" /> removes from quick train
+                </div>
+            </div>
+        </div>
+        <div ng-show="deleteModalLoading" class="loadingContainer">
+            <img src="res/walking-dog.gif" class="loadingImg" />
+            <div class="noAchivemntsMessage loadingMessage">
+                Deleting trick...
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/x-kendo-angular-template" id="trickTemplate">
+    <div class="menuLink">
+        #:name#
+    </div>
+</script>
+
+
+
+
+<!--<div class="trainContainer">
+    <a class="trickTrainButton absoluteCenter" href="#train/{{trainingType}}/{{trickId}}"> <img src="res/trainWhite.png" />Train</a>
+</div>-->

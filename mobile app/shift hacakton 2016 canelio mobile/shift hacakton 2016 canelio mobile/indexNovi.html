@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+
+
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--target-densitydpi=device-dpi height=device-height width=device-width, -->
+    <meta name="viewport" id="viewport" />
+    <!--kendo styles-->
+
+    <link href="lib/kendo2/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />
+    <!--canelio kendo fixes-->
+    <!--alertify styles-->
+    <link href="lib/alertify/alertify.core.css" rel="stylesheet" type="text/css" />
+    <link href="lib/alertify/alertify.default.css" rel="stylesheet" type="text/css" />
+    <!--cropper styles-->
+    <link href="lib/cropper/cropper.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/mycss.css" />
+
+    <script src="lib/require.js"></script>
+
+    <script src="loadingScriptsProcedure.js"></script>
+</head>
+
+<!--<body ng-app="App" ng-controller="AppCtrl" onload="onLoad()">-->
+
+
+<body ng-controller="AppCtrl" onload="beginLoadingRequireJs()">
+
+    <div class="absoluteCenter" id="appLoader">
+
+        <img src="res/appLoadingImage.jpg" />
+        <div class="infoBox centeredBigMessage">loading Canelio App...</div>
+
+
+
+        <div class="progressBarTitle centeredBigMessage">Progress: <span class="progressGreen" id="appLoaderProgrees">0%</span></div>
+        <div class="progressBarContainer">
+            <div class="greyProgressBar absoluteVerticalCenter">
+            </div>
+            <div class="greenProgressBar absoluteVerticalCenter" id="appLoaderProgreesBar">
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+
+
+
+
+
+    <div class="styleView {{pageClass}}" ng-view></div>
+
+</body>
+
+</html>

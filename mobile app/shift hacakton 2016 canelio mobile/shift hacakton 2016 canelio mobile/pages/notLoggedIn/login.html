@@ -1,0 +1,14 @@
+<div class="loginContainer">
+    <form ng-submit="login()">
+        <div class="inputContainer">
+            <input type="text" placeholder="email" ng-model="email" />
+            <input type="password" placeholder="{{passwordTxt}}" class="inputPassword" ng-model="password" />
+        </div>
+        <a href="#/passwordReset"><p class="forgotPassword">{{forgotPassword}}</p></a>
+        <div class="buttonsContainer">
+            <a ng-click="goBack()" class="navigation">{{backTxt}}</a>
+            <a class="navigation" ng-click="login()">{{loginTxt}}</a>
+        </div>
+        <button type="submit" style="display:none"></button>
+    </form>
+</div>

@@ -1,0 +1,202 @@
+/*.view-animate-left.ng-leave,.view-animate-right.ng-leave {
+    -webkit-transition:all linear 0.6s;
+    transition:all linear 0.6s;
+}*/
+.view-animate-right.ng-enter,.view-animate-right.ng-leave,.view-animate-left.ng-leave, .view-animate-left.ng-enter {
+    width:100%;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    position:absolute;
+    top:0;
+    /*right:0;
+    left:0;*/
+    -webkit-transition:all ease-in-out 0.3s;
+    transition:all ease-in-out 0.3s;
+}
+
+/*view animate left*/
+    .view-animate-left.ng-enter {
+        
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        /*left:100%;*/
+        /*right:initial;*/
+
+    }
+    .view-animate-left.ng-enter.ng-enter-active {
+        
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        /*left:0;*/
+
+    }
+    .view-animate-left.ng-leave {
+        
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        /*left:0;
+        right:initial;*/
+
+    }
+    .view-animate-left.ng-leave.ng-leave-active {
+        
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        /*left:-100%;
+        top:0;*/
+
+    }
+
+        .view-animate-left.ng-enter #navBar, .view-animate-left.ng-leave #navBar {
+            /*left:0;*/
+            /*transform: translateX(0);
+            -webkit-transform: translateX(0);*/
+
+            -webkit-transition:all ease-in-out 0.3s;
+            transition:all ease-in-out 0.3s;
+        }
+        .view-animate-left.ng-leave #navBar {
+            /*left:0;*/
+            transform: translateX(0);
+            -webkit-transform: translateX(0);
+            z-index:200;
+
+        }
+        .view-animate-left.ng-leave.ng-leave-active #navBar {
+            /*left: 100%;*/
+            transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            z-index: 200;
+
+        }
+        .view-animate-left.ng-enter #navBar{
+            /*left:-100%;*/
+
+            transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            z-index:201;
+
+        }
+        .view-animate-left.ng-enter.ng-enter-active #navBar{
+            transform: translateX(0);
+            -webkit-transform: translateX(0);
+
+            /*left:0;*/
+            z-index:201;
+        }
+
+
+/*view animate right*/
+    .view-animate-right.ng-enter {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        /*right:100%;*/
+        /*left:initial;*/
+    }
+    .view-animate-right.ng-enter.ng-enter-active {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        /*right:0;*/
+
+    }
+    .view-animate-right.ng-leave {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        /*right:0;
+        left:initial;*/
+
+    }
+    .view-animate-right.ng-leave.ng-leave-active {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        /*right:-100%;
+        top:0;*/
+
+    }
+
+
+        .view-animate-right.ng-enter #navBar, .view-animate-right.ng-leave #navBar {
+            /*left:0;*/
+            /*transform: translateX(0);
+            -webkit-transform: translateX(0);*/
+
+            -webkit-transition:all ease-in-out 0.3s;
+            transition:all ease-in-out 0.3s;
+        }
+        .view-animate-right.ng-leave #navBar {
+            /*left:0;*/
+            transform: translateX(0);
+            -webkit-transform: translateX(0);
+            z-index:200;
+
+        }
+        .view-animate-right.ng-leave.ng-leave-active #navBar {
+            /*left: 100%;*/
+            transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            z-index: 200;
+
+        }
+        .view-animate-right.ng-enter #navBar{
+            /*left:-100%;*/
+
+            transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            z-index:201;
+
+        }
+        .view-animate-right.ng-enter.ng-enter-active #navBar{
+            transform: translateX(0%);
+            -webkit-transform: translateX(0%);
+
+            /*left:0;*/
+            z-index:201;
+        }
+
+/*animate left no navbar transition*/
+
+.view-animate-left-no-navbar.ng-leave, .view-animate-left-no-navbar.ng-enter {
+    width:100%;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    position:absolute;
+    top:0;
+    /*right:0;
+    left:0;*/
+    -webkit-transition:all ease-in-out 0.3s;
+    transition:all ease-in-out 0.3s;
+}
+
+/*view animate left*/
+    .view-animate-left-no-navbar.ng-enter {
+        
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        /*left:100%;*/
+        /*right:initial;*/
+
+    }
+    .view-animate-left-no-navbar.ng-enter.ng-enter-active {
+        
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        /*left:0;*/
+
+    }
+    .view-animate-left-no-navbar.ng-leave {
+        
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        /*left:0;
+        right:initial;*/
+
+    }
+    .view-animate-left-no-navbar.ng-leave.ng-leave-active {
+        
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        /*left:-100%;
+        top:0;*/
+
+    }
+    

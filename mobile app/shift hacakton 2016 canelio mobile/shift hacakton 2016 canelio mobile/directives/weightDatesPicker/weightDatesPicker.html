@@ -1,0 +1,36 @@
+<div class="relativeContainer">
+    <div class="title"> Select time period </div>
+    <div class="lastDays">
+        
+        <a class="trickLink"
+           ng-class="{selected: datesPicker_isSelected('9999')}"
+           ng-click="lastDaysClicked(9999)">
+            All time
+        </a>
+        <a class="trickLink"
+           ng-class="{selected: datesPicker_isSelected('365')}"
+           ng-click="lastDaysClicked(365)">
+            Last year
+        </a>
+        <a class="trickLink "
+           ng-class="{selected: datesPicker_isSelected('90')}"
+           ng-click="lastDaysClicked(90)">
+            Last 90 days
+        </a>
+        <a class="trickLink"
+           ng-class="{selected: datesPicker_isSelected('30')}"
+           ng-click="lastDaysClicked(30)">
+            Last 30 days
+        </a>
+        <a class="trickLink"
+           ng-class="{selected: datesPicker_isSelected('15')}"
+           ng-click="lastDaysClicked(15)">
+            Last 15 days
+        </a>
+
+    </div>
+
+
+
+    
+</div>

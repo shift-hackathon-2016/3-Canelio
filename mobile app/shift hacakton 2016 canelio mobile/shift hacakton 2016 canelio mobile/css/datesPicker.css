@@ -1,0 +1,102 @@
+#datesPicker{
+    width: 100%;
+    top:48px;
+    bottom:0;
+    padding: 0px;
+    margin: 0px;
+    background-color: #ddd;
+    position:absolute;
+    z-index:20;
+}
+#datesPicker .title{
+    width: 100%;
+    text-align: center;
+    font-family: Bangers;
+    color: #555;
+    font-size: 22px;
+    padding-top: 20px;
+}
+#datesPicker .set{
+    margin:auto;
+    margin-bottom:30px;
+    width:50%;
+    border-radius:10px;
+    border-bottom:0px solid #eee;
+    text-align:center;
+
+}
+#datesPicker .pickersContainer{
+    width:100%;
+    margin-top: 53px;
+    position:relative;
+}
+#datesPicker .customeDatesPicker{
+    width:100%;
+    position:absolute;
+    top:0;
+}
+#datesPicker .lastDays{
+    width:100%;
+    padding-top:15px;
+}
+
+#datesPicker .inputContainer{
+    margin: auto;
+    display: block;
+    width: 275px;
+    margin: auto;
+    height: 34px;
+    position: relative;
+}
+#datesPicker .trickLink{
+    text-align:center;
+}
+#datesPicker .secondPicker{
+    margin-top:20px;
+    
+}
+#datesPicker .label{
+    box-sizing:border-box;
+    /*top:0px;
+    bottom:0px;
+    margin:auto;
+    height:20px;
+    position:absolute;*/
+    font-family:Lato;
+    float:right;
+    margin-right:15px;
+    font-size:18px;
+    font-weight: 600;
+    color: #777;
+}
+#datesPicker .k-datepicker{
+    float:right;
+    margin-right:10px;
+}
+
+#datesPicker .disabled {
+    background-color: #888;
+    color: #ddd;
+}
+
+#datesPicker .selected{
+    background-color:#062244;
+    color:white;
+}
+
+#datesPicker .k-picker-wrap{
+    background-color: #2b605f;
+    border-color:#2b605f;
+}
+
+#datesPicker .selectedContainer .k-picker-wrap{
+    background-color:#062244;
+    border-color:#062244;
+}
+
+#datesPicker .datesError .k-picker-wrap{
+    background-color:#B0192D;
+    border-color:#B0192D;
+    transition: 300ms all linear;
+    box-shadow: 0px 0px 5px 3px #F0909D;
+}

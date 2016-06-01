@@ -1,0 +1,7 @@
+{"name":"Respond to Clicker",
+"training":"1",
+"video":"matej.MP4",
+"handSignal":"handSignals/1.png",
+"steps":[{"name":"Explanation","text":"Click and give your dog a treat"},
+	{"name":"Learning","text":"Repeat about 60 times. This teaches your dog to associate the click with the treat."},
+	{"name":"After","text":"To maintain this connection, it is important to follow the rule: Never click without treating and never treat without clicking. We have one exception to this important rule in the Come command"}]}

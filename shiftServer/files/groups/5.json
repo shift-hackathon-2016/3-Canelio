@@ -1,0 +1,21 @@
+{
+    "name": "Basic Tricks",
+    "subGroups": [
+        {
+            "id": "4",
+            "name": "Come"
+        },
+        {
+            "name": "Stay",
+            "trickId": 3
+        },
+        {
+            "id": "6",
+            "name": "Sit"
+        },
+        {
+            "name": "Lay",
+            "trickId": 8
+        }
+    ]
+}

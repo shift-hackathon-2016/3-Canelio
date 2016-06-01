@@ -1,0 +1,40 @@
+<div id="kapp" class="solutions standardKapp standardizeFonts">
+    <div data-role="view" id="solutions">
+        <div data-role="header">
+            <main-nav></main-nav>
+            <div id="tabs">
+                <div class="tabSpacer" ng-style="tabsSpacer"></div>
+                <div class="tabContainer "
+                     ng-click="tabChange(true)"
+                     ng-class="{tabContainerSelected: isProblemsActive}">
+                    <img ng-src="{{getTabIconSrc('problems')}}" class="tabIcon" />
+                    <span class="tabText tabTextSelected">Problems</span>
+                </div>
+                <div class="tabSpacer" ng-style="tabsSpacer"></div>
+                <div class="tabContainer"
+                     ng-click="tabChange(false)"
+                     ng-class="{tabContainerSelected: !isProblemsActive}">
+                    <img ng-src="{{getTabIconSrc('advice')}}" class="tabIcon" />
+                    <span class="tabText">Advices</span>
+                </div>
+                <div class="tabSpacer" ng-style="tabsSpacer"></div>
+            </div>
+            <div class="tabBelowSpace"></div>
+        </div>
+
+        <div class="problems" ng-show="isProblemsActive">
+            <div ng-repeat="problem in problems">
+                <h2 ng-click="problemClicked(problem)" ng-class="{problemHeaderActive: isProblemClicked(problem)}">{{problem.name}}</h2>
+                <p ng-show="isProblemClicked(problem)" class="stepContent growFromTopOut">
+                    {{problem.text}}.
+                </p>
+            </div>
+        </div>
+
+        <div class="advices" ng-hide="isProblemsActive">
+            <p class="advice" ng-repeat="advice in advices">
+                {{advice}}
+            </p>
+        </div>
+    </div>
+</div>

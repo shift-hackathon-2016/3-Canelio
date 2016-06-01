@@ -1,0 +1,345 @@
+.currentLevelStatus{
+    padding-top:33px;
+    margin-top:32px;
+    height: 205px;
+    box-sizing: border-box;
+    width:100%;
+    position:relative;
+}
+
+.currentLevelStatus .currentStatusContainer{
+    position:absolute;
+    top: 0px;
+    right:43.75%;
+    left:0%;
+    height:33px;
+}
+
+.currentLevelStatus .currentStatusContainer .currentStatus{
+    width:140px;
+    height:100%;
+    margin:auto;
+    background-color:#edebb3;
+    font-family:Bangers;
+    color:#444444;
+    font-size:1.3em;
+    text-align:center;
+    box-sizing:border-box;
+    padding-top:4px;
+}
+.currentLevelStatus .titleWonContainer{
+    position:absolute;
+    top: -10px;
+    right:43.75%;
+    left:0%;
+    height:43px;
+}
+
+.currentLevelStatus .titleWonContainer .titleWon{
+width: 150px;
+  height: 100%;
+  margin: auto;
+  background-color: #fff;
+  font-family: Bangers;
+  color: #000;
+  font-size: 1.4em;
+  padding-left: 20px;
+  /* text-align: center; */
+  box-sizing: border-box;
+  padding-top: 10px;
+  position: relative;
+}
+
+.currentLevelStatus .titleWonContainer .crown{
+      height: 39px;
+      position: absolute;
+      top: 5px;
+      left: 97px;
+}
+
+.currentLevelStatus .whiteBackgroundContainer{
+    background-color:#ffffff;
+    height:110px;
+}
+
+.currentLevelStatus .colorBackground{
+    background-color:#edebb3;
+    height:45px;
+}
+
+.currentLevelStatus .dogImage{
+    height:110px;
+    width:110px;
+    right:43.75%;
+    left:0%;
+    top:33px;
+    position:absolute;
+    margin: auto;
+}
+
+.currentLevelStatus .medalLevel{
+    position:absolute;
+    left: 36.25%;
+    right:0%;
+    top:10px;
+    margin:auto;
+    width: 100px;
+}
+
+.currentLevelStatus .medalLevel .levelPic{
+      height: 134px;
+}
+
+.currentLevelStatus .medalLevel .currentLvl{
+  font-family: Bangers;
+  font-size: 2em;
+  color: #444;
+  position: absolute;
+  text-align: center;
+   right: 21.5%;
+  width: 50px;
+  top: 80px;
+}
+
+.currentLevelStatus .medalLevel .lvlText{
+    font-family: Bangers;
+  font-size: 1.5em;
+  color: #222;
+  position: absolute;
+  left: 98%;
+  top: 98px;
+}
+
+.currentLevelStatus .currentTitle{
+  height: 60px;
+  box-sizing: border-box;
+  padding-top: 8px;
+  font-family: Bangers;
+  color: #000;
+  font-size: 2.6em;
+  text-align: center;
+  background-color: #edebb3;
+}
+
+.currentLevelStatus .currentTitleWon{
+    background-color:#f9e97d;
+}
+
+
+.currentLevelStatus .width320{
+    position:absolute;
+    top:0px;
+    margin:auto;
+    left: 0px;
+    right: 0px;
+}
+
+
+.levelsWon{
+    height:170px;
+    background-color:#afe9d8;
+    border-bottom:8px #9f9f9f solid;
+    box-sizing:border-box;
+}
+
+.levelsWon .width320{
+    height:100%;
+}
+
+
+.levelsWon .trohpy{
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  height: 150px;
+}
+
+.levelsWon .lvls{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  right: 43.75%;
+  left: 0%;
+  margin: auto;
+  top: 36px;
+  font-family: Bangers;
+  font-size: 3em;
+  padding-top: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.levelsWon .description{
+    font-family:Bangers;
+    font-size:2em;
+    position: absolute;
+    right: 43.75%;
+    left: 0%;
+    top: 106px;
+    color: #444;    
+    text-align:center;
+}
+
+.resultsUploadCloseButton{
+    position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding-top: 0px;
+  font-family: Bangers;
+  box-sizing: border-box;
+  font-size: 24px;
+  line-height:48px;
+  color: white;
+  background-color: #062244;
+  height: 48px;
+  text-align: center;
+}
+
+.resultUploadAchivmentsWon{
+    background-color:#e8e3ac;
+}
+
+.resultUploadAchivmentsWon .trohpy{
+    height:160px;
+    position: absolute;
+    bottom: -10px;
+    left: 56%;
+    /*right: 40.75%;
+    left:0%;*/
+}
+
+.resultUploadAchivmentsWon .lvls, .resultUploadAchivmentsWon .description{
+    right: 40.75%;
+    /*left:56%;
+    right:0%;*/
+}
+
+.resultUploadAchivmentList{
+    padding:15px 0px;
+}
+
+.resultUploadAchivmentList li{
+    padding:3px 0px 0px 0px!important;
+}
+
+
+
+.resultUploadAchivmentList .singleAchivment{
+    background-color:#95c4e5;
+    height:100px;
+    position:relative;
+    margin-bottom:20px;
+}
+
+.resultUploadAchivmentList li .singleAchivment{
+    margin-top: 10px;
+    margin-bottom:10px
+}
+
+.resultUploadAchivmentList .singleAchivment .profileImg{
+    height:100px;
+    width:100px;
+    border:3px solid #95c4e5;
+    position:absolute;
+    top:-3px;
+    left:5px;
+    box-sizing: content-box;
+}
+
+.resultUploadAchivmentList .singleAchivment .trickTitle{
+    position:absolute;
+    background-color:#fff;
+    color:#000;
+    top:0px;
+    bottom:0px;
+    height:40px;
+    left:108px;
+    width: 212px;
+    margin: auto 0px;
+    font-family: Bangers;
+    padding: 5px 10px 0px 5px;
+    box-sizing: border-box;
+    font-size: 28px;
+    font-weight:normal;
+}
+
+
+.resultUploadAchivmentList .singleAchivment .width320{
+      height: 100px;
+}
+
+.resultSyncSuccessRatesTitle{
+    font-family:Bangers;
+    font-size:1.8em;
+    color:#444444;
+    text-align:center;
+    padding-top: 10px;
+}
+
+.resultSyncSuccessRates{
+    background-color:transparent;
+    padding-top:10px;
+    padding-bottom:0px;
+
+}
+
+
+
+
+
+
+
+.resultSyncSuccessRates .dailyPorgressButton:nth-child(1){
+    background-color:#b44444;
+}
+.resultSyncSuccessRates .dailyPorgressButton:nth-child(1) .progressBar{
+    background-color:#862626
+}
+.resultSyncSuccessRates .dailyPorgressButton:nth-child(2){
+    background-color:#b4ad44;
+}
+.resultSyncSuccessRates .dailyPorgressButton:nth-child(2) .progressBar{
+    background-color:#868326
+}
+.resultSyncSuccessRates .dailyPorgressButton:nth-child(3){
+    background-color:#a8b2b0;
+}
+.resultSyncSuccessRates .dailyPorgressButton:nth-child(3) .progressBar{
+    background-color:#8f9493
+}
+.resultSyncSuccessRates .dailyPorgressButton:nth-child(4){
+    background-color:#44b447;
+}
+.resultSyncSuccessRates .dailyPorgressButton:nth-child(4) .progressBar{
+    background-color:#26862b;
+}
+.resultSyncSuccessRates .dailyPorgressButton:nth-child(5){
+    background-color:#4477b4;
+}
+.resultSyncSuccessRates .dailyPorgressButton:nth-child(5) .progressBar{
+    background-color:#265286
+}
+
+.resultSyncRepsDoneContainer{
+    padding-top: 10px;
+    background-color:#e5c895;
+    height:60px;
+    box-sizing:border-box;
+    text-align:center;
+    font-family:Bangers;
+    color:#444444;
+    font-size:1.4em;
+}
+
+.resultSyncRepsDoneContainer .reps{
+    font-size:2em;
+    color:#000;
+    font-size: 1.5em;
+    color: #222;
+}
+.color222{
+    color:#222!important;
+}

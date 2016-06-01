@@ -1,0 +1,2548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>620e62e2-f556-4673-bba9-9ecd41b1f474</ProjectGuid>
+    <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ProjectHome />
+    <ProjectName>shift2016</ProjectName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\AndroidManifest.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\drawable-land-hdpi\splashscreen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\drawable-land-ldpi\splashscreen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\drawable-land-mdpi\splashscreen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\drawable-land-xhdpi\splashscreen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\drawable-land-xxhdpi\splashscreen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\drawable-land-xxxhdpi\splashscreen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\drawable-xhdpi\icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\drawable-xhdpi\splashscreen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\drawable-xxhdpi\icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\drawable-xxhdpi\splashscreen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\splashscreen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Resources\Android\xml\config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bin\Debug\Android\AndroidManifest.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bin\Debug\Android\shifthacakton2016caneliomobile.apk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bin\Debug\Android\testCrowsswalk.apk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bin\Debug\iOS\app.ipa">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bin\Debug\iOS\Info.plist">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bin\Release\Android\AndroidManifest.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bin\Release\Android\testCrowsswalk.apk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bin\Release\iOS\app.ipa">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bin\Release\iOS\Info.plist">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\achievment.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\animations\animate.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\animations\charts.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\animations\growFromTopOut.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\animations\imitateViewTransition.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\animations\slideFadeInFromBottomOut.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\animations\slideFromBottomOutQuick.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\animations\trick.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\animations\views - Copy %282%29.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\animations\views - Copy.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\animations\views.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\Bangers.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\BebasNeue-webfont.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\canelioKendoFixes.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\chartStatistics.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\clicker.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\common.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\cropper.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\datesPicker.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\decimalInput.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\file.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\goals.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\images.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\infoBoxes.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\kendoFixes.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\Lato-Regular.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\loggedInMain.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\mycss.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\myTricks.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\navbar.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\notLoggedIn.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\result.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\resultSync.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\scrollableList.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\solutions.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\sync.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\tabs.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\train.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\trick.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\valuePicker.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\weight.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="indexLoading.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="indexNovi.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="indexStandardni.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\alertify\alertify.core.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\alertify\alertify.default.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\alertify\alertify.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\angular-animate.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\angular-route.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\angular-sanitize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\angular-touch.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\angular-ui-router.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\angular.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\cropper\cropper.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\cropper\cropper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\d3\d3.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\d3\radialProgress.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\d3\radialProgress.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\fastclick.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\globalize.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\iscroll-infinite.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\iscroll-lite.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\iscroll-probe - appendSmooth.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\iscroll-probe - backupSmooth.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\iscroll-probe.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\iscroll.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\jquery2.1.1..js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\editor.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\imagebrowser.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\indeterminate.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\loading-image.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\loading.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\loading_2x.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\markers.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\markers_2x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\slider-h.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\slider-v.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\sprite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\sprite_2x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\sprite_kpi.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\Flat\sprite_kpi_2x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\images\back.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\images\kendoui.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\images\kendoui.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\images\kendoui.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\images\wp8_icons.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\images\wp8_inverseicons.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.all.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.common.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.dataviz.flat.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.dataviz.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.dataviz.mobile.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.flat.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.mobile.all.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.mobile.application.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.mobile.flat.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.mobile.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.mobile.pane.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.mobile.scroller.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.mobile.view.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\kendo2\kendo.router.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\moment.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ng-cordova.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\plugins\FileTransfer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\plugins\SocialSharing.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\require.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\slip-original.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\slip.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="loadingScriptsProcedure.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="localisation.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\kmodel_Achivement.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\kmodel_MyTricks.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\kmodel_Points.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\kmodel_TrickStatistics.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\kmodel_UploadDogImage.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\kmodel_Weight.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_Achivement.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_Clicker.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_Dog.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_DownloadFiles.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_Gallery.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_Goal.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_GoalDaily.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_GoalDetails.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_GoalWeekly.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_GroupStatistics.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_Level.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_Login.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_Register.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_Result.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_ResultUpload.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_ServerSync.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_Share.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_SimpleMenu.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_SimpleTrainMenu.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_Train.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_Tricks.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_TrickStatistics.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\model_UploadDogImage.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="obj\Debug\testCrowsswalk.zip">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="obj\Release\testCrowsswalk.zip">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\ble.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\bleRead.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\bleRead.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\bleTest.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\bleTest.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\ctrl_FirstView.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\ctrl_Kedno.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\download\ctrl_DownloadFiles.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\download\ctrl_DownloadTraining.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\download\downloadFiles.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\download\downloadTraining.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\achivement\achievmentShare.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\achivement\achievmentsListView.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\achivement\ctrl_AchievmentShare.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\achivement\ctrl_AchievmentShare.js~RFe1ec24b.TMP">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\achivement\kctrl_AchievmentList.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\achivement\kctrl_SingleAchivement.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\achivement\singleAchivement.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\ctrl_Extras.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\extras.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\weight\ctrl_Weight.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\weight\ctrl_WeightLog.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\weight\kctrl_WeightHistory.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\weight\log.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\weight\weight.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\extras\weight\weightHistory.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\firstView.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\imageUpload\ctrl_ImageUpload.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\imageUpload\gallery\ctrl_DogGallery.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\imageUpload\gallery\dogGallery.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\imageUpload\imageUpload.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\kedno.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\achivments\ctrl_SingleAchivment.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\achivments\singleAchivment.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\clicker\clickerConnect.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\clicker\ctrl_ClickerConnect.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\ctrl_Main - scrollable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\ctrl_Main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\ctrl_MenuSimple.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\ctrl_Settings.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\ctrl_TrainMenuSimple.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\goals\ctrl_DailyGoals.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\goals\ctrl_DetailsGoals.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\goals\ctrl_SetupGoals.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\goals\ctrl_WeeklyGoals.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\goals\dailyGoals.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\goals\detailsGoals.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\goals\setupGoals.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\goals\weeklyGoals.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\level\ctrl_LevelDetails.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\level\levelDetails.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\main - scrollable.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\main.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\settings.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\sync\ctrl_DownloadClicker.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\sync\ctrl_ResultUpload.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\sync\ctrl_ServerSync.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\sync\ctrl_ServerUpload.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\sync\downloadClicker.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\sync\resultUpload.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\sync\serverUpload.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\loggedIn\trainMenuSimple.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\menu\ctrl_Menu.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\menu\menu.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\myscripts.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\notLoggedIn\ctrl_Login.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\notLoggedIn\ctrl_NotLoggedInMain.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\notLoggedIn\ctrl_Register.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\notLoggedIn\ctrl_RequestPassword.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\notLoggedIn\ctrl_ResetPassword.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\notLoggedIn\login.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\notLoggedIn\notLoggedInMain.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\notLoggedIn\register.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\notLoggedIn\requestPassword.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\notLoggedIn\resetPassword.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\statistics\ctrl_groupStatistics.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\statistics\ctrl_TrickStatistics.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\statistics\groupStatistics.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\statistics\trickStatistics.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trainMenu\ctrl_trainMenu.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trainMenu\myTricks\createTrick.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trainMenu\myTricks\ctrl_createTrick.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trainMenu\myTricks\ctrl_deleteTrick.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trainMenu\myTricks\ctrl_myTricks.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trainMenu\myTricks\deleteTrick.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trainMenu\myTricks\myTricks.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trainMenu\trainMenu.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trick\ctrl_Solutions.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trick\ctrl_Trick.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trick\help\ctrl_HandSignal.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trick\help\ctrl_Help.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trick\help\ctrl_Instructions.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trick\help\handSignal.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trick\help\help.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trick\help\instructions.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trick\solutions.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="pages\trick\trick.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\CHANGES.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\battery\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\battery\config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\battery\hooks\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\battery\platforms\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\battery\plugins\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\battery\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\battery\www\css\index.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\battery\www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\battery\www\js\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\hooks\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\plugins\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\www\css\index.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\www\js\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\heartrate\config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\heartrate\hooks\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\heartrate\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\heartrate\www\css\index.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\heartrate\www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\heartrate\www\js\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\metawear\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\metawear\config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\metawear\hooks\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\metawear\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\metawear\www\css\index.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\metawear\www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\metawear\www\js\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\redbearlab\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\redbearlab\config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\redbearlab\hooks\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\redbearlab\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\redbearlab\www\css\index.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\redbearlab\www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\redbearlab\www\js\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\hooks\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\plugins\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\www\css\index.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\www\js\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\hooks\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\plugins\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\www\css\index.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\www\js\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\hooks\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\plugins\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\www\css\index.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\www\js\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag_cc2650\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag_cc2650\config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag_cc2650\hooks\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag_cc2650\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag_cc2650\www\css\index.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag_cc2650\www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag_cc2650\www\js\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\LICENSE.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\android\BLECentralPlugin.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\android\BLECommand.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\android\Helper.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\android\Peripheral.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\android\UUIDHelper.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\browser\BLECentralPlugin.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\ios\BLECentralPlugin.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\ios\BLECentralPlugin.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\ios\BLECommandContext.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\ios\BLECommandContext.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\ios\CBPeripheral+Extensions.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\ios\CBPeripheral+Extensions.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\src\wp\BLECentralPlugin.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\tests\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\tests\tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-ble-central-master\www\ble.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\.travis.yml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\CONTRIBUTING.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\de\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\es\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\fr\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\it\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\ja\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\ko\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\pl\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\ru\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\zh\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\NOTICE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\RELEASENOTES.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\amazon\FileTransfer.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\android\FileProgressResult.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\android\FileTransfer.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\android\FileUploadResult.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\ios\CDVFileTransfer.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\ios\CDVFileTransfer.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\ubuntu\file-transfer.cpp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\ubuntu\file-transfer.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\windows\FileTransferProxy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\wp\FileTransfer.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\tests\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\tests\tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\blackberry10\FileTransfer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\blackberry10\FileTransferProxy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\blackberry10\xhrFileTransfer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\browser\FileTransfer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\FileTransfer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\FileTransferError.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\firefoxos\FileTransferProxy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\wp7\base64.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-wkwebview-engine-master\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-wkwebview-engine-master\.jshintrc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-wkwebview-engine-master\.travis.yml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-wkwebview-engine-master\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-wkwebview-engine-master\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-wkwebview-engine-master\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-wkwebview-engine-master\RELEASENOTES.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-wkwebview-engine-master\src\ios\CDVWKWebViewEngine.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-wkwebview-engine-master\src\ios\CDVWKWebViewEngine.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-wkwebview-engine-master\src\ios\CDVWKWebViewUIDelegate.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-wkwebview-engine-master\src\ios\CDVWKWebViewUIDelegate.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-wkwebview-engine-master\src\www\ios\ios-wkwebview-exec.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\.travis.yml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\AUTHORS.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\bin\test.ps1">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\bin\test.sh">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\CHANGES.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\circle.yml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\Lawnchair-adapter\Lawnchair-sqlitePlugin.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\Lawnchair-adapter\test-www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\Lawnchair-adapter\test-www\lawnchair-spec.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\Lawnchair-adapter\test-www\Lawnchair-sqlitePlugin.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\Lawnchair-adapter\test-www\lib\json2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\Lawnchair-adapter\test-www\lib\lawnchair.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\Lawnchair-adapter\test-www\lib\qunit.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\Lawnchair-adapter\test-www\lib\qunit.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\LICENSE.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\.cordova\config.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\platforms\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\plugins\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\lib\jasmine-2.2.0\boot.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\lib\jasmine-2.2.0\console.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\lib\jasmine-2.2.0\jasmine-html.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\lib\jasmine-2.2.0\jasmine.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\lib\jasmine-2.2.0\jasmine.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\lib\jasmine-2.2.0\jasmine_favicon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\spec\big-memory-test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\spec\browser-check-startup.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\spec\legacy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\spec\simple-test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\SQLitePlugin.coffee.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\io\liteglue\SQLiteAndroidDatabase.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\io\liteglue\SQLitePlugin.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\libs\arm64-v8a\libsqlc-native-driver.so">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\libs\armeabi-v7a\libsqlc-native-driver.so">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\libs\armeabi\libsqlc-native-driver.so">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\libs\sqlite-connector.jar">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\libs\x86\libsqlc-native-driver.so">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\libs\x86_64\libsqlc-native-driver.so">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\common\sqlite3.c">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\common\sqlite3.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\external\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\ios\SQLitePlugin.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\ios\SQLitePlugin.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3JS\js\SQLite3.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\Constants.cpp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\Constants.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\Database.cpp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\Database.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\pch.cpp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\pch.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\SQLite3.Shared.vcxitems">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\SQLite3.sln">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\SQLite3.WindowsPhone\SQLite3.WindowsPhone.vcxproj">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\SQLite3.Windows\SQLite3.Windows.vcxproj">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\Statement.cpp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\Statement.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLiteProxy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\alter_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\analyze_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\attach_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\auth_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\backup_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\bitvec_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\btmutex_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\BtreeInt_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\btree_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\Btree_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\build_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\callback_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\complete_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\crypto.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\ctime_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\date_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\Delegates.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\delete_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\expr_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\fault_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\fkey_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\func_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\global_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\hash_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\Hash_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\hwtime_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\insert_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\journal_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\keywordhash_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\legacy_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\loadext_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\main_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\malloc_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\memjournal_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\mem_Pool.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\mutex_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\mutex_noop_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\notify_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\opcodes_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\opcodes_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\os_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\os_common_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\os_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\os_win_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\pager_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\pager_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\parse_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\parse_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\pcache1_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\pcache_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\pcache_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\pragma_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\prepare_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\printf_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\random_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\resolve_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\rowset_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\select_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\sqlite3_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\sqliteInt_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\sqliteLimit_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\status_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\table_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\tokenize_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\trigger_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\update_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\utf_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\util_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\vacuum_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\vdbeapi_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\vdbeaux_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\vdbeblob_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\VdbeInt_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\vdbemem_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\vdbetrace_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\vdbe_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\Vdbe_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\vtab_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\walker_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\wal_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\wal_h.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\where_c.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\_Custom.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\SQLite.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\SQLitePlugin.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\tests\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\tests\tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Cordova-sqlite-storage-master-public %281%29\www\SQLitePlugin.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\adapters\NativePageTransitionsIonicAdapter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\adapters\NativePageTransitionsKendoAdapter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\demo\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\demo\jqmdemo.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\demo\kendouidemo.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\demo\standalone.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\src\android\lib\AnimationFactory.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\src\android\lib\FlipAnimation.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\src\android\NativePageTransitions.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\src\ios\AppDelegate+nativepagetransitions.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\src\ios\AppDelegate+nativepagetransitions.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\src\ios\NativePageTransitions.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\src\ios\NativePageTransitions.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\src\winphone\NativePageTransitions.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\nativepagetransitions-0-6-4\www\NativePageTransitions.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\screenshot-android-share.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\screenshot-ios6-share.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\screenshot-ios7-ipad-share.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\screenshot-ios7-share.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\screenshot-wp8-share.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\screenshots-ios7-shareconfig.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\android\nl\xservices\plugins\SocialSharing.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\ios\SocialSharing.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\ios\SocialSharing.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\windows\SocialSharingProxy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\wp8\SocialSharing.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\wp8\SocialSharingSDK\Newtonsoft.Json.dll">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\tests\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\tests\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\www\SocialSharing.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\advices2b605f.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\advicesWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\adviceWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\appLoadingImage.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\arrowBottom222.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\arrows\02644.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\arrowTop222.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\arrowUpBig222.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\arrowWhiteLeft.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\arrowWhiteRight.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\backArrowWhite.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\calendarWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\camera444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\cameraWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\checkbox.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\checkboxChecked.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\crop444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\crown.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\deleteWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\digitalInputDeleteArrow.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\dog-sit.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\facebook.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\gallery444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\goalDaySelector.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\GoldMedal.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\hand222.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\hand444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\handWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\history444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\historyWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\instagram.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\instructions222.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\instructions444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\instructionsWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\logo002644WithoutPencil.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\logo062244White.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\logoBig444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\logoBigWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\logoSmall444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\logoWhite3e5d6d.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\mainMenuProgressArrow.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\medalLevels.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\menu.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\navBarStatisticsWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\needsIcon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\pencilWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\playVideo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\problems2b605f.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\problemsSelected.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\problemsWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\repetitionsChart2b605f.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\repetitionsChartWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\repetitionWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\sadPuppy3dSmall.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\saveWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\search.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\settingsWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\share2b605f.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\shareWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\shields\shieldBlue.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\shields\shieldRed.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\silverMedalSmall.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\solutions444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\solutionsWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\statistics222.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\statistics2b605f.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\statistics444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\statisticsBlue.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\statisticsWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\sucessRateWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\sync\animacijaSync1.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\target222.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\target444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\targetBlue.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\targetWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\textures\grass.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\textures\wood-texture.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\tipRotatePhoneForVideo.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trainIcon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trainWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\troph3d.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophies\trophy1.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophies\trophy1Blue.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophies\trophy1BlueLight.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophies\trophy2.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophies\trophy2Blue.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophies\trophy2BlueLight.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophies\trophy3.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophies\trophy3Blue.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophies\trophy3BlueLight.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophies\trophy4.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophies\trophy4Blue.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophies\trophy4BlueLight.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophy444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophyYellow.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\trophyYellowBig.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\twitter.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\video444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\videoRed.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\videoWhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\walking-dog.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\weight444.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\whatsapp.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="routing.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="services\kendoConnector.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="services\svc_AngularHistory.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="services\svc_File.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="services\svc_FileChecker.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="services\svc_NativeTransitions.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="variables.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="welcome.html">
+      <SubType>Content</SubType>
+    </Content>
+    <None Include=".abignore" />
+    <Content Include=".abproject" />
+    <Content Include=".debug.abproject" />
+    <Content Include=".release.abproject" />
+    <Content Include="cordova.android.js" />
+    <Content Include="cordova.ios.js" />
+    <Content Include="cordova.wp8.js" />
+    <Content Include="dbModels\db_Manager.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="dbModels\db_Sync.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="dbModels\db_Training.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="dbModels\db_TrainingForServer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="dbModels\db_Tricks.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\d3AreaChart - pokusaj stacka.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\d3AreaChart -backup normalni.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\d3AreaChart.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\datesPicker\datesPicker.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\datesPicker\datesPicker.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\decimalInput\decimalInput.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\decimalInput\decimalInput.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\mainNav\mainNav.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\mainNav\mainNav.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\ScrollableList.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\SortableList.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\trainSettings\trainSettings.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\trainSettings\trainSettings.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\valuePicker\valuePicker -koji radi.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\valuePicker\valuePicker-radni sa fixnim velicnima.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\valuePicker\valuePicker.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\valuePicker\valuePicker.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\viewAnimationEnd\viewAnimationEnd.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\viewAnimationEnd\viewAnimationEnd.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\weightDatesPicker\weightDatesPicker.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="directives\weightDatesPicker\weightDatesPicker.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="handSignals\1.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="helpers\arrayHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="helpers\chartHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="helpers\ctrl_FilesDownload.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="helpers\dateHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="helpers\kendo_ChartHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="helpers\kendo_DateCalculationsHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="helpers\kendo_DateHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="helpers\kendo_RequestHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="helpers\requestHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="helpers\stringHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <Resource Include="App_Resources\Android\drawable-hdpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-mdpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
+    <Resource Include="App_Resources\iOS\Default-568h@2x.png" />
+    <Resource Include="App_Resources\iOS\Default-667h.png" />
+    <Resource Include="App_Resources\iOS\Default-736h.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape-667h.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape-736h.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape@2x.png" />
+    <Resource Include="App_Resources\iOS\Default-Portrait.png" />
+    <Resource Include="App_Resources\iOS\Default-Portrait@2x.png" />
+    <Resource Include="App_Resources\iOS\Default.png" />
+    <Resource Include="App_Resources\iOS\Default@2x.png" />
+    <Resource Include="App_Resources\iOS\icon-40.png" />
+    <Resource Include="App_Resources\iOS\icon-40@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-40@3x.png" />
+    <Resource Include="App_Resources\iOS\icon-60.png" />
+    <Resource Include="App_Resources\iOS\icon-60@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-60@3x.png" />
+    <Resource Include="App_Resources\iOS\icon-72.png" />
+    <Resource Include="App_Resources\iOS\icon-72@2x.png" />
+    <Resource Include="App_Resources\iOS\icon-76.png" />
+    <Resource Include="App_Resources\iOS\icon-76@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small-50.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small-50@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small@2x.png" />
+    <Resource Include="App_Resources\iOS\icon.png" />
+    <Resource Include="App_Resources\iOS\icon@2x.png" />
+    <Resource Include="App_Resources\iOS\watch-172x172.png" />
+    <Resource Include="App_Resources\iOS\watch-196x196.png" />
+    <Resource Include="App_Resources\iOS\watch-48x48.png" />
+    <Resource Include="App_Resources\iOS\watch-55x55.png" />
+    <Resource Include="App_Resources\iOS\watch-58x58.png" />
+    <Resource Include="App_Resources\iOS\watch-80x80.png" />
+    <Resource Include="App_Resources\iOS\watch-87x87.png" />
+    <Resource Include="App_Resources\iOS\watch-88x88.png" />
+    <Resource Include="App_Resources\WP8\ApplicationIcon.png" />
+    <Resource Include="App_Resources\WP8\SplashScreenImage.jpg" />
+    <Resource Include="App_Resources\WP8\Assets\BadgeLogo.png" />
+    <Resource Include="App_Resources\WP8\Assets\Logo.png" />
+    <Resource Include="App_Resources\WP8\Assets\SplashScreen.png" />
+    <Resource Include="App_Resources\WP8\Assets\SquareTile150x150.png" />
+    <Resource Include="App_Resources\WP8\Assets\SquareTile71x71.png" />
+    <Resource Include="App_Resources\WP8\Assets\StoreLogo.png" />
+    <Resource Include="App_Resources\WP8\Assets\WideLogo.png" />
+    <Resource Include="App_Resources\WP8\Tiles\Iconic\110x110.png" />
+    <Resource Include="App_Resources\WP8\Tiles\Iconic\202x202.png" />
+    <Content Include="css\index.css" />
+    <Content Include="img\cordova.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="js\index.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Resources\" />
+    <Folder Include="App_Resources\Android\" />
+    <Folder Include="App_Resources\Android\drawable-hdpi\" />
+    <Folder Include="App_Resources\Android\drawable-land-hdpi\" />
+    <Folder Include="App_Resources\Android\drawable-land-ldpi\" />
+    <Folder Include="App_Resources\Android\drawable-land-mdpi\" />
+    <Folder Include="App_Resources\Android\drawable-land-xhdpi\" />
+    <Folder Include="App_Resources\Android\drawable-land-xxhdpi\" />
+    <Folder Include="App_Resources\Android\drawable-land-xxxhdpi\" />
+    <Folder Include="App_Resources\Android\drawable-ldpi\" />
+    <Folder Include="App_Resources\Android\drawable-mdpi\" />
+    <Folder Include="App_Resources\Android\drawable-nodpi\" />
+    <Folder Include="App_Resources\Android\drawable-xhdpi\" />
+    <Folder Include="App_Resources\Android\drawable-xxhdpi\" />
+    <Folder Include="App_Resources\Android\drawable-xxxhdpi\" />
+    <Folder Include="App_Resources\Android\xml\" />
+    <Folder Include="App_Resources\iOS\" />
+    <Folder Include="App_Resources\WP8\" />
+    <Folder Include="App_Resources\WP8\Assets\" />
+    <Folder Include="App_Resources\WP8\Tiles\" />
+    <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
+    <Folder Include="bin\" />
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Debug\Android\" />
+    <Folder Include="bin\Debug\iOS\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="bin\Release\Android\" />
+    <Folder Include="bin\Release\iOS\" />
+    <Folder Include="css\" />
+    <Folder Include="css\animations\" />
+    <Folder Include="dbModels\" />
+    <Folder Include="directives\" />
+    <Folder Include="directives\datesPicker\" />
+    <Folder Include="directives\decimalInput\" />
+    <Folder Include="directives\mainNav\" />
+    <Folder Include="directives\trainSettings\" />
+    <Folder Include="directives\valuePicker\" />
+    <Folder Include="directives\viewAnimationEnd\" />
+    <Folder Include="directives\weightDatesPicker\" />
+    <Folder Include="handSignals\" />
+    <Folder Include="helpers\" />
+    <Folder Include="img\" />
+    <Folder Include="js\" />
+    <Folder Include="lib\" />
+    <Folder Include="lib\alertify\" />
+    <Folder Include="lib\cropper\" />
+    <Folder Include="lib\d3\" />
+    <Folder Include="lib\kendo2\" />
+    <Folder Include="lib\kendo2\Flat\" />
+    <Folder Include="lib\kendo2\images\" />
+    <Folder Include="lib\plugins\" />
+    <Folder Include="models\" />
+    <Folder Include="obj\" />
+    <Folder Include="obj\Debug\" />
+    <Folder Include="obj\Release\" />
+    <Folder Include="pages\" />
+    <Folder Include="pages\download\" />
+    <Folder Include="pages\extras\" />
+    <Folder Include="pages\extras\achivement\" />
+    <Folder Include="pages\extras\weight\" />
+    <Folder Include="pages\imageUpload\" />
+    <Folder Include="pages\imageUpload\gallery\" />
+    <Folder Include="pages\loggedIn\" />
+    <Folder Include="pages\loggedIn\achivments\" />
+    <Folder Include="pages\loggedIn\clicker\" />
+    <Folder Include="pages\loggedIn\goals\" />
+    <Folder Include="pages\loggedIn\level\" />
+    <Folder Include="pages\loggedIn\sync\" />
+    <Folder Include="pages\menu\" />
+    <Folder Include="pages\notLoggedIn\" />
+    <Folder Include="pages\statistics\" />
+    <Folder Include="pages\trainMenu\" />
+    <Folder Include="pages\trainMenu\myTricks\" />
+    <Folder Include="pages\train\" />
+    <Folder Include="pages\trick\" />
+    <Folder Include="pages\trick\help\" />
+    <Folder Include="Plugins\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\battery\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\battery\hooks\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\battery\platforms\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\battery\plugins\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\battery\www\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\battery\www\css\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\battery\www\js\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\hooks\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\plugins\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\www\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\www\css\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\bluefruitle\www\js\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\heartrate\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\heartrate\hooks\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\heartrate\www\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\heartrate\www\css\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\heartrate\www\js\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\metawear\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\metawear\hooks\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\metawear\www\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\metawear\www\css\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\metawear\www\js\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\redbearlab\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\redbearlab\hooks\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\redbearlab\www\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\redbearlab\www\css\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\redbearlab\www\js\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\hooks\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\plugins\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\www\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\www\css\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\rfduinoLedButton\www\js\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\hooks\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\plugins\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\www\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\www\css\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\robosmart\www\js\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\hooks\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\plugins\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\www\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\www\css\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag\www\js\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag_cc2650\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag_cc2650\hooks\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag_cc2650\www\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag_cc2650\www\css\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\examples\sensortag_cc2650\www\js\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\src\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\src\android\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\src\browser\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\src\ios\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\src\wp\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\tests\" />
+    <Folder Include="Plugins\cordova-plugin-ble-central-master\www\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\de\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\es\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\fr\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\it\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\ja\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\ko\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\pl\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\ru\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\doc\zh\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\amazon\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\android\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\ios\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\ubuntu\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\windows\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\src\wp\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\tests\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\blackberry10\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\browser\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\firefoxos\" />
+    <Folder Include="Plugins\cordova-plugin-file-transfer-1.1.0\www\wp7\" />
+    <Folder Include="Plugins\cordova-plugin-wkwebview-engine-master\" />
+    <Folder Include="Plugins\cordova-plugin-wkwebview-engine-master\src\" />
+    <Folder Include="Plugins\cordova-plugin-wkwebview-engine-master\src\ios\" />
+    <Folder Include="Plugins\cordova-plugin-wkwebview-engine-master\src\www\" />
+    <Folder Include="Plugins\cordova-plugin-wkwebview-engine-master\src\www\ios\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\bin\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\Lawnchair-adapter\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\Lawnchair-adapter\test-www\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\Lawnchair-adapter\test-www\lib\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\.cordova\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\platforms\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\plugins\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\lib\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\lib\jasmine-2.2.0\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\spec\www\spec\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\io\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\io\liteglue\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\libs\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\libs\arm64-v8a\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\libs\armeabi-v7a\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\libs\armeabi\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\libs\x86\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\android\libs\x86_64\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\common\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\external\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\ios\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3JS\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3JS\js\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\SQLite3.WindowsPhone\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\windows\SQLite3-WinRT\SQLite3\SQLite3.Windows\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\src\wp\csharp-sqlite-src\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\tests\" />
+    <Folder Include="Plugins\Cordova-sqlite-storage-master-public %281%29\www\" />
+    <Folder Include="Plugins\nativepagetransitions-0-6-4\" />
+    <Folder Include="Plugins\nativepagetransitions-0-6-4\adapters\" />
+    <Folder Include="Plugins\nativepagetransitions-0-6-4\demo\" />
+    <Folder Include="Plugins\nativepagetransitions-0-6-4\src\" />
+    <Folder Include="Plugins\nativepagetransitions-0-6-4\src\android\" />
+    <Folder Include="Plugins\nativepagetransitions-0-6-4\src\android\lib\" />
+    <Folder Include="Plugins\nativepagetransitions-0-6-4\src\ios\" />
+    <Folder Include="Plugins\nativepagetransitions-0-6-4\src\winphone\" />
+    <Folder Include="Plugins\nativepagetransitions-0-6-4\www\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\android\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\android\nl\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\android\nl\xservices\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\android\nl\xservices\plugins\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\ios\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\windows\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\wp8\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\wp8\SocialSharingSDK\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\tests\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\www\" />
+    <Folder Include="res\" />
+    <Folder Include="res\arrows\" />
+    <Folder Include="res\shields\" />
+    <Folder Include="res\sync\" />
+    <Folder Include="res\textures\" />
+    <Folder Include="res\trophies\" />
+    <Folder Include="services\" />
+  </ItemGroup>
+  <Import Project="$(IceniumTargets)Build.targets" />
+  <!--
+    TODO: Uncomment this code if you need to customize the build process.
+    <Target Name="BeforeBuild">
+        <Message Text="TODO: Implement BeforeBuild" Importance="high" />
+    </Target>
+
+    <Target Name="AfterBuild">
+        <Message Text="TODO: Implement AfterBuild" Importance="high" />
+    </Target>
+    -->
+</Project>

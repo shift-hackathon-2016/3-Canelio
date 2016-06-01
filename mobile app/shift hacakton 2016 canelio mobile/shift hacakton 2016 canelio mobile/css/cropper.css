@@ -1,0 +1,29 @@
+.cropFooter{
+    position:absolute;
+    bottom:0px;
+    width:100%;
+    height:73px;
+    line-height:73px;
+    font-family:Bangers;
+    font-size:1.8em;
+    text-align:center;
+    color:#bbb;
+}
+
+    .cropFooter .cancel,.cropFooter .save{
+       float:left;
+       width:50%; 
+    }
+
+    .cropFooter .save{
+        color: white;
+    }
+
+#croppingContainer div{
+    width:100%;
+    height:100%;
+}
+
+.margin0Auto{
+    margin:0px auto;
+}

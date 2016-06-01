@@ -1,0 +1,57 @@
+<main-nav settings="true"></main-nav>
+
+<div class="goalMonthContainer relativeContainer">
+    <img src="res/arrowWhiteLeft.png" class="absoluteCenter goalArrowLeft" ng-show="arrowLeft" ng-click="arrowLeftClick()" />
+    <img src="res/arrowWhiteRight.png" class="absoluteCenter goalArrowRight" ng-show="arrowRight" ng-click="arrowRightClick()" />
+    <div class="goalMonth">
+        {{currentMonth}},{{currentYear}}
+    </div>
+</div>
+<div class="dailyGoalDaysContainer relativeContainer">
+    <div ng-style="getTotalWidth()" class="absoluteCenter">
+        <!--<div class="dailyGoalDays dailyGoalDaySelected" ng-style="getDaysStyle()">Su</div>-->
+        <div class="dailyGoalDays" ng-style="getDaysStyle()">Su</div>
+        <div class="dailyGoalDays" ng-style="getDaysStyle()">Mo</div>
+        <div class="dailyGoalDays" ng-style="getDaysStyle()">Tu</div>
+        <div class="dailyGoalDays" ng-style="getDaysStyle()">We</div>
+        <div class="dailyGoalDays" ng-style="getDaysStyle()">Th</div>
+        <div class="dailyGoalDays" ng-style="getDaysStyle()">Fr</div>
+        <div class="dailyGoalDays" ng-style="getDaysStyle()">Sa</div>
+    </div>
+</div>
+<div ng-show="!defNeedsReject">
+    <div ng-repeat="day in days" class="goalDailyDay goalDailyDayGreen" ng-style="getDotsStyle(day)" ng-click="dayClicked(day)">{{day.day}}</div>
+</div>
+<div ng-show="defNeedsReject">
+    <img src="res/walking-dog.gif" class="loadingImg" />
+    <div class="loadingText">Loading Days...</div>
+</div>
+
+<div class="absoluteCenter tutorial" ng-show="goalsTutorialShow">
+    <div class="relativeContainer">
+        <div class="absoluteCenter" style="height:350px">
+            <div class="GoalsLegendContainer">
+                <span class="goalLegend goalAchieved"></span> <span class="goalLegendInfo">Goal achieved</span>
+            </div>
+            <div class="GoalsLegendContainer">
+                <span class="goalLegend trained"></span> <span class="goalLegendInfo">Trained</span>
+            </div>
+            <div class="GoalsLegendContainer">
+                <span class="goalLegend notTrained"></span> <span class="goalLegendInfo">Not trained at all</span>
+            </div>
+
+            <div class="closeButtons">
+                <div class="dontShowThisAgain">
+                    <form>
+                        <label for="test" ng-click="clickedLabel()">
+                            <input type="checkbox" name="test" id="test" ng-model="goalsTutorial" />
+                            <span class="checkboxReplacment"></span>
+                            <span class="text">Don't show this again</span>
+                        </label>
+                    </form>
+                </div>
+                <div class="trickTrainButton" ng-click="closeTutorial()">Got it</div>
+            </div>
+        </div>
+    </div>
+</div>

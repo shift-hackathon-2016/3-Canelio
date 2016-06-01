@@ -1,0 +1,63 @@
+<!--<video controls id="trickVideo" style="width:100%;height:300px;" >
+    <source src="{{videoSrc}}" type="video/mp4">
+</video>
+-->
+<main-nav></main-nav>
+
+<div class="singleTrickMainPartContainer">
+    <div class="singleTrickContainer">
+        <div class="singleAchivmentTitle">
+            {{achivmentTitle}}
+        </div>
+        <div class="width320">
+            <div class="shield shieldSuccess" ng-click="goToStatistics()">
+                <img src="res/shields/shieldBlue.png" class="shieldImage" />
+                <div class="shieldTitle">Success</div>
+                <div class="shieldImprotant">{{success}}%</div>
+            </div>
+            <div class="pictureSide">
+                <img class="pictureContainer" src="res/logo002644WithoutPencil.png" ng-src="{{imageSrc}}" ng-click="uploadDogImage()" />
+
+            </div>
+            <div class="shield shieldFail" ng-click="goToStatistics()">
+                <img src="res/shields/shieldRed.png" class="shieldImage" />
+                <div class="shieldTitle">Fail</div>
+                <div class="shieldImprotant">{{fail}}%</div>
+            </div>
+        </div>
+        <div class="backgroundColorContainer">
+            <div class="width320">
+                <div class="backgroundColor">
+                    <div class="successBarContainer"><div id="successBar"class="successBar"></div><div id="failBar" class="successBar failBar"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="achivmentsContainer" ng-click="goToAchivment()">
+        <div class="achivmentBadgeContainer">
+            <img class="trophy1" src="res/trophies/trophy1BlueLight.png" ng-src="{{trophy1}}"></img>
+        </div>
+        <div class="achivmentBadgeContainer">
+            <img class="trophy2" src="res/trophies/trophy2BlueLight.png" ng-src="{{trophy2}}"></img>
+        </div>
+        <div class="achivmentBadgeContainer">
+            <img class="trophy3" src="res/trophies/trophy3BlueLight.png" ng-src="{{trophy3}}"></img>
+        </div>
+        <div class="achivmentBadgeContainer">
+            <img class="trophy4" src="res/trophies/trophy4BlueLight.png" ng-src="{{trophy4}}"></img>
+        </div>
+    </div>
+</div>
+<div class="trickFooter">
+    <div class="buttonsContainer" ng-click="goToInstructions()">
+        <a class="statisticsButton">
+            Instructions
+        </a>
+    </div>
+    <a class="mainMenuButtonV2 mainMenuButtonv2Medium" href="#statistics/trick/{{trickId}}" >
+        <div class="button">
+            Statistics
+        </div>
+    </a>
+
+</div>

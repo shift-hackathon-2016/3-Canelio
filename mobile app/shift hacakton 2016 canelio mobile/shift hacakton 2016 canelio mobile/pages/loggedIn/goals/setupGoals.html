@@ -1,0 +1,24 @@
+<main-nav></main-nav>
+
+<div ng-hide="loading">
+    <div class="noAchivemntsMessage setupGoalMessage" ng-hide="goal">
+        {{message}}
+    </div>
+    <div class="logWeightButton relativeContainer" ng-show="goal" style="background-color:#4477b4" ng-click="showInput();">
+        <div class="currentWeightContainer absoluteCenter">
+            <div class="weightMessage" style="color: #222;">
+                {{type}} Goal
+            </div>
+            <div class="weightMessage currentWeight">
+                {{goal}} Repetitions
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-show="loading">
+    <img src="res/walking-dog.gif" class="loadingImg" />
+    <div class="loadingText">Saving Goal...</div>
+</div>
+
+<decimal-input></decimal-input>

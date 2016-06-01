@@ -1,0 +1,78 @@
+
+
+@media only screen and (max-width: 1100px) {
+    .singleAchivment .width1080{
+        width: auto;
+    }
+    
+    .singleAchivment .content .picBigContainer{
+        float:none;
+        width:100%;
+    }
+    
+    .singleAchivment .content .picBigContainer .picBig{
+        float:none;
+        margin:0px auto;
+        display:block;
+        max-width: 100%;
+    }
+    
+    .singleAchivment .content .info{
+        float:none;
+        width:100%;
+        margin:0px auto;
+    }
+    
+    .singleAchivment .header img{
+        display:block;
+        float:none;
+        margin:0px auto;
+        
+    }
+    
+    .singleAchivment .header .info{
+        float:none;
+        margin:0px;
+        width:100%;
+        text-align: center;
+    }
+    
+    .singleAchivment .header .info .name{
+        margin-top:10px;
+    }
+    
+    .singleAchivment .ledaerboardPosition{
+        text-align: center;
+        width: 100%;
+    }
+    
+    .singleAchivment .ledaerboardPosition img{
+        float:none;
+        display:block;
+        margin:0px auto;
+    }
+    
+    .singleAchivment .ledaerboardPosition span{
+        display:block;
+        float:none;
+    }
+    
+    .singleAchivment .ledaerboardPosition span{
+        line-height: normal;
+        margin: 30px 0px;
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 720px) {
+    .singleAchivment .content .info .statistics{
+        line-height: normal;
+    }
+    
+    .singleAchivment .content .info .statistics div{
+        margin: 15px 0px;
+    }
+}
+
